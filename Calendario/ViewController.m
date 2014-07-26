@@ -24,6 +24,7 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    // I'm adding code now.
 }
 
 @end
