@@ -486,6 +486,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		048E8C5A19884783002301C7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7841D2A31949CA5200F8351C /* Main.storyboard */,
+				7841D2A61949CA5200F8351C /* ViewController.h */,
+				7841D2A71949CA5200F8351C /* ViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		048E8C5B198848E7002301C7 /* ModelBO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ModelBO;
+			sourceTree = "<group>";
+		};
+		048E8C5C198849B1002301C7 /* ModelDAO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ModelDAO;
+			sourceTree = "<group>";
+		};
 		7841D2851949CA5200F8351C = {
 			isa = PBXGroup;
 			children = (
@@ -520,11 +544,11 @@
 		7841D2971949CA5200F8351C /* Calendario */ = {
 			isa = PBXGroup;
 			children = (
+				048E8C5A19884783002301C7 /* ViewController */,
+				048E8C5C198849B1002301C7 /* ModelDAO */,
+				048E8C5B198848E7002301C7 /* ModelBO */,
 				7841D2A01949CA5200F8351C /* AppDelegate.h */,
 				7841D2A11949CA5200F8351C /* AppDelegate.m */,
-				7841D2A31949CA5200F8351C /* Main.storyboard */,
-				7841D2A61949CA5200F8351C /* ViewController.h */,
-				7841D2A71949CA5200F8351C /* ViewController.m */,
 				7841D2A91949CA5200F8351C /* Images.xcassets */,
 				7841D2981949CA5200F8351C /* Supporting Files */,
 			);
