@@ -37,12 +37,12 @@
 
 - (void)likeStatusUpdate:(NSInteger)idUser idStatusUpdate:(NSInteger)idStatusUpdate
 {
-    
+    // Method logic goes here ...
 }
 
 - (void)commentStatusUpdate:(NSInteger)idUser idStatusUpdate:(NSInteger)idStatusUpdate
 {
-    
+    // Method logic goes here ...
 }
 
 - (NSString *)copyURL:(NSInteger)idStatusUpdate
@@ -56,7 +56,7 @@
 
 - (void)report:(NSInteger)idUser idStatusUpdate:(NSInteger)idStatusUpdate
 {
-    
+    // Method logic goes here ...
 }
 
 - (NSArray *)retrieveStatusUpdate:(NSInteger)idUserFollow month:(NSInteger)month year:(NSInteger)year

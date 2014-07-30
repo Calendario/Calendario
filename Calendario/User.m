@@ -22,7 +22,7 @@
 
 - (BOOL)login:(NSString *)userName passWord:(NSString *)passWord
 {
-    BOOL isLoged = FALSE;
+    BOOL isLoged = false;
     
     // Method logic goes here ...
     
