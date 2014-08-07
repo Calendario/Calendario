@@ -224,6 +224,10 @@
 		78A31C05196D424200A86759 /* ios7-arrow-leftwhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A31C04196D424200A86759 /* ios7-arrow-leftwhite.png */; };
 		78A31C07196D424800A86759 /* ios7-arrow-right.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A31C06196D424800A86759 /* ios7-arrow-right.png */; };
 		78A33638194D69CC0073A86D /* address_book.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A33637194D69CC0073A86D /* address_book.png */; };
+		78CC80B71993CAEC002C142E /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC80B61993CAEC002C142E /* RegisterViewController.m */; };
+		78CC80BF1993DDAE002C142E /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC80BE1993DDAE002C142E /* SettingsViewController.m */; };
+		78CC80C21993DDEA002C142E /* LoggedInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC80C11993DDEA002C142E /* LoggedInViewController.m */; };
+		78CC80C51993DED1002C142E /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78CC80C41993DED1002C142E /* LogInViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -460,6 +464,14 @@
 		78A31C04196D424200A86759 /* ios7-arrow-leftwhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios7-arrow-leftwhite.png"; sourceTree = "<group>"; };
 		78A31C06196D424800A86759 /* ios7-arrow-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios7-arrow-right.png"; sourceTree = "<group>"; };
 		78A33637194D69CC0073A86D /* address_book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = address_book.png; sourceTree = "<group>"; };
+		78CC80B51993CAEC002C142E /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		78CC80B61993CAEC002C142E /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		78CC80BD1993DDAE002C142E /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		78CC80BE1993DDAE002C142E /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		78CC80C01993DDEA002C142E /* LoggedInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggedInViewController.h; sourceTree = "<group>"; };
+		78CC80C11993DDEA002C142E /* LoggedInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoggedInViewController.m; sourceTree = "<group>"; };
+		78CC80C31993DED1002C142E /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
+		78CC80C41993DED1002C142E /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -523,9 +535,17 @@
 				7841D2A01949CA5200F8351C /* AppDelegate.h */,
 				7841D2A11949CA5200F8351C /* AppDelegate.m */,
 				7841D2A31949CA5200F8351C /* Main.storyboard */,
+				78CC80BD1993DDAE002C142E /* SettingsViewController.h */,
+				78CC80BE1993DDAE002C142E /* SettingsViewController.m */,
 				7841D2A61949CA5200F8351C /* ViewController.h */,
 				7841D2A71949CA5200F8351C /* ViewController.m */,
+				78CC80C01993DDEA002C142E /* LoggedInViewController.h */,
+				78CC80C11993DDEA002C142E /* LoggedInViewController.m */,
+				78CC80B51993CAEC002C142E /* RegisterViewController.h */,
+				78CC80B61993CAEC002C142E /* RegisterViewController.m */,
 				7841D2A91949CA5200F8351C /* Images.xcassets */,
+				78CC80C31993DED1002C142E /* LogInViewController.h */,
+				78CC80C41993DED1002C142E /* LogInViewController.m */,
 				7841D2981949CA5200F8351C /* Supporting Files */,
 			);
 			path = Calendario;
@@ -1118,9 +1138,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78CC80C51993DED1002C142E /* LogInViewController.m in Sources */,
 				7841D2A81949CA5200F8351C /* ViewController.m in Sources */,
 				7841D2A21949CA5200F8351C /* AppDelegate.m in Sources */,
 				7841D29E1949CA5200F8351C /* main.m in Sources */,
+				78CC80BF1993DDAE002C142E /* SettingsViewController.m in Sources */,
+				78CC80B71993CAEC002C142E /* RegisterViewController.m in Sources */,
+				78CC80C21993DDEA002C142E /* LoggedInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
