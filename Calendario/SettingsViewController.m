@@ -47,7 +47,6 @@
 */
 
 - (IBAction)SignOut:(id)sender {
-    [PFUser Signout];
-    [self dismissViewControllerAnimated:YES completion:nil];
+  
 }
 @end
