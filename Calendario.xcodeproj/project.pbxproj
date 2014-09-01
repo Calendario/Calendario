@@ -26,6 +26,7 @@
 		0439213B19B452BE00716F6C /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 0439212A19B452BE00716F6C /* UIWebView+AFNetworking.m */; };
 		0439213D19B452D500716F6C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0439213C19B452D500716F6C /* Security.framework */; };
 		0439213F19B452E500716F6C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0439213E19B452E500716F6C /* SystemConfiguration.framework */; };
+		0439214219B4539000716F6C /* UserDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0439214119B4539000716F6C /* UserDAO.m */; };
 		048E8C6319885F71002301C7 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 048E8C6219885F71002301C7 /* User.m */; };
 		048E8C6619886E15002301C7 /* Timeline.m in Sources */ = {isa = PBXBuildFile; fileRef = 048E8C6519886E15002301C7 /* Timeline.m */; };
 		048E8C6C19886F6C002301C7 /* StatusUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 048E8C6B19886F6C002301C7 /* StatusUpdate.m */; };
@@ -297,6 +298,8 @@
 		0439212A19B452BE00716F6C /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		0439213C19B452D500716F6C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0439213E19B452E500716F6C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0439214019B4539000716F6C /* UserDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDAO.h; sourceTree = "<group>"; };
+		0439214119B4539000716F6C /* UserDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDAO.m; sourceTree = "<group>"; };
 		048E8C6119885F71002301C7 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		048E8C6219885F71002301C7 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		048E8C6419886E15002301C7 /* Timeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timeline.h; sourceTree = "<group>"; };
@@ -630,6 +633,8 @@
 		048E8C5C198849B1002301C7 /* ModelDAO */ = {
 			isa = PBXGroup;
 			children = (
+				0439214019B4539000716F6C /* UserDAO.h */,
+				0439214119B4539000716F6C /* UserDAO.m */,
 			);
 			name = ModelDAO;
 			sourceTree = "<group>";
@@ -1277,6 +1282,7 @@
 				0439213419B452BE00716F6C /* AFNetworkActivityIndicatorManager.m in Sources */,
 				048E8C6C19886F6C002301C7 /* StatusUpdate.m in Sources */,
 				0439213019B452BE00716F6C /* AFURLConnectionOperation.m in Sources */,
+				0439214219B4539000716F6C /* UserDAO.m in Sources */,
 				0439213919B452BE00716F6C /* UIProgressView+AFNetworking.m in Sources */,
 				0439212D19B452BE00716F6C /* AFHTTPSessionManager.m in Sources */,
 				0439213119B452BE00716F6C /* AFURLRequestSerialization.m in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="aKj-Q7-R65">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="sVi-Ov-jDg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -484,31 +484,6 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
             </objects>
             <point key="canvasLocation" x="-396" y="1314"/>
         </scene>
-        <!--View Controller - Item 1-->
-        <scene sceneID="Fv2-AJ-gg6">
-            <objects>
-                <viewController id="f0J-hY-v1L" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7dc-gZ-LWy"/>
-                        <viewControllerLayoutGuide type="bottom" id="Xgk-Yn-2c1"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="WWl-bQ-rdH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="header.png" translatesAutoresizingMaskIntoConstraints="NO" id="0wu-6C-2Ps">
-                                <rect key="frame" x="0.0" y="-9" width="325" height="85"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="3Rm-P1-geG"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ATk-Ho-LUD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1412" y="-1754"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="zSK-fX-bfK">
             <objects>
@@ -706,25 +681,23 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
             </objects>
             <point key="canvasLocation" x="3027" y="-284"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="Ii3-bj-DZn">
+        <!--View Controller-->
+        <scene sceneID="cZI-Hr-joy">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="aKj-Q7-R65" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="VnY-DW-LbS"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="wa9-hV-cpz">
-                        <rect key="frame" x="129" y="330" width="163" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="f0J-hY-v1L" kind="relationship" relationship="viewControllers" id="Fkv-TP-iak"/>
-                        <segue destination="P1G-fm-kns" kind="relationship" relationship="viewControllers" id="uaA-Zy-Qkc"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HIi-qe-Y7L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="fpB-mj-tS6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aQK-O9-zQ6"/>
+                        <viewControllerLayoutGuide type="bottom" id="aDi-P6-7xE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VFH-5g-uU1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="crf-fI-pV9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="725" y="-1582"/>
+            <point key="canvasLocation" x="-396" y="-1617"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="e5h-Oo-vHS">
@@ -2080,25 +2053,6 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                 <placeholder placeholderIdentifier="IBFirstResponder" id="stf-6j-cLn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2916" y="1314"/>
-        </scene>
-        <!--View Controller - Item 2-->
-        <scene sceneID="60o-s8-wEZ">
-            <objects>
-                <viewController id="P1G-fm-kns" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="80k-9R-LXF"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ce9-mm-I1d"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CrU-iR-u2I">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="57V-AD-xNG"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oEH-7Q-I0N" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1435" y="-921"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="kZH-ku-G6e">
