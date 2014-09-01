@@ -7,12 +7,24 @@
 //
 
 #import "ViewController.h"
+#import "UserDAO.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) UserDAO *userDAO;
 @end
 
 @implementation ViewController
+
+@synthesize userDAO;
+
+- (UserDAO *)userDAO
+{
+    if (userDAO == nil) {
+        userDAO = [[UserDAO alloc] init];
+    }
+    
+    return userDAO;
+}
 
 - (void)viewDidLoad
 {
@@ -29,4 +41,8 @@
     // I'm adding more and more code now.
 }
 
+// A test button that call a DAO (Data Acess Object) class method
+- (IBAction)downloadUserButton:(id)sender {
+    [self.userDAO downloadUser];
+}
 @end
