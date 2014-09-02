@@ -19,7 +19,7 @@
 - (NSDictionary *)downloadTimeline;
 {
     // Download the json file
-    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/User.php", webServiceAddress]];
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/Timeline.php", webServiceAddress]];
     
     // Create the request
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:URL];
