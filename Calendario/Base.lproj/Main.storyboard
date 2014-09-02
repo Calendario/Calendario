@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -740,7 +740,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
             </objects>
             <point key="canvasLocation" x="3027" y="-284"/>
         </scene>
-        <!--View Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="cZI-Hr-joy">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="aKj-Q7-R65" sceneMemberID="viewController">
@@ -1518,7 +1518,6 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
         <!--View Controller-->
         <scene sceneID="y7O-6h-kJs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fzu-df-KTB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="TimelinePage" id="dPw-bT-76T" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fha-l6-hrU"/>
@@ -1585,7 +1584,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3R9-5Q-GuQ">
-                                <rect key="frame" x="285" y="309" width="42" height="21"/>
+                                <rect key="frame" x="283" y="309" width="17" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.85149881110000003" green="0.1347524708" blue="0.22287211870000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1658,6 +1657,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="ndA-k7-XXR"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fzu-df-KTB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1242" y="1082"/>
         </scene>
