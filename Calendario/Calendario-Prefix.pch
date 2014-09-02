@@ -15,3 +15,6 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+// The address of the main web service folder
+static NSString *const webServiceAddress = @"http://localhost:8888/calendario/";

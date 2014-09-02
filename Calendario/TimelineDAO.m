@@ -1,22 +1,22 @@
 //
-//  UserDAO.m
+//  TimelineDAO.m
 //  Calendario
 //
-//  Created by Osvaldo Livondeni on 8/29/14.
+//  Created by Osvaldo Livondeni on 9/1/14.
 //
 //
 
-#import "UserDAO.h"
+#import "TimelineDAO.h"
 
-@interface UserDAO ()
+@interface TimelineDAO ()
 
-@property (nonatomic, strong) NSDictionary *user;
+@property (nonatomic, strong) NSDictionary *timeline;
 
 @end
 
-@implementation UserDAO
+@implementation TimelineDAO
 
-- (NSDictionary *)downloadUser
+- (NSDictionary *)downloadTimeline;
 {
     // Download the json file
     NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/User.php", webServiceAddress]];
@@ -31,8 +31,8 @@
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        self.user = (NSDictionary *)responseObject;
-        NSLog(@"self.user: %@", self.user);
+        self.timeline = (NSDictionary *)responseObject;
+        NSLog(@"self.user: %@", self.timeline);
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
@@ -43,10 +43,10 @@
     
     [operation start];
     
-    return  self.user;
+    return  self.timeline;
 }
 
-- (void)uploadUser
+- (void)uploadTimeline
 {
     // AFNetworking code to upload goes here
 }

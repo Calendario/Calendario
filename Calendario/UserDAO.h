@@ -10,8 +10,6 @@
 
 @interface UserDAO : NSObject
 
-@property (nonatomic, strong) NSDictionary *user;
-
 /**
  Downloads all data from table User
  
