@@ -232,7 +232,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzU-qm-1y1">
-                                <rect key="frame" x="134" y="450" width="46" height="30"/>
+                                <rect key="frame" x="126" y="450" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                 <state key="normal" title="Done">
@@ -280,7 +280,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lock_grey_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="lHp-Si-Ghe">
-                                <rect key="frame" x="16" y="373" width="33" height="30"/>
+                                <rect key="frame" x="13" y="329" width="33" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hku-7G-uMR">
@@ -295,7 +295,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lock_grey_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="p2n-qr-gUQ">
-                                <rect key="frame" x="12" y="329" width="35" height="30"/>
+                                <rect key="frame" x="13" y="374" width="33" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_dark_silver.png" translatesAutoresizingMaskIntoConstraints="NO" id="X2P-l5-Wfx">
@@ -1993,7 +1993,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="map_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="aay-L9-lLh">
-                                <rect key="frame" x="189" y="401" width="31" height="29"/>
+                                <rect key="frame" x="188" y="401" width="31" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="8em-Vu-3o8">
@@ -3065,6 +3065,6 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Ka3-WY-m9v"/>
+        <segue reference="sla-c1-sf1"/>
     </inferredMetricsTieBreakers>
 </document>
