@@ -703,6 +703,16 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                     <action selector="downloadUserButton:" destination="fpB-mj-tS6" eventType="touchUpInside" id="W5J-2f-OKC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGU-5N-6CJ">
+                                <rect key="frame" x="98" y="58" width="125" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="downloadTimeline">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadTimelineButton:" destination="fpB-mj-tS6" eventType="touchUpInside" id="UtA-km-6oB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

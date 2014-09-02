@@ -32,7 +32,6 @@
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         self.timeline = (NSDictionary *)responseObject;
-        NSLog(@"self.user: %@", self.timeline);
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         

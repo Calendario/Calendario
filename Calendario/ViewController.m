@@ -8,15 +8,21 @@
 
 #import "ViewController.h"
 #import "UserDAO.h"
+#import "TimelineDAO.h"
 
 @interface ViewController ()
+
 @property (nonatomic, strong) UserDAO *userDAO;
+@property (nonatomic, strong) TimelineDAO *timelineDAO;
+
 @end
 
 @implementation ViewController
 
 @synthesize userDAO;
+@synthesize timelineDAO;
 
+// Initialises userDAO
 - (UserDAO *)userDAO
 {
     if (userDAO == nil) {
@@ -24,6 +30,15 @@
     }
     
     return userDAO;
+}
+
+// Initialises timelineDAO
+- (TimelineDAO *)timelineDAO {
+    if (timelineDAO == nil) {
+        timelineDAO = [[TimelineDAO alloc] init];
+    }
+    
+    return timelineDAO;
 }
 
 - (void)viewDidLoad
@@ -43,6 +58,13 @@
 
 // A test button that call a DAO (Data Acess Object) class method
 - (IBAction)downloadUserButton:(id)sender {
-    [self.userDAO downloadUser];
+    NSDictionary *users = [self.userDAO downloadUser];
+    NSLog(@"%@", users);
 }
+
+- (IBAction)downloadTimelineButton:(id)sender {
+    NSDictionary *timelines = [self.timelineDAO downloadTimeline];
+    NSLog(@"%@", timelines);
+}
+
 @end

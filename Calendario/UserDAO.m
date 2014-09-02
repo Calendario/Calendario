@@ -32,7 +32,6 @@
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         self.user = (NSDictionary *)responseObject;
-        NSLog(@"self.user: %@", self.user);
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
