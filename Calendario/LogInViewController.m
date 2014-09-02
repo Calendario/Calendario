@@ -47,7 +47,26 @@
 */
 
 - (IBAction)SignInButton:(id)sender {
-}
+    [PFUser loginWithUsernameInBackground:_UsernameField.text password:_PasswordField.text block:(PFUser *user , NSError *error) {
+        If (!error) {
+            NSLog(@"Login User!");
+            _PasswordField.text = nil;
+            _UsernameField.text = nil;
+            _PasswordField.text = nil;
+            
+            [self performSegueWithIdentifier:@"Login" sender:self];
+        }
+        
+        
+    }
+     if(error) {
+         UIAlertView *alert = [[UIAlertView alloc] initWithTittle:@"Oops!" message:@"Sorry We Had Problem Logging You In" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+         
+         [alert show];
+     }
+     
+     }
+
 
 
 @end
