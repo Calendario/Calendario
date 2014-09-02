@@ -5,6 +5,7 @@
 //
 
 #import <Availability.h>
+#import "AFNetworking.h"
 
 #ifndef __IPHONE_5_0
 #warning "This project uses features only available in iOS SDK 5.0 and later."
@@ -14,3 +15,6 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+// The address of the main web service folder
+static NSString *const webServiceAddress = @"http://localhost:8888/calendario/";
