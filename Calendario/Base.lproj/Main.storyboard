@@ -1970,11 +1970,11 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bookmark_ribbon.png" translatesAutoresizingMaskIntoConstraints="NO" id="GTk-nz-bGZ">
-                                <rect key="frame" x="215" y="159" width="31" height="37"/>
+                                <rect key="frame" x="210" y="159" width="31" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDI-52-4ha">
-                                <rect key="frame" x="107" y="160" width="107" height="36"/>
+                                <rect key="frame" x="107" y="159" width="107" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Bryan Briggs">
@@ -1983,13 +1983,13 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                 </state>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stay Hungry , Stay Foolish." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH0-Js-M7F">
-                                <rect key="frame" x="80" y="204" width="220" height="21"/>
+                                <rect key="frame" x="80" y="204" width="190" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qjd-bf-0sJ">
-                                <rect key="frame" x="84" y="226" width="167" height="30"/>
+                                <rect key="frame" x="77" y="230" width="167" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="www.calendario.com">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -2026,7 +2026,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="followers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gsk-9Y-QtU">
-                                <rect key="frame" x="116" y="309" width="98" height="21"/>
+                                <rect key="frame" x="116" y="309" width="85" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2115,11 +2115,11 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                 <state key="normal" image="gallery_icon.png"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NEf-1J-0yn">
-                                <rect key="frame" x="132" y="77" width="66" height="75"/>
+                                <rect key="frame" x="127" y="77" width="66" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="outer_date_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="feT-yd-nWI">
-                                <rect key="frame" x="135" y="396" width="49" height="46"/>
+                                <rect key="frame" x="135" y="395" width="50" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
