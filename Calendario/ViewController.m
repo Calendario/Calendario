@@ -62,6 +62,7 @@
     NSLog(@"%@", users);
 }
 
+// Another test button that call a DAO (Data Acess Object) class method
 - (IBAction)downloadTimelineButton:(id)sender {
     NSDictionary *timelines = [self.timelineDAO downloadTimeline];
     NSLog(@"%@", timelines);

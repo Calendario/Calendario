@@ -17,4 +17,4 @@
 #endif
 
 // The address of the main web service folder
-static NSString *const webServiceAddress = @"http://localhost:8888/calendario/";
+static NSString *const webServiceAddress = @"http://calendario.emlinha.net";
