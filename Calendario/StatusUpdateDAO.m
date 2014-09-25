@@ -1,25 +1,25 @@
 //
-//  UserDAO.m
+//  StatusUpdateDAO.m
 //  Calendario
 //
-//  Created by Osvaldo Livondeni on 8/29/14.
+//  Created by Osvaldo Livondeni on 9/22/14.
 //
 //
 
-#import "UserDAO.h"
+#import "StatusUpdateDAO.h"
 
-@interface UserDAO ()
+@interface StatusUpdateDAO ()
 
-@property (nonatomic, strong) NSDictionary *user;
+@property (nonatomic, strong) NSDictionary *statusUpdate;
 
 @end
 
-@implementation UserDAO
+@implementation StatusUpdateDAO
 
-- (NSDictionary *)downloadUser
+- (NSDictionary *)downloadStatusUpdate
 {
     // Download the json file
-    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@User.php", webServiceAddress]];
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@StatusUpdate.php", webServiceAddress]];
     
     // Create the request
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:URL];
@@ -31,7 +31,7 @@
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        self.user = (NSDictionary *)responseObject;
+        self.statusUpdate = (NSDictionary *)responseObject;
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
@@ -41,13 +41,11 @@
     }];
     
     [operation start];
+
+    return self.statusUpdate;
+}
+
+-(void)uploadStatusUpdate {
     
-    return  self.user;
 }
-
-- (void)uploadUser
-{
-    // AFNetworking code to upload goes here
-}
-
 @end

@@ -16,10 +16,10 @@
 
 @implementation TimelineDAO
 
-- (NSDictionary *)downloadTimeline;
+- (NSDictionary *)downloadTimeline
 {
     // Download the json file
-    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/Timeline.php", webServiceAddress]];
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@Timeline.php", webServiceAddress]];
     
     // Create the request
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:URL];

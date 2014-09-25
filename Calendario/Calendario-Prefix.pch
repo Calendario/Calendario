@@ -16,5 +16,7 @@
     #import <Foundation/Foundation.h>
 #endif
 
-// The address of the main web service folder
-static NSString *const webServiceAddress = @"http://calendario.emlinha.net";
+// The base address of the web service
+//static NSString *const webServiceAddress = @"http://calendario.emlinha.net/";
+
+static NSString *const webServiceAddress = @"http://localhost:8888/calendario/";

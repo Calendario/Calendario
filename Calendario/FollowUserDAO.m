@@ -1,25 +1,25 @@
 //
-//  UserDAO.m
+//  FollowUserDAO.m
 //  Calendario
 //
-//  Created by Osvaldo Livondeni on 8/29/14.
+//  Created by Osvaldo Livondeni on 9/22/14.
 //
 //
 
-#import "UserDAO.h"
+#import "FollowUserDAO.h"
 
-@interface UserDAO ()
+@interface FollowUserDAO ()
 
-@property (nonatomic, strong) NSDictionary *user;
+@property (nonatomic, strong) NSDictionary *followUser;
 
 @end
 
-@implementation UserDAO
+@implementation FollowUserDAO
 
-- (NSDictionary *)downloadUser
+- (NSDictionary *)downloadFollowUser
 {
     // Download the json file
-    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@User.php", webServiceAddress]];
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@FollowUser.php", webServiceAddress]];
     
     // Create the request
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:URL];
@@ -31,7 +31,7 @@
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        self.user = (NSDictionary *)responseObject;
+        self.followUser = (NSDictionary *)responseObject;
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
@@ -42,12 +42,11 @@
     
     [operation start];
     
-    return  self.user;
+    return self.followUser;
 }
 
-- (void)uploadUser
+- (void)uploadFollowUser
 {
-    // AFNetworking code to upload goes here
+    
 }
-
 @end
