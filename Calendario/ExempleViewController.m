@@ -94,8 +94,9 @@
 
 // A test button that call a DAO (Data Acess Object) class method
 - (IBAction)downloadUserButton:(id)sender {
-    NSDictionary *users = [self.userDAO downloadUser];
-    NSLog(@"%@", users);
+   
+    [self.userDAO downloadUser];
+
 }
 
 // Another test button that call a DAO (Data Acess Object) class method

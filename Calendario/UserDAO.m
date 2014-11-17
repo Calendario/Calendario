@@ -7,44 +7,35 @@
 //
 
 #import "UserDAO.h"
-
+#import "CAUsersContainer.h"
 @interface UserDAO ()
 
-@property (nonatomic, strong) NSDictionary *user;
+@property (nonatomic, strong) CAUsersContainer *userContainer;
 
 @end
 
 @implementation UserDAO
 
-- (NSDictionary *)downloadUser
+- (void)downloadUser
 {
-    // Download the json file
-    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@User.php", webServiceAddress]];
+
+#warning LB TODO - Completion Black param
+    /**
+     *  create the manager || LB TODO
+     */
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
-    // Create the request
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:URL];
-    
-    // Create the operation
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    
-    operation.responseSerializer = [AFJSONResponseSerializer serializer];
-    
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+    //get
+    [manager GET:[NSString stringWithFormat:@"%@User.php", webServiceAddress] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        self.user = (NSDictionary *)responseObject;
+         _userContainer = [CAUsersContainer instanceFromDictionary:responseObject];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Data" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        
-        [alertView show];
+        [SVProgressHUD showErrorWithStatus:@"Error"];
     }];
     
-    [operation start];
-    
-    return  self.user;
 }
-
 - (void)uploadUser
 {
     // AFNetworking code to upload goes here
