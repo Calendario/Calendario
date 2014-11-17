@@ -15,7 +15,6 @@
 
 @interface ExempleViewController ()
 
-@property (nonatomic, strong) UserDAO *userDAO;
 @property (nonatomic, strong) TimelineDAO *timelineDAO;
 @property (nonatomic, strong) StatusUpdateDAO *statusUpdateDAO;
 @property (nonatomic, strong) FollowUserDAO *followUserDAO;
@@ -25,21 +24,11 @@
 
 @implementation ExempleViewController
 
-@synthesize userDAO;
 @synthesize timelineDAO;
 @synthesize statusUpdateDAO;
 @synthesize followUserDAO;
 @synthesize followTimelineDAO;
 
-// Initializes userDAO
-- (UserDAO *)userDAO
-{
-    if (!userDAO) {
-        userDAO = [[UserDAO alloc] init];
-    }
-    
-    return userDAO;
-}
 
 // Initializes timelineDAO
 - (TimelineDAO *)timelineDAO {
@@ -95,7 +84,18 @@
 // A test button that call a DAO (Data Acess Object) class method
 - (IBAction)downloadUserButton:(id)sender {
    
-    [self.userDAO downloadUser];
+    [SVProgressHUD showWithStatus:@"Loading users"];
+    [UserDAO downloadUser:^(CAUsersContainer *users, NSError *error) {
+       
+        if (error) {
+            [SVProgressHUD showErrorWithStatus:error.localizedDescription];
+        }
+        else {
+            [SVProgressHUD dismiss];
+            NSLog(@"%@",users);
+        }
+        
+    }];
 
 }
 

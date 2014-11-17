@@ -8,6 +8,7 @@
 
 @import Foundation; //i always try to import using Modules like this - quite a new thing
 
+#import "CAUsersContainer.h"
 @interface UserDAO : NSObject
 
 
@@ -16,7 +17,7 @@
  
  @return NSDictionary
  */
-- (void)downloadUser;
++ (void)downloadUser:(void (^)(CAUsersContainer * users, NSError * error))completionBlock;
 
 /**
  Uploads a user and its data to the database

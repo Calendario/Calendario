@@ -7,19 +7,15 @@
 //
 
 #import "UserDAO.h"
-#import "CAUsersContainer.h"
+
 @interface UserDAO ()
-
-@property (nonatomic, strong) CAUsersContainer *userContainer;
-
 @end
 
 @implementation UserDAO
 
-- (void)downloadUser
++ (void)downloadUser:(void (^)(CAUsersContainer * users, NSError * error))completionBlock
 {
 
-#warning LB TODO - Completion Black param
     /**
      *  create the manager || LB TODO
      */
@@ -28,11 +24,12 @@
     //get
     [manager GET:[NSString stringWithFormat:@"%@User.php", webServiceAddress] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-         _userContainer = [CAUsersContainer instanceFromDictionary:responseObject];
+        completionBlock([CAUsersContainer instanceFromDictionary:responseObject],nil);
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
         [SVProgressHUD showErrorWithStatus:@"Error"];
+        completionBlock(nil,error);
     }];
     
 }
