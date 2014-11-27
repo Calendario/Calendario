@@ -272,6 +272,8 @@
 		78AB4EEA19D441B6003D028C /* background3.png in Resources */ = {isa = PBXBuildFile; fileRef = 78AB4EE919D441B6003D028C /* background3.png */; };
 		78AB4EEC19D441C0003D028C /* wallpaper2.png in Resources */ = {isa = PBXBuildFile; fileRef = 78AB4EEB19D441C0003D028C /* wallpaper2.png */; };
 		78AB4EEE19D441C9003D028C /* fillbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 78AB4EED19D441C9003D028C /* fillbox.png */; };
+		78D680861A277C0900DBBEE4 /* RegisterPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D680851A277C0900DBBEE4 /* RegisterPage.m */; };
+		78D680891A2782EF00DBBEE4 /* LogOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D680881A2782EF00DBBEE4 /* LogOut.m */; };
 		78DD6AEF1A24C74E000FF878 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD6AEE1A24C74E000FF878 /* HomeViewController.m */; };
 		78DD6AF61A24D2EA000FF878 /* LoginPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD6AF51A24D2EA000FF878 /* LoginPage.m */; };
 /* End PBXBuildFile section */
@@ -593,6 +595,10 @@
 		78AB4EE919D441B6003D028C /* background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background3.png; sourceTree = "<group>"; };
 		78AB4EEB19D441C0003D028C /* wallpaper2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wallpaper2.png; sourceTree = "<group>"; };
 		78AB4EED19D441C9003D028C /* fillbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fillbox.png; sourceTree = "<group>"; };
+		78D680841A277C0900DBBEE4 /* RegisterPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterPage.h; sourceTree = "<group>"; };
+		78D680851A277C0900DBBEE4 /* RegisterPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterPage.m; sourceTree = "<group>"; };
+		78D680871A2782EF00DBBEE4 /* LogOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogOut.h; sourceTree = "<group>"; };
+		78D680881A2782EF00DBBEE4 /* LogOut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogOut.m; sourceTree = "<group>"; };
 		78DD6AED1A24C74E000FF878 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Calendario/HomeViewController.h; sourceTree = "<group>"; };
 		78DD6AEE1A24C74E000FF878 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Calendario/HomeViewController.m; sourceTree = "<group>"; };
 		78DD6AF41A24D2EA000FF878 /* LoginPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginPage.h; path = Calendario/LoginPage.h; sourceTree = "<group>"; };
@@ -799,6 +805,8 @@
 		7841D2971949CA5200F8351C /* Calendario */ = {
 			isa = PBXGroup;
 			children = (
+				78D6808A1A27844600DBBEE4 /* LogOut */,
+				78D680831A276D6500DBBEE4 /* Register */,
 				78DD6AF01A24C752000FF878 /* UITabBar */,
 				7824B7681A239B310097F204 /* Login */,
 				7841D2A01949CA5200F8351C /* AppDelegate.h */,
@@ -1101,6 +1109,24 @@
 				7841D4141949DB1500F8351C /* right_icon.psd */,
 			);
 			path = timeline;
+			sourceTree = "<group>";
+		};
+		78D680831A276D6500DBBEE4 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				78D680851A277C0900DBBEE4 /* RegisterPage.m */,
+				78D680841A277C0900DBBEE4 /* RegisterPage.h */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
+		78D6808A1A27844600DBBEE4 /* LogOut */ = {
+			isa = PBXGroup;
+			children = (
+				78D680881A2782EF00DBBEE4 /* LogOut.m */,
+				78D680871A2782EF00DBBEE4 /* LogOut.h */,
+			);
+			name = LogOut;
 			sourceTree = "<group>";
 		};
 		78DD6AF01A24C752000FF878 /* UITabBar */ = {
@@ -1436,12 +1462,14 @@
 				04B0A63E19CF80BF00A04F45 /* FollowTimeline.m in Sources */,
 				04B0A65619CF9B1E00A04F45 /* ReportDAO.m in Sources */,
 				7841D2A81949CA5200F8351C /* ExempleViewController.m in Sources */,
+				78D680891A2782EF00DBBEE4 /* LogOut.m in Sources */,
 				04B0A64D19CF9AF800A04F45 /* FollowUserDAO.m in Sources */,
 				0439213719B452BE00716F6C /* UIButton+AFNetworking.m in Sources */,
 				04B0A64719CF80EA00A04F45 /* LikeTable.m in Sources */,
 				04B0A65319CF9B1300A04F45 /* CommentDAO.m in Sources */,
 				0439213819B452BE00716F6C /* UIImageView+AFNetworking.m in Sources */,
 				7841D2A21949CA5200F8351C /* AppDelegate.m in Sources */,
+				78D680861A277C0900DBBEE4 /* RegisterPage.m in Sources */,
 				7841D29E1949CA5200F8351C /* main.m in Sources */,
 				0439213619B452BE00716F6C /* UIAlertView+AFNetworking.m in Sources */,
 				0439213B19B452BE00716F6C /* UIWebView+AFNetworking.m in Sources */,
