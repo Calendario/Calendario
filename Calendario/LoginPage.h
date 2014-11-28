@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface LoginPage : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *txtUsername;
@@ -17,5 +18,5 @@
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *backgroundTab;
 
 - (IBAction)backgroundTab:(id)sender;
-
+@property (weak, nonatomic) IBOutlet FBLoginView *loginView;
 @end

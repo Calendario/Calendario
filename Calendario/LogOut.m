@@ -43,7 +43,7 @@
 }
 
   // Dispose of any resources that can be recreated.
-}
+
 
 - (IBAction)logout:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];

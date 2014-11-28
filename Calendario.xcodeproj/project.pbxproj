@@ -256,6 +256,9 @@
 		7841D4381949E7A900F8351C /* x_icon.psd in Resources */ = {isa = PBXBuildFile; fileRef = 7841D4361949E7A900F8351C /* x_icon.psd */; };
 		7841D43B1949E7D900F8351C /* check_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7841D4391949E7D900F8351C /* check_icon.png */; };
 		7841D43C1949E7D900F8351C /* check_icon.psd in Resources */ = {isa = PBXBuildFile; fileRef = 7841D43A1949E7D900F8351C /* check_icon.psd */; };
+		786AAFCA1A28BA1200B1A622 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 786AAFC91A28BA1200B1A622 /* FacebookSDK.framework */; };
+		786AAFCD1A28C8C400B1A622 /* FacebookLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 786AAFCC1A28C8C400B1A622 /* FacebookLogin.m */; };
+		786AAFD31A290CFB00B1A622 /* GooglePlus.m in Sources */ = {isa = PBXBuildFile; fileRef = 786AAFD21A290CFB00B1A622 /* GooglePlus.m */; };
 		7884184B1967D05C0028E0C3 /* mail_icon_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 7884184A1967D05C0028E0C3 /* mail_icon_gray.png */; };
 		78A31BF3196D37A200A86759 /* facebook_icon_coloured.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A31BF2196D37A200A86759 /* facebook_icon_coloured.png */; };
 		78A31BF5196D37A800A86759 /* google_icon_coloured.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A31BF4196D37A800A86759 /* google_icon_coloured.png */; };
@@ -579,6 +582,11 @@
 		7841D4361949E7A900F8351C /* x_icon.psd */ = {isa = PBXFileReference; lastKnownFileType = file; name = x_icon.psd; path = ../x_icon.psd; sourceTree = "<group>"; };
 		7841D4391949E7D900F8351C /* check_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check_icon.png; sourceTree = "<group>"; };
 		7841D43A1949E7D900F8351C /* check_icon.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = check_icon.psd; sourceTree = "<group>"; };
+		786AAFC91A28BA1200B1A622 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		786AAFCB1A28C8C400B1A622 /* FacebookLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FacebookLogin.h; path = Calendario/FacebookLogin.h; sourceTree = "<group>"; };
+		786AAFCC1A28C8C400B1A622 /* FacebookLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacebookLogin.m; path = Calendario/FacebookLogin.m; sourceTree = "<group>"; };
+		786AAFD11A290CFB00B1A622 /* GooglePlus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GooglePlus.h; path = Calendario/GooglePlus.h; sourceTree = "<group>"; };
+		786AAFD21A290CFB00B1A622 /* GooglePlus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GooglePlus.m; path = Calendario/GooglePlus.m; sourceTree = "<group>"; };
 		7884184A1967D05C0028E0C3 /* mail_icon_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail_icon_gray.png; sourceTree = "<group>"; };
 		78A31BF2196D37A200A86759 /* facebook_icon_coloured.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook_icon_coloured.png; sourceTree = "<group>"; };
 		78A31BF4196D37A800A86759 /* google_icon_coloured.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google_icon_coloured.png; sourceTree = "<group>"; };
@@ -623,6 +631,7 @@
 				7824B7831A23A7DB0097F204 /* GooglePlus.framework in Frameworks */,
 				7824B7771A23A73D0097F204 /* AssetsLibrary.framework in Frameworks */,
 				7824B7751A23A7330097F204 /* AddressBook.framework in Frameworks */,
+				786AAFCA1A28BA1200B1A622 /* FacebookSDK.framework in Frameworks */,
 				7824B7731A23A7020097F204 /* GooglePlus.framework in Frameworks */,
 				7824B7711A23A6E30097F204 /* GoogleOpenSource.framework in Frameworks */,
 			);
@@ -750,6 +759,10 @@
 		7824B7681A239B310097F204 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				786AAFD11A290CFB00B1A622 /* GooglePlus.h */,
+				786AAFD21A290CFB00B1A622 /* GooglePlus.m */,
+				786AAFCB1A28C8C400B1A622 /* FacebookLogin.h */,
+				786AAFCC1A28C8C400B1A622 /* FacebookLogin.m */,
 				78DD6AF41A24D2EA000FF878 /* LoginPage.h */,
 				78DD6AF51A24D2EA000FF878 /* LoginPage.m */,
 			);
@@ -780,6 +793,7 @@
 		7841D2901949CA5200F8351C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				786AAFC91A28BA1200B1A622 /* FacebookSDK.framework */,
 				7824B7821A23A7DB0097F204 /* GooglePlus.framework */,
 				7824B7801A23A7CC0097F204 /* GoogleOpenSource.framework */,
 				7824B77E1A23A77D0097F204 /* MediaPlayer.framework */,
@@ -1447,6 +1461,7 @@
 				04B0A65019CF9B0500A04F45 /* FollowTimelineDAO.m in Sources */,
 				048E8C6319885F71002301C7 /* User.m in Sources */,
 				0439212E19B452BE00716F6C /* AFNetworkReachabilityManager.m in Sources */,
+				786AAFCD1A28C8C400B1A622 /* FacebookLogin.m in Sources */,
 				04B0A65919CF9B2F00A04F45 /* LikeTableDAO.m in Sources */,
 				0439213419B452BE00716F6C /* AFNetworkActivityIndicatorManager.m in Sources */,
 				048E8C6C19886F6C002301C7 /* StatusUpdate.m in Sources */,
@@ -1458,6 +1473,7 @@
 				0439212D19B452BE00716F6C /* AFHTTPSessionManager.m in Sources */,
 				04B0A63B19CF80A100A04F45 /* FollowUser.m in Sources */,
 				0439213119B452BE00716F6C /* AFURLRequestSerialization.m in Sources */,
+				786AAFD31A290CFB00B1A622 /* GooglePlus.m in Sources */,
 				78DD6AEF1A24C74E000FF878 /* HomeViewController.m in Sources */,
 				04B0A63E19CF80BF00A04F45 /* FollowTimeline.m in Sources */,
 				04B0A65619CF9B1E00A04F45 /* ReportDAO.m in Sources */,
@@ -1610,11 +1626,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					/Users/harith/Dropbox/calendario/Code/Xcode/Calendario/Calendario/Calendario,
+					/Users/harith/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Calendario/Calendario-Prefix.pch";
 				INFOPLIST_FILE = "Calendario/Calendario-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -1631,11 +1649,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					/Users/harith/Dropbox/calendario/Code/Xcode/Calendario/Calendario/Calendario,
+					/Users/harith/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Calendario/Calendario-Prefix.pch";
 				INFOPLIST_FILE = "Calendario/Calendario-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

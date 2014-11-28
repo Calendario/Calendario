@@ -21,7 +21,7 @@
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults]; //create instance of NSUSerDefaults
     
-
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,7 +35,7 @@
     //check that the two apssword fields are identical
     if ([_passwordField.text isEqualToString:_reEnterPasswordField.text]) {
         NSLog(@"passwords match!");
-        [self registerNewUser];
+        [self _registerNewUser];
     }
     else {
         UIAlertView *error = [[UIAlertView alloc] initWithTitle:@"Oooops" message:@"Your entered passwords do not match" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
@@ -106,22 +106,22 @@
         
         success = [jsonData[@"success"] integerValue];
         NSLog(@"Success: %ld",(long)success);
-
-
-- (void) registerNewUser {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    //write the username and password and set BOOL value in NSUserDefaults
-    [defaults setObject:_usernameField.text forKey:@"username"];
-    [defaults setObject:_passwordField.text forKey:@"password"];
-    [defaults setBool:YES forKey:@"registered"];
-    
-    [defaults synchronize];
-    
-    UIAlertView *success = [[UIAlertView alloc] initWithTitle:@"Success" message:@"You have registered a new user" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    
-    [success show];
-    
-    [self performSegueWithIdentifier:@"login" sender:self];
-}
-@end
+        
+        
+        - (void) registerNewUser {
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            
+            //write the username and password and set BOOL value in NSUserDefaults
+            [defaults setObject:_usernameField.text forKey:@"username"];
+            [defaults setObject:_passwordField.text forKey:@"password"];
+            [defaults setBool:YES forKey:@"registered"];
+            
+            [defaults synchronize];
+            
+            UIAlertView *success = [[UIAlertView alloc] initWithTitle:@"Success" message:@"You have registered a new user" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            
+            [success show];
+            
+            [self performSegueWithIdentifier:@"login" sender:self];
+        }
+        @end
