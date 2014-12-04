@@ -20,13 +20,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [GPPSignIn sharedInstance].delegate= self;
+    [[GPPSignIn sharedInstance] trySilentAuthentication];
     
     GPPSignIn *signIn = [GPPSignIn sharedInstance];
     signIn.shouldFetchGooglePlusUser = YES;
     //signIn.shouldFetchGoogleUserEmail = YES;  // Uncomment to get the user's email
     
     // You previously set kClientId in the "Initialize the Google+ client" step
-    signIn.clientID = kClientId;
+    signIn.clientID =kClientId;
+    
+    //Server ClientID
+    signIn.homeServerClientID = @"<SERVER-CLIENT-ID>";
     
     // Uncomment one of these two statements for the scope you chose in the previous step
     signIn.scopes = @[ kGTLAuthScopePlusLogin ];  // "https://www.googleapis.com/auth/plus.login" scope
@@ -45,7 +50,11 @@
 - (void)finishedWithAuth: (GTMOAuth2Authentication *)auth
                    error: (NSError *) error {
     NSLog(@"Received error %@ and auth object %@",error, auth);
-}
+    if (error) {
+        // Do some error handling here.
+    } else {
+        [self refreshInterfaceBasedOnSignIn];
+    }
 
 - (void)presentSignInViewController:(UIViewController *)viewController {
     // This is an example of how you can implement it if your app is navigation-based.
@@ -69,14 +78,7 @@
         // Perform other actions here
     }
 }
-- (void)finishedWithAuth: (GTMOAuth2Authentication *)auth
-                   error: (NSError *) error {
-    NSLog(@"Received error %@ and auth object %@",error, auth);
-    if (error) {
-        // Do some error handling here.
-    } else {
-        [self refreshInterfaceBasedOnSignIn];
-    }
+
 }
 // User Log out
 - (void)signOut {

@@ -260,6 +260,7 @@
 		786AAFCD1A28C8C400B1A622 /* FacebookLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 786AAFCC1A28C8C400B1A622 /* FacebookLogin.m */; };
 		786AAFD31A290CFB00B1A622 /* GooglePlus.m in Sources */ = {isa = PBXBuildFile; fileRef = 786AAFD21A290CFB00B1A622 /* GooglePlus.m */; };
 		7884184B1967D05C0028E0C3 /* mail_icon_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 7884184A1967D05C0028E0C3 /* mail_icon_gray.png */; };
+		788C04B41A30C7D3004B9244 /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 788C04B31A30C7D3004B9244 /* GooglePlus.bundle */; };
 		78A31BF3196D37A200A86759 /* facebook_icon_coloured.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A31BF2196D37A200A86759 /* facebook_icon_coloured.png */; };
 		78A31BF5196D37A800A86759 /* google_icon_coloured.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A31BF4196D37A800A86759 /* google_icon_coloured.png */; };
 		78A31BF7196D393600A86759 /* email_grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A31BF6196D393600A86759 /* email_grey.png */; };
@@ -588,6 +589,7 @@
 		786AAFD11A290CFB00B1A622 /* GooglePlus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GooglePlus.h; path = Calendario/GooglePlus.h; sourceTree = "<group>"; };
 		786AAFD21A290CFB00B1A622 /* GooglePlus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GooglePlus.m; path = Calendario/GooglePlus.m; sourceTree = "<group>"; };
 		7884184A1967D05C0028E0C3 /* mail_icon_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail_icon_gray.png; sourceTree = "<group>"; };
+		788C04B31A30C7D3004B9244 /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlus.bundle; path = "../../../../../../../Downloads/google-plus-ios-sdk-1.7.1/GooglePlus.bundle"; sourceTree = "<group>"; };
 		78A31BF2196D37A200A86759 /* facebook_icon_coloured.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook_icon_coloured.png; sourceTree = "<group>"; };
 		78A31BF4196D37A800A86759 /* google_icon_coloured.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google_icon_coloured.png; sourceTree = "<group>"; };
 		78A31BF6196D393600A86759 /* email_grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email_grey.png; sourceTree = "<group>"; };
@@ -793,6 +795,7 @@
 		7841D2901949CA5200F8351C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				788C04B31A30C7D3004B9244 /* GooglePlus.bundle */,
 				786AAFC91A28BA1200B1A622 /* FacebookSDK.framework */,
 				7824B7821A23A7DB0097F204 /* GooglePlus.framework */,
 				7824B7801A23A7CC0097F204 /* GoogleOpenSource.framework */,
@@ -1394,6 +1397,7 @@
 				7841D3EE1949CAEA00F8351C /* video-play-24.png in Resources */,
 				7841D4301949DB1500F8351C /* plus_icon.psd in Resources */,
 				7841D29C1949CA5200F8351C /* InfoPlist.strings in Resources */,
+				788C04B41A30C7D3004B9244 /* GooglePlus.bundle in Resources */,
 				7841D3A31949CAEA00F8351C /* love_red.png in Resources */,
 				7841D3D51949CAEA00F8351C /* plus_icon.png in Resources */,
 				7841D3641949CAEA00F8351C /* camera_icon.psd in Resources */,

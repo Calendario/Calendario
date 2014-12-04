@@ -430,21 +430,6 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                     <segue destination="n94-Pr-Jdn" kind="push" id="bUY-iK-UCW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8a-jP-7RN">
-                                <rect key="frame" x="22" y="299" width="42" height="40"/>
-                                <state key="normal" image="facebook_icon_coloured.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kh0-0F-dlG">
-                                <rect key="frame" x="22" y="251" width="42" height="40"/>
-                                <state key="normal" image="google_icon_coloured.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_button.png" translatesAutoresizingMaskIntoConstraints="NO" id="c7s-LG-ruU">
-                                <rect key="frame" x="94" y="258" width="132" height="74"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="calendario_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Ps-FZ-x74">
                                 <rect key="frame" x="63" y="46" width="195" height="71"/>
                                 <constraints>
@@ -478,8 +463,20 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="FFY-LB-NZY"/>
                                 </connections>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UOX-zg-RA3" customClass="FBLoginView">
-                                <rect key="frame" x="34" y="406" width="240" height="54"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wQ-gN-WpM">
+                                <rect key="frame" x="85" y="405" width="161" height="40"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ci9-Mj-fcL" customClass="GPPSignInButton">
+                                <rect key="frame" x="80" y="467" width="166" height="44"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_button.png" translatesAutoresizingMaskIntoConstraints="NO" id="c7s-LG-ruU">
+                                <rect key="frame" x="97" y="258" width="125" height="74"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -489,7 +486,6 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                     </view>
                     <navigationItem key="navigationItem" id="Mrg-h3-nuL"/>
                     <connections>
-                        <outlet property="loginView" destination="UOX-zg-RA3" id="EUC-yV-A7k"/>
                         <outlet property="txtPassword" destination="m6j-3k-iML" id="7mm-iE-azO"/>
                         <outlet property="txtUsername" destination="lvb-bD-qDh" id="nzH-l7-hJv"/>
                         <segue destination="eQ5-ei-55H" kind="modal" identifier="login_success" id="MQA-vl-5mD"/>
