@@ -17,8 +17,4 @@
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation;
-
-
-
-@end
 @end

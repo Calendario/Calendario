@@ -50,11 +50,15 @@
 - (void)finishedWithAuth: (GTMOAuth2Authentication *)auth
                    error: (NSError *) error {
     NSLog(@"Received error %@ and auth object %@",error, auth);
-    if (error) {
+    if (error)
+    {
         // Do some error handling here.
-    } else {
+    }
+    else
+    {
         [self refreshInterfaceBasedOnSignIn];
     }
+}
 
 - (void)presentSignInViewController:(UIViewController *)viewController {
     // This is an example of how you can implement it if your app is navigation-based.
@@ -79,7 +83,6 @@
     }
 }
 
-}
 // User Log out
 - (void)signOut {
     [[GPPSignIn sharedInstance] signOut];

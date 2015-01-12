@@ -30,23 +30,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) checkPasswordsMatch {
-    
+- (void) checkPasswordsMatch
+{
     //check that the two apssword fields are identical
-    if ([_passwordField.text isEqualToString:_reEnterPasswordField.text]) {
+    if ([_passwordField.text isEqualToString:_reEnterPasswordField.text])
+    {
         NSLog(@"passwords match!");
-        [self _registerNewUser];
+        [self registerNewUser];
     }
-    else {
+    else
+    {
         UIAlertView *error = [[UIAlertView alloc] initWithTitle:@"Oooops" message:@"Your entered passwords do not match" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        
         [error show];
     }
     
 }
 
-- (IBAction)backgroundTab:(id)sender {
-    
+- (IBAction)backgroundTab:(id)sender
+{
     [self.view endEditing:YES];
 }
 
@@ -57,20 +58,24 @@
     return YES;
 }
 
-- (IBAction)doneButton:(id)sender {
+- (IBAction)doneButton:(id)sender
+{
     //check if all text fields are completed
-    if ([_usernameField.text isEqualToString:@""] || [_passwordField.text isEqualToString:@""] || [_reEnterPasswordField.text isEqualToString:@""] || [_emailField.text isEqualToString:@""]) {
+    if ([_usernameField.text isEqualToString:@""] || [_passwordField.text isEqualToString:@""] || [_reEnterPasswordField.text isEqualToString:@""] || [_emailField.text isEqualToString:@""])
+    {
         
         UIAlertView *error = [[UIAlertView alloc] initWithTitle:@"Oooops" message:@"You must complete all fields" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        
         [error show];
     }
-    else {
+    else
+    {
         [self checkPasswordsMatch];
     }
+}
 
-        
-        - (void) registerNewUser {
+
+- (void)registerNewUser
+{
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
             
             //write the username and password and set BOOL value in NSUserDefaults
@@ -85,7 +90,9 @@
             [success show];
             
             [self performSegueWithIdentifier:@"login" sender:self];
-        }
+}
         
-        @end
+    
+@end
+
 

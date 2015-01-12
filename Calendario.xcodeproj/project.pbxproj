@@ -51,8 +51,6 @@
 		7824B77B1A23A7640097F204 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7824B77A1A23A7640097F204 /* CoreMotion.framework */; };
 		7824B77D1A23A7760097F204 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7824B77C1A23A7760097F204 /* CoreText.framework */; };
 		7824B77F1A23A77D0097F204 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7824B77E1A23A77D0097F204 /* MediaPlayer.framework */; };
-		7824B7811A23A7CC0097F204 /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7824B7801A23A7CC0097F204 /* GoogleOpenSource.framework */; };
-		7824B7831A23A7DB0097F204 /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7824B7821A23A7DB0097F204 /* GooglePlus.framework */; };
 		7831CBA1196AD8B100657506 /* fbicon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7831CBA0196AD8B100657506 /* fbicon2.png */; };
 		7831CBA3196AD8FC00657506 /* fbicon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7831CBA2196AD8FC00657506 /* fbicon3.png */; };
 		7831CBA5196AD93400657506 /* google+.png in Resources */ = {isa = PBXBuildFile; fileRef = 7831CBA4196AD93400657506 /* google+.png */; };
@@ -256,11 +254,9 @@
 		7841D4381949E7A900F8351C /* x_icon.psd in Resources */ = {isa = PBXBuildFile; fileRef = 7841D4361949E7A900F8351C /* x_icon.psd */; };
 		7841D43B1949E7D900F8351C /* check_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7841D4391949E7D900F8351C /* check_icon.png */; };
 		7841D43C1949E7D900F8351C /* check_icon.psd in Resources */ = {isa = PBXBuildFile; fileRef = 7841D43A1949E7D900F8351C /* check_icon.psd */; };
-		786AAFCA1A28BA1200B1A622 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 786AAFC91A28BA1200B1A622 /* FacebookSDK.framework */; };
 		786AAFCD1A28C8C400B1A622 /* FacebookLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 786AAFCC1A28C8C400B1A622 /* FacebookLogin.m */; };
 		786AAFD31A290CFB00B1A622 /* GooglePlus.m in Sources */ = {isa = PBXBuildFile; fileRef = 786AAFD21A290CFB00B1A622 /* GooglePlus.m */; };
 		7884184B1967D05C0028E0C3 /* mail_icon_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 7884184A1967D05C0028E0C3 /* mail_icon_gray.png */; };
-		788C04B41A30C7D3004B9244 /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 788C04B31A30C7D3004B9244 /* GooglePlus.bundle */; };
 		789500361A64217500763491 /* WelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 789500351A64217500763491 /* WelcomeView.m */; };
 		789500381A64256E00763491 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789500371A64256E00763491 /* AudioToolbox.framework */; };
 		7895003A1A64259000763491 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789500391A64259000763491 /* CFNetwork.framework */; };
@@ -285,6 +281,10 @@
 		78D680891A2782EF00DBBEE4 /* LogOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D680881A2782EF00DBBEE4 /* LogOut.m */; };
 		78DD6AEF1A24C74E000FF878 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD6AEE1A24C74E000FF878 /* HomeViewController.m */; };
 		78DD6AF61A24D2EA000FF878 /* LoginPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD6AF51A24D2EA000FF878 /* LoginPage.m */; };
+		B79481701A6459B30091332E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816C1A6459B30091332E /* Bolts.framework */; };
+		B79481711A6459B30091332E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816D1A6459B30091332E /* FacebookSDK.framework */; };
+		B79481721A6459B30091332E /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816E1A6459B30091332E /* GoogleOpenSource.framework */; };
+		B79481731A6459B30091332E /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816F1A6459B30091332E /* GooglePlus.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -377,8 +377,6 @@
 		7824B77A1A23A7640097F204 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		7824B77C1A23A7760097F204 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		7824B77E1A23A77D0097F204 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		7824B7801A23A7CC0097F204 /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleOpenSource.framework; path = ../../../../../../calendario/Code/Xcode/Calendario/Calendario/Calendario/GoogleOpenSource.framework; sourceTree = "<group>"; };
-		7824B7821A23A7DB0097F204 /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlus.framework; path = ../../../../../../calendario/Code/Xcode/Calendario/Calendario/Calendario/GooglePlus.framework; sourceTree = "<group>"; };
 		7831CBA0196AD8B100657506 /* fbicon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fbicon2.png; sourceTree = "<group>"; };
 		7831CBA2196AD8FC00657506 /* fbicon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fbicon3.png; sourceTree = "<group>"; };
 		7831CBA4196AD93400657506 /* google+.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google+.png"; sourceTree = "<group>"; };
@@ -588,13 +586,11 @@
 		7841D4361949E7A900F8351C /* x_icon.psd */ = {isa = PBXFileReference; lastKnownFileType = file; name = x_icon.psd; path = ../x_icon.psd; sourceTree = "<group>"; };
 		7841D4391949E7D900F8351C /* check_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check_icon.png; sourceTree = "<group>"; };
 		7841D43A1949E7D900F8351C /* check_icon.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = check_icon.psd; sourceTree = "<group>"; };
-		786AAFC91A28BA1200B1A622 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		786AAFCB1A28C8C400B1A622 /* FacebookLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FacebookLogin.h; path = Calendario/FacebookLogin.h; sourceTree = "<group>"; };
 		786AAFCC1A28C8C400B1A622 /* FacebookLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacebookLogin.m; path = Calendario/FacebookLogin.m; sourceTree = "<group>"; };
 		786AAFD11A290CFB00B1A622 /* GooglePlus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GooglePlus.h; path = Calendario/GooglePlus.h; sourceTree = "<group>"; };
 		786AAFD21A290CFB00B1A622 /* GooglePlus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GooglePlus.m; path = Calendario/GooglePlus.m; sourceTree = "<group>"; };
 		7884184A1967D05C0028E0C3 /* mail_icon_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail_icon_gray.png; sourceTree = "<group>"; };
-		788C04B31A30C7D3004B9244 /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlus.bundle; path = "../../../../../../../Downloads/google-plus-ios-sdk-1.7.1/GooglePlus.bundle"; sourceTree = "<group>"; };
 		789500341A64217500763491 /* WelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeView.h; path = Calendario/WelcomeView.h; sourceTree = "<group>"; };
 		789500351A64217500763491 /* WelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeView.m; path = Calendario/WelcomeView.m; sourceTree = "<group>"; };
 		789500371A64256E00763491 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -624,6 +620,10 @@
 		78DD6AEE1A24C74E000FF878 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Calendario/HomeViewController.m; sourceTree = "<group>"; };
 		78DD6AF41A24D2EA000FF878 /* LoginPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginPage.h; path = Calendario/LoginPage.h; sourceTree = "<group>"; };
 		78DD6AF51A24D2EA000FF878 /* LoginPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginPage.m; path = Calendario/LoginPage.m; sourceTree = "<group>"; };
+		B794816C1A6459B30091332E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		B794816D1A6459B30091332E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		B794816E1A6459B30091332E /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
+		B794816F1A6459B30091332E /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -632,6 +632,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7895003E1A6425EE00763491 /* QuartzCore.framework in Frameworks */,
+				B79481711A6459B30091332E /* FacebookSDK.framework in Frameworks */,
 				7895003C1A6425A900763491 /* MobileCoreServices.framework in Frameworks */,
 				7895003A1A64259000763491 /* CFNetwork.framework in Frameworks */,
 				789500381A64256E00763491 /* AudioToolbox.framework in Frameworks */,
@@ -640,15 +641,15 @@
 				0439213D19B452D500716F6C /* Security.framework in Frameworks */,
 				7824B77F1A23A77D0097F204 /* MediaPlayer.framework in Frameworks */,
 				7824B77D1A23A7760097F204 /* CoreText.framework in Frameworks */,
+				B79481721A6459B30091332E /* GoogleOpenSource.framework in Frameworks */,
 				7841D2941949CA5200F8351C /* CoreGraphics.framework in Frameworks */,
 				7824B77B1A23A7640097F204 /* CoreMotion.framework in Frameworks */,
 				7824B7791A23A75B0097F204 /* CoreLocation.framework in Frameworks */,
-				7824B7811A23A7CC0097F204 /* GoogleOpenSource.framework in Frameworks */,
 				7841D2921949CA5200F8351C /* Foundation.framework in Frameworks */,
-				7824B7831A23A7DB0097F204 /* GooglePlus.framework in Frameworks */,
 				7824B7771A23A73D0097F204 /* AssetsLibrary.framework in Frameworks */,
+				B79481731A6459B30091332E /* GooglePlus.framework in Frameworks */,
 				7824B7751A23A7330097F204 /* AddressBook.framework in Frameworks */,
-				786AAFCA1A28BA1200B1A622 /* FacebookSDK.framework in Frameworks */,
+				B79481701A6459B30091332E /* Bolts.framework in Frameworks */,
 				7824B7731A23A7020097F204 /* GooglePlus.framework in Frameworks */,
 				7824B7711A23A6E30097F204 /* GoogleOpenSource.framework in Frameworks */,
 			);
@@ -807,14 +808,14 @@
 		7841D2901949CA5200F8351C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B794816C1A6459B30091332E /* Bolts.framework */,
+				B794816D1A6459B30091332E /* FacebookSDK.framework */,
+				B794816E1A6459B30091332E /* GoogleOpenSource.framework */,
+				B794816F1A6459B30091332E /* GooglePlus.framework */,
 				7895003D1A6425EE00763491 /* QuartzCore.framework */,
 				7895003B1A6425A900763491 /* MobileCoreServices.framework */,
 				789500391A64259000763491 /* CFNetwork.framework */,
 				789500371A64256E00763491 /* AudioToolbox.framework */,
-				788C04B31A30C7D3004B9244 /* GooglePlus.bundle */,
-				786AAFC91A28BA1200B1A622 /* FacebookSDK.framework */,
-				7824B7821A23A7DB0097F204 /* GooglePlus.framework */,
-				7824B7801A23A7CC0097F204 /* GoogleOpenSource.framework */,
 				7824B77E1A23A77D0097F204 /* MediaPlayer.framework */,
 				7824B77C1A23A7760097F204 /* CoreText.framework */,
 				7824B77A1A23A7640097F204 /* CoreMotion.framework */,
@@ -1428,7 +1429,6 @@
 				7841D3EE1949CAEA00F8351C /* video-play-24.png in Resources */,
 				7841D4301949DB1500F8351C /* plus_icon.psd in Resources */,
 				7841D29C1949CA5200F8351C /* InfoPlist.strings in Resources */,
-				788C04B41A30C7D3004B9244 /* GooglePlus.bundle in Resources */,
 				7841D3A31949CAEA00F8351C /* love_red.png in Resources */,
 				7841D3D51949CAEA00F8351C /* plus_icon.png in Resources */,
 				7841D3641949CAEA00F8351C /* camera_icon.psd in Resources */,

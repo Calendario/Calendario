@@ -7,14 +7,9 @@
 //
 
 #import "WelcomeView.h"
-#import
+
 @interface WelcomeView ()
-
-@end
-
-
 @property (nonatomic, strong) NSArray * FBPermissions;
-
 @end
 
 @implementation WelcomeView
