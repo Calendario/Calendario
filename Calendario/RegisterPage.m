@@ -20,8 +20,6 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults]; //create instance of NSUSerDefaults
-    
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -33,20 +31,21 @@
 - (void) checkPasswordsMatch {
     
     //check that the two apssword fields are identical
-    if ([_passwordField.text isEqualToString:_reEnterPasswordField.text]) {
+    if ([_passwordField.text isEqualToString:_reEnterPasswordField.text])
+    {
         NSLog(@"passwords match!");
         [self _registerNewUser];
     }
-    else {
+    else
+    {
         UIAlertView *error = [[UIAlertView alloc] initWithTitle:@"Oooops" message:@"Your entered passwords do not match" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        
         [error show];
     }
     
 }
 
-- (IBAction)backgroundTab:(id)sender {
-    
+- (IBAction)backgroundTab:(id)sender
+{
     [self.view endEditing:YES];
 }
 
@@ -68,6 +67,7 @@
     else {
         [self checkPasswordsMatch];
     }
+    
     NSString *post =[[NSString alloc] initWithFormat:@"username=%@&password=%@",[self.usernameField text],[self.passwordField text],[self.emailField],[self.reEnterPasswordField]];
     NSLog(@"PostData: %@",post);
     

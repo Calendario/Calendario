@@ -14,9 +14,11 @@
 
 @end
 
+static NSString * const kClientId = @"342860623345-15to7jo4b3qv6cp4dopq5p430ohskosi.apps.googleusercontent.com";
+
 @implementation GooglePlus
 
-    static NSString * const kClientId = @"342860623345-15to7jo4b3qv6cp4dopq5p430ohskosi.apps.googleusercontent.com";
+@synthesize signInButton;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -47,14 +49,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (void)finishedWithAuth: (GTMOAuth2Authentication *)auth
-                   error: (NSError *) error {
+                   error: (NSError *) error
+{
     NSLog(@"Received error %@ and auth object %@",error, auth);
-    if (error) {
+    if (error)
+    {
         // Do some error handling here.
-    } else {
+    }
+    else
+    {
         [self refreshInterfaceBasedOnSignIn];
     }
+}
 
 - (void)presentSignInViewController:(UIViewController *)viewController {
     // This is an example of how you can implement it if your app is navigation-based.
@@ -79,7 +87,6 @@
     }
 }
 
-}
 // User Log out
 - (void)signOut {
     [[GPPSignIn sharedInstance] signOut];
