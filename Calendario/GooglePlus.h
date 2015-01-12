@@ -13,5 +13,5 @@
 @interface GooglePlus : UIViewController <GPPSignInDelegate>
 @class GPPSignInButton;
 @property (retain, nonatomic) IBOutlet GPPSignInButton *signInButton;
-@synthesize signInButton;
+
 @end

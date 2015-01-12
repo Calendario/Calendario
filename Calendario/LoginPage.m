@@ -7,7 +7,8 @@
 //
 
 #import "LoginPage.h"
-
+#import "FacebookLogin.h"
+#import "GooglePlus.h"
 @interface LoginPage ()
 
 @end

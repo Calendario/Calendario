@@ -261,6 +261,11 @@
 		786AAFD31A290CFB00B1A622 /* GooglePlus.m in Sources */ = {isa = PBXBuildFile; fileRef = 786AAFD21A290CFB00B1A622 /* GooglePlus.m */; };
 		7884184B1967D05C0028E0C3 /* mail_icon_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 7884184A1967D05C0028E0C3 /* mail_icon_gray.png */; };
 		788C04B41A30C7D3004B9244 /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 788C04B31A30C7D3004B9244 /* GooglePlus.bundle */; };
+		789500361A64217500763491 /* WelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 789500351A64217500763491 /* WelcomeView.m */; };
+		789500381A64256E00763491 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789500371A64256E00763491 /* AudioToolbox.framework */; };
+		7895003A1A64259000763491 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789500391A64259000763491 /* CFNetwork.framework */; };
+		7895003C1A6425A900763491 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7895003B1A6425A900763491 /* MobileCoreServices.framework */; };
+		7895003E1A6425EE00763491 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7895003D1A6425EE00763491 /* QuartzCore.framework */; };
 		78A31BF3196D37A200A86759 /* facebook_icon_coloured.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A31BF2196D37A200A86759 /* facebook_icon_coloured.png */; };
 		78A31BF5196D37A800A86759 /* google_icon_coloured.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A31BF4196D37A800A86759 /* google_icon_coloured.png */; };
 		78A31BF7196D393600A86759 /* email_grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A31BF6196D393600A86759 /* email_grey.png */; };
@@ -590,6 +595,12 @@
 		786AAFD21A290CFB00B1A622 /* GooglePlus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GooglePlus.m; path = Calendario/GooglePlus.m; sourceTree = "<group>"; };
 		7884184A1967D05C0028E0C3 /* mail_icon_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail_icon_gray.png; sourceTree = "<group>"; };
 		788C04B31A30C7D3004B9244 /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlus.bundle; path = "../../../../../../../Downloads/google-plus-ios-sdk-1.7.1/GooglePlus.bundle"; sourceTree = "<group>"; };
+		789500341A64217500763491 /* WelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeView.h; path = Calendario/WelcomeView.h; sourceTree = "<group>"; };
+		789500351A64217500763491 /* WelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeView.m; path = Calendario/WelcomeView.m; sourceTree = "<group>"; };
+		789500371A64256E00763491 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		789500391A64259000763491 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		7895003B1A6425A900763491 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		7895003D1A6425EE00763491 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		78A31BF2196D37A200A86759 /* facebook_icon_coloured.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook_icon_coloured.png; sourceTree = "<group>"; };
 		78A31BF4196D37A800A86759 /* google_icon_coloured.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google_icon_coloured.png; sourceTree = "<group>"; };
 		78A31BF6196D393600A86759 /* email_grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email_grey.png; sourceTree = "<group>"; };
@@ -620,6 +631,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7895003E1A6425EE00763491 /* QuartzCore.framework in Frameworks */,
+				7895003C1A6425A900763491 /* MobileCoreServices.framework in Frameworks */,
+				7895003A1A64259000763491 /* CFNetwork.framework in Frameworks */,
+				789500381A64256E00763491 /* AudioToolbox.framework in Frameworks */,
 				7841D2961949CA5200F8351C /* UIKit.framework in Frameworks */,
 				0439213F19B452E500716F6C /* SystemConfiguration.framework in Frameworks */,
 				0439213D19B452D500716F6C /* Security.framework in Frameworks */,
@@ -758,17 +773,14 @@
 			name = ModelDAO;
 			sourceTree = "<group>";
 		};
-		7824B7681A239B310097F204 /* Login */ = {
+		7824B7681A239B310097F204 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				786AAFD11A290CFB00B1A622 /* GooglePlus.h */,
-				786AAFD21A290CFB00B1A622 /* GooglePlus.m */,
-				786AAFCB1A28C8C400B1A622 /* FacebookLogin.h */,
-				786AAFCC1A28C8C400B1A622 /* FacebookLogin.m */,
-				78DD6AF41A24D2EA000FF878 /* LoginPage.h */,
-				78DD6AF51A24D2EA000FF878 /* LoginPage.m */,
+				7895003F1A642F9D00763491 /* Log In */,
+				78D680831A276D6500DBBEE4 /* Register */,
+				78D6808A1A27844600DBBEE4 /* LogOut */,
 			);
-			name = Login;
+			name = Authentication;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -795,6 +807,10 @@
 		7841D2901949CA5200F8351C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7895003D1A6425EE00763491 /* QuartzCore.framework */,
+				7895003B1A6425A900763491 /* MobileCoreServices.framework */,
+				789500391A64259000763491 /* CFNetwork.framework */,
+				789500371A64256E00763491 /* AudioToolbox.framework */,
 				788C04B31A30C7D3004B9244 /* GooglePlus.bundle */,
 				786AAFC91A28BA1200B1A622 /* FacebookSDK.framework */,
 				7824B7821A23A7DB0097F204 /* GooglePlus.framework */,
@@ -822,10 +838,8 @@
 		7841D2971949CA5200F8351C /* Calendario */ = {
 			isa = PBXGroup;
 			children = (
-				78D6808A1A27844600DBBEE4 /* LogOut */,
-				78D680831A276D6500DBBEE4 /* Register */,
-				78DD6AF01A24C752000FF878 /* UITabBar */,
-				7824B7681A239B310097F204 /* Login */,
+				78DD6AF01A24C752000FF878 /* Tabs */,
+				7824B7681A239B310097F204 /* Authentication */,
 				7841D2A01949CA5200F8351C /* AppDelegate.h */,
 				7841D2A11949CA5200F8351C /* AppDelegate.m */,
 				048E8C5A19884783002301C7 /* ViewController */,
@@ -1128,6 +1142,21 @@
 			path = timeline;
 			sourceTree = "<group>";
 		};
+		7895003F1A642F9D00763491 /* Log In */ = {
+			isa = PBXGroup;
+			children = (
+				78DD6AF51A24D2EA000FF878 /* LoginPage.m */,
+				78DD6AF41A24D2EA000FF878 /* LoginPage.h */,
+				786AAFCC1A28C8C400B1A622 /* FacebookLogin.m */,
+				786AAFCB1A28C8C400B1A622 /* FacebookLogin.h */,
+				786AAFD21A290CFB00B1A622 /* GooglePlus.m */,
+				786AAFD11A290CFB00B1A622 /* GooglePlus.h */,
+				789500351A64217500763491 /* WelcomeView.m */,
+				789500341A64217500763491 /* WelcomeView.h */,
+			);
+			name = "Log In";
+			sourceTree = "<group>";
+		};
 		78D680831A276D6500DBBEE4 /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -1135,6 +1164,7 @@
 				78D680841A277C0900DBBEE4 /* RegisterPage.h */,
 			);
 			name = Register;
+			path = Calendario;
 			sourceTree = "<group>";
 		};
 		78D6808A1A27844600DBBEE4 /* LogOut */ = {
@@ -1144,15 +1174,16 @@
 				78D680871A2782EF00DBBEE4 /* LogOut.h */,
 			);
 			name = LogOut;
+			path = Calendario;
 			sourceTree = "<group>";
 		};
-		78DD6AF01A24C752000FF878 /* UITabBar */ = {
+		78DD6AF01A24C752000FF878 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
 				78DD6AED1A24C74E000FF878 /* HomeViewController.h */,
 				78DD6AEE1A24C74E000FF878 /* HomeViewController.m */,
 			);
-			name = UITabBar;
+			name = Tabs;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -1485,6 +1516,7 @@
 				78D680891A2782EF00DBBEE4 /* LogOut.m in Sources */,
 				04B0A64D19CF9AF800A04F45 /* FollowUserDAO.m in Sources */,
 				0439213719B452BE00716F6C /* UIButton+AFNetworking.m in Sources */,
+				789500361A64217500763491 /* WelcomeView.m in Sources */,
 				04B0A64719CF80EA00A04F45 /* LikeTable.m in Sources */,
 				04B0A65319CF9B1300A04F45 /* CommentDAO.m in Sources */,
 				0439213819B452BE00716F6C /* UIImageView+AFNetworking.m in Sources */,

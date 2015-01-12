@@ -31,7 +31,7 @@
     signIn.clientID =kClientId;
     
     //Server ClientID
-    signIn.homeServerClientID = @"<SERVER-CLIENT-ID>";
+    signIn.homeServerClientID = @"342860623345-15to7jo4b3qv6cp4dopq5p430ohskosi.apps.googleusercontent.com";
     
     // Uncomment one of these two statements for the scope you chose in the previous step
     signIn.scopes = @[ kGTLAuthScopePlusLogin ];  // "https://www.googleapis.com/auth/plus.login" scope
