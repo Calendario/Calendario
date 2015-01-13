@@ -414,7 +414,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ien-Af-zE8">
-                                <rect key="frame" x="203" y="340" width="101" height="30"/>
+                                <rect key="frame" x="203" y="342" width="101" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ien-Af-zE8" secondAttribute="height" multiplier="101:30" id="nhA-bf-MAg"/>
                                 </constraints>
