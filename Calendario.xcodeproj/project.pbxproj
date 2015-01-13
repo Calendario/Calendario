@@ -256,6 +256,7 @@
 		7841D43C1949E7D900F8351C /* check_icon.psd in Resources */ = {isa = PBXBuildFile; fileRef = 7841D43A1949E7D900F8351C /* check_icon.psd */; };
 		786AAFCD1A28C8C400B1A622 /* FacebookLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 786AAFCC1A28C8C400B1A622 /* FacebookLogin.m */; };
 		786AAFD31A290CFB00B1A622 /* GooglePlus.m in Sources */ = {isa = PBXBuildFile; fileRef = 786AAFD21A290CFB00B1A622 /* GooglePlus.m */; };
+		787433AE1A655F7F000A16A3 /* swiss.png in Resources */ = {isa = PBXBuildFile; fileRef = 787433AD1A655F7F000A16A3 /* swiss.png */; };
 		7884184B1967D05C0028E0C3 /* mail_icon_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 7884184A1967D05C0028E0C3 /* mail_icon_gray.png */; };
 		789500361A64217500763491 /* WelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 789500351A64217500763491 /* WelcomeView.m */; };
 		789500381A64256E00763491 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789500371A64256E00763491 /* AudioToolbox.framework */; };
@@ -590,6 +591,7 @@
 		786AAFCC1A28C8C400B1A622 /* FacebookLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacebookLogin.m; path = Calendario/FacebookLogin.m; sourceTree = "<group>"; };
 		786AAFD11A290CFB00B1A622 /* GooglePlus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GooglePlus.h; path = Calendario/GooglePlus.h; sourceTree = "<group>"; };
 		786AAFD21A290CFB00B1A622 /* GooglePlus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GooglePlus.m; path = Calendario/GooglePlus.m; sourceTree = "<group>"; };
+		787433AD1A655F7F000A16A3 /* swiss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = swiss.png; path = "../../../../../calendario's design team (resources)/Intro&Guide View/swiss.png"; sourceTree = "<group>"; };
 		7884184A1967D05C0028E0C3 /* mail_icon_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail_icon_gray.png; sourceTree = "<group>"; };
 		789500341A64217500763491 /* WelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeView.h; path = Calendario/WelcomeView.h; sourceTree = "<group>"; };
 		789500351A64217500763491 /* WelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeView.m; path = Calendario/WelcomeView.m; sourceTree = "<group>"; };
@@ -885,6 +887,7 @@
 		7841D2CA1949CAEA00F8351C /* icon */ = {
 			isa = PBXGroup;
 			children = (
+				787433AD1A655F7F000A16A3 /* swiss.png */,
 				7831CBA0196AD8B100657506 /* fbicon2.png */,
 				78AB4EE919D441B6003D028C /* background3.png */,
 				78A31C04196D424200A86759 /* ios7-arrow-leftwhite.png */,
@@ -1402,6 +1405,7 @@
 				7841D3A21949CAEA00F8351C /* love.psd in Resources */,
 				7841D3D91949CAEA00F8351C /* setting_icon.png in Resources */,
 				7841D3C91949CAEA00F8351C /* more_button.png in Resources */,
+				787433AE1A655F7F000A16A3 /* swiss.png in Resources */,
 				7841D36D1949CAEA00F8351C /* lock_icon.png in Resources */,
 				7841D4191949DB1500F8351C /* default_profile_pic.png in Resources */,
 				7841D4181949DB1500F8351C /* chat_buble.psd in Resources */,
