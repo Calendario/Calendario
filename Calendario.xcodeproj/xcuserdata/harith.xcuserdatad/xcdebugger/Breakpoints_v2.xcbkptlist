@@ -33,6 +33,36 @@
             endingLineNumber = "13"
             landmarkName = "txtUsername"
             landmarkType = "19">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[LoginPage txtUsername]"
+                  moduleName = "Calendario"
+                  urlString = "file:///Users/harith/Dropbox/Calendario/Code/Xcode/Calendario/Calendario/LoginPage.h"
+                  timestampString = "442837510.310354"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[LoginPage setTxtUsername:]"
+                  moduleName = "Calendario"
+                  urlString = "file:///Users/harith/Dropbox/Calendario/Code/Xcode/Calendario/Calendario/LoginPage.h"
+                  timestampString = "442837510.310761"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -105,7 +135,7 @@
                   symbolName = "-[LoginPage loginView]"
                   moduleName = "Calendario"
                   urlString = "file:///Users/harith/Dropbox/Calendario/Code/Xcode/Calendario/Calendario/LoginPage.h"
-                  timestampString = "442837252.149263"
+                  timestampString = "442837510.423626"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "22"
@@ -119,7 +149,7 @@
                   symbolName = "-[LoginPage setLoginView:]"
                   moduleName = "Calendario"
                   urlString = "file:///Users/harith/Dropbox/Calendario/Code/Xcode/Calendario/Calendario/LoginPage.h"
-                  timestampString = "442837252.149428"
+                  timestampString = "442837510.423823"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "22"
@@ -229,7 +259,7 @@
                   symbolName = "-[FacebookLogin nameLabel]"
                   moduleName = "Calendario"
                   urlString = "file:///Users/harith/Dropbox/Calendario/Code/Xcode/Calendario/Calendario/FacebookLogin.h"
-                  timestampString = "442837252.151717"
+                  timestampString = "442837510.567651"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -243,7 +273,7 @@
                   symbolName = "-[FacebookLogin setNameLabel:]"
                   moduleName = "Calendario"
                   urlString = "file:///Users/harith/Dropbox/Calendario/Code/Xcode/Calendario/Calendario/FacebookLogin.h"
-                  timestampString = "442837252.151871"
+                  timestampString = "442837510.567829"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -275,7 +305,7 @@
                   symbolName = "-[GooglePlus signInButton]"
                   moduleName = "Calendario"
                   urlString = "file:///Users/harith/Dropbox/Calendario/Code/Xcode/Calendario/Calendario/GooglePlus.h"
-                  timestampString = "442837252.152322"
+                  timestampString = "442837510.568845"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -289,7 +319,7 @@
                   symbolName = "-[GooglePlus setSignInButton:]"
                   moduleName = "Calendario"
                   urlString = "file:///Users/harith/Dropbox/Calendario/Code/Xcode/Calendario/Calendario/GooglePlus.h"
-                  timestampString = "442837252.152502"
+                  timestampString = "442837510.569022"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
