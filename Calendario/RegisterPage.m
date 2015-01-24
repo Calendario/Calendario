@@ -21,7 +21,7 @@
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults]; //create instance of NSUSerDefaults
     
-    
+    [self.doneButton.layer setCornerRadius:5.0]; 
 }
 
 - (void)didReceiveMemoryWarning
