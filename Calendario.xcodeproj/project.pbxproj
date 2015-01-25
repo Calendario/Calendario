@@ -285,6 +285,7 @@
 		B79481711A6459B30091332E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816D1A6459B30091332E /* FacebookSDK.framework */; };
 		B79481721A6459B30091332E /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816E1A6459B30091332E /* GoogleOpenSource.framework */; };
 		B79481731A6459B30091332E /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816F1A6459B30091332E /* GooglePlus.framework */; };
+		E1C5BF681A74F1ED002726AB /* SettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C5BF671A74F1ED002726AB /* SettingsVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -624,6 +625,8 @@
 		B794816D1A6459B30091332E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		B794816E1A6459B30091332E /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
 		B794816F1A6459B30091332E /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
+		E1C5BF661A74F1ED002726AB /* SettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsVC.h; sourceTree = "<group>"; };
+		E1C5BF671A74F1ED002726AB /* SettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -721,6 +724,7 @@
 		048E8C5A19884783002301C7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E1C5BF651A74F1D1002726AB /* Settings */,
 				7841D2A31949CA5200F8351C /* Main.storyboard */,
 				7841D2A61949CA5200F8351C /* ExempleViewController.h */,
 				7841D2A71949CA5200F8351C /* ExempleViewController.m */,
@@ -1188,6 +1192,15 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		E1C5BF651A74F1D1002726AB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E1C5BF661A74F1ED002726AB /* SettingsVC.h */,
+				E1C5BF671A74F1ED002726AB /* SettingsVC.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1491,6 +1504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0439214519B4B0EF00716F6C /* TimelineDAO.m in Sources */,
+				E1C5BF681A74F1ED002726AB /* SettingsVC.m in Sources */,
 				0439213319B452BE00716F6C /* AFURLSessionManager.m in Sources */,
 				048E8C6619886E15002301C7 /* Timeline.m in Sources */,
 				04B0A65019CF9B0500A04F45 /* FollowTimelineDAO.m in Sources */,
