@@ -89,7 +89,7 @@
             
             [success show];
             
-            [self performSegueWithIdentifier:@"login" sender:self];
+            [self performSegueWithIdentifier:@"signUpSegue" sender:self];
 }
         
     

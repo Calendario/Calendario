@@ -2544,9 +2544,6 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                 <state key="normal" image="leftarrowblue.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="l7k-LR-Rfa" kind="push" id="1uj-Zd-xct"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rightarrow1.png" translatesAutoresizingMaskIntoConstraints="NO" id="eaS-gy-XBf">
                                 <rect key="frame" x="264" y="358" width="49" height="34"/>
@@ -2573,9 +2570,6 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                     <color key="titleColor" red="0.85149881110000003" green="0.1347524708" blue="0.22287211870000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="bDH-C0-VC9" kind="modal" identifier="logout_success" id="hNa-Oy-jhg"/>
-                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Posts Can Be Viewed By Your Followers Only" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uc9-cv-lRW">
                                 <rect key="frame" x="16" y="480" width="298" height="21"/>
@@ -2593,7 +2587,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAv-Hd-hNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9" y="3056"/>
+            <point key="canvasLocation" x="89" y="3074"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="CE7-kR-59f">
@@ -3342,7 +3336,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="doneButton:" destination="CTu-VV-AQH" eventType="touchUpInside" id="SJz-5w-qmK"/>
+                                    <action selector="doneButton:" destination="CTu-VV-AQH" eventType="touchUpInside" id="Jon-9c-Kyh"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By tapping done you have agreed and read." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kob-nR-fzT">
@@ -3672,8 +3666,8 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="vzz-Mk-D6G"/>
+        <segue reference="x0S-Jb-QkL"/>
+        <segue reference="AYC-4H-dqM"/>
         <segue reference="XTw-Nc-knD"/>
-        <segue reference="MQA-vl-5mD"/>
     </inferredMetricsTieBreakers>
 </document>
