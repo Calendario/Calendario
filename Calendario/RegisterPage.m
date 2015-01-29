@@ -19,7 +19,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults]; //create instance of NSUSerDefaults
+    // Create instance of NSUSerDefaults.
+    NSUserDefaults *defaults;
+    defaults = [NSUserDefaults standardUserDefaults];
     
     [self.doneButton.layer setCornerRadius:5.0]; 
 }
@@ -76,23 +78,55 @@
 
 - (void)registerNewUser
 {
-            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-            
-            //write the username and password and set BOOL value in NSUserDefaults
-            [defaults setObject:_usernameField.text forKey:@"username"];
-            [defaults setObject:_passwordField.text forKey:@"password"];
-            [defaults setBool:YES forKey:@"registered"];
-            
-            [defaults synchronize];
-            
-            UIAlertView *success = [[UIAlertView alloc] initWithTitle:@"Success" message:@"You have registered a new user" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-            
-            [success show];
-            
-            [self performSegueWithIdentifier:@"signUpSegue" sender:self];
-}
-        
     
+    // Submit email, username, password to Calendario server.
+    NSString *URL = [NSString stringWithFormat:@"%@UserReq.php", webServiceAddress];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    // Pass the email, username and password in the request.
+    NSDictionary *params = @{@"email": _emailField.text,
+                             @"username": _usernameField.text,
+                             @"password": _passwordField.text};
+    
+    [manager POST:URL parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        // Request has worked, go on to saveing
+        // the user data locally.
+        [self saveUserData];
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        // The request has failed, alert the user,
+        // and do not save the user data locally.
+        UIAlertView *reqError = [[UIAlertView alloc] initWithTitle:@"Oooops" message:@"There was an issue registering your account, please check your intertnet connection and try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [reqError show];
+    }];
+}
+
+
+- (void)saveUserData
+{
+    
+    // Save the username/password locally.
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    // write the username and password and set BOOL value in NSUserDefaults.
+    [defaults setObject:_usernameField.text forKey:@"username"];
+    [defaults setObject:_passwordField.text forKey:@"password"];
+    [defaults setBool:YES forKey:@"registered"];
+    
+    [defaults synchronize];
+    
+    UIAlertView *success = [[UIAlertView alloc] initWithTitle:@"Success" message:@"You have registered a new user" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    
+    [success show];
+    
+    [self performSegueWithIdentifier:@"signUpSegue" sender:self];
+}
+
+
 @end
 
 
