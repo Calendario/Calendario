@@ -75,32 +75,34 @@
     }
 }
 
-
 - (void)registerNewUser
 {
     
-    // Submit email, username, password to Calendario server.
-    NSString *URL = [NSString stringWithFormat:@"%@UserReq.php", webServiceAddress];
+    // Register a new account with the Calendario server.
+    NSString *URL = [NSString stringWithFormat:@"%@v1/require/UserReq.php", webServiceAddress];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
-    // Pass the email, username and password in the request.
-    NSDictionary *params = @{@"email": _emailField.text,
-                             @"username": _usernameField.text,
-                             @"password": _passwordField.text};
+    // Pass the email, username and password in to the request.
+    NSString *paramPass = [NSString stringWithFormat:@"email=%@&user=%@&pass=%@", _emailField.text, _usernameField.text, _passwordField.text];
     
-    [manager POST:URL parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager POST:URL parameters:paramPass success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         // Request has worked, go on to saveing
         // the user data locally.
         [self saveUserData];
         
-        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
         // The request has failed, alert the user,
         // and do not save the user data locally.
-        UIAlertView *reqError = [[UIAlertView alloc] initWithTitle:@"Oooops" message:@"There was an issue registering your account, please check your intertnet connection and try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        // Parse the responce JSON from the server.
+        
+        NSDictionary *result = [NSJSONSerialization JSONObjectWithData:operation.responseData options:NSJSONReadingMutableLeaves error:&error];
+        
+        NSLog(@"\n\n\n\n Server Responce: %@ \n\n\n\n", result);
+        
+        UIAlertView *reqError = [[UIAlertView alloc] initWithTitle:@"Oooops" message:@"error" delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles: nil];
         [reqError show];
     }];
 }
