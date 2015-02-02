@@ -9,6 +9,9 @@
 #import "SettingsVC.h"
 
 @interface SettingsVC ()
+{
+    NSArray *services;
+}
 
 @end
 
@@ -21,6 +24,9 @@
     //declare tableview datasource and delegate
     self.settingsTableView.delegate = self;
     self.settingsTableView.dataSource = self;
+    
+    services = [[NSArray alloc] initWithObjects:@"Privacy Policy", @"Terms of Service", @"Report Bug", @"About This App", nil];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -97,7 +103,6 @@
     }
     else if (indexPath.section == 1)
     {
-        NSArray *services = [[NSArray alloc] initWithObjects:@"Privacy Policy", @"Terms of Service", @"Report Bug", @"About This App", nil];
         labelTitle.text = services[indexPath.row];
     }
     else
@@ -127,6 +132,23 @@
     {
         return 1;
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 1)
+    {
+        NSObject *selectedObject = [services objectAtIndex:indexPath.row];
+        if ([selectedObject isEqual:@"Privacy Policy"])
+        {
+            [self performSegueWithIdentifier:@"privacyPolicySegue" sender:self];
+        }
+        else if ([selectedObject isEqual:@"Terms of Service"])
+        {
+            [self performSegueWithIdentifier:@"termsOfServiceSegue" sender:self]; 
+        }
+    }
+    
 }
 
 @end
