@@ -22,22 +22,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Calendario/LoginPage.h"
-            timestampString = "438620801.904706"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "txtUsername"
-            landmarkType = "19">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -89,74 +73,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Calendario/LoginPage.h"
-            timestampString = "439407762.92676"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "loginView"
-            landmarkType = "19">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[LoginPage loginView]"
-                  moduleName = "Calendario"
-                  urlString = "file:///Users/harith/Dropbox/Calendario/Code/Xcode/Calendario/Calendario/LoginPage.h"
-                  timestampString = "442838795.237173"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[LoginPage setLoginView:]"
-                  moduleName = "Calendario"
-                  urlString = "file:///Users/harith/Dropbox/Calendario/Code/Xcode/Calendario/Calendario/LoginPage.h"
-                  timestampString = "442838795.237339"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "20">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Calendario/RegisterPage.m"
             timestampString = "442770370.401572"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "128"
-            endingLineNumber = "128">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Calendario/RegisterPage.m"
-            timestampString = "442771796.103328"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "-checkPasswordsMatch"
-            landmarkType = "5">
+            endingLineNumber = "128"
+            landmarkName = "@implementation RegisterPage"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -197,22 +121,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Calendario/RegisterPage.m"
-            timestampString = "442779287.20684"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Calendario/FacebookLogin.h"
             timestampString = "442780084.421231"
             startingColumnNumber = "9223372036854775807"
@@ -229,7 +137,7 @@
                   symbolName = "-[FacebookLogin nameLabel]"
                   moduleName = "Calendario"
                   urlString = "file:///Users/harith/Dropbox/Calendario/Code/Xcode/Calendario/Calendario/FacebookLogin.h"
-                  timestampString = "442838795.239538"
+                  timestampString = "444595060.707201"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -243,7 +151,7 @@
                   symbolName = "-[FacebookLogin setNameLabel:]"
                   moduleName = "Calendario"
                   urlString = "file:///Users/harith/Dropbox/Calendario/Code/Xcode/Calendario/Calendario/FacebookLogin.h"
-                  timestampString = "442838795.239678"
+                  timestampString = "444595060.707356"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -275,7 +183,7 @@
                   symbolName = "-[GooglePlus signInButton]"
                   moduleName = "Calendario"
                   urlString = "file:///Users/harith/Dropbox/Calendario/Code/Xcode/Calendario/Calendario/GooglePlus.h"
-                  timestampString = "442838795.240474"
+                  timestampString = "444595060.708595"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -289,7 +197,7 @@
                   symbolName = "-[GooglePlus setSignInButton:]"
                   moduleName = "Calendario"
                   urlString = "file:///Users/harith/Dropbox/Calendario/Code/Xcode/Calendario/Calendario/GooglePlus.h"
-                  timestampString = "442838795.240621"
+                  timestampString = "444595060.708779"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
