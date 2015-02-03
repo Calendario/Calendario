@@ -77,40 +77,75 @@
 
 - (void)registerNewUser
 {
+    // Create the URL to the User Register PHP file.
+    NSString *urlFormatted = [NSString stringWithFormat:@"%@v1/require/UserReq.php", webServiceAddress];
+    NSURL *URL = [NSURL URLWithString:urlFormatted];
     
-    // Register a new account with the Calendario server.
-    NSString *URL = [NSString stringWithFormat:@"%@v1/require/UserReq.php", webServiceAddress];
+    // Add the email, username and password to the POST request.
+    NSString *paramPass = [NSString stringWithFormat:@"json_option=register&email=%@&user=%@&password=%@", _emailField.text, _usernameField.text, _passwordField.text];
     
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    // Format the data for the POST request.
+    NSData *postData = [paramPass dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
     
-    // Pass the email, username and password in to the request.
-    NSString *paramPass = [NSString stringWithFormat:@"email=%@&user=%@&pass=%@", _emailField.text, _usernameField.text, _passwordField.text];
+    // Create the POST request.
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:URL];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:postData];
     
-    [manager POST:URL parameters:paramPass success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    // Server responce - Register PHP file.
+    NSError *error = [[NSError alloc] init];
+    NSHTTPURLResponse *response = nil;
+    NSData *urlData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+    // Check if the responce is between 200 - 299.
+    if ([response statusCode] >= 200 && [response statusCode] < 300)
+    {
+        NSString *responseData = [[NSString alloc]initWithData:urlData encoding:NSUTF8StringEncoding];
+        NSLog(@"Response ==> %@", responseData);
         
-        // Request has worked, go on to saveing
-        // the user data locally.
-        [self saveUserData];
+        NSError *error = nil;
+        NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:urlData options:NSJSONReadingMutableContainers error:&error];
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"\n\n JSON DATA RETURNED: %@\n\n", jsonData);
         
-        // The request has failed, alert the user,
-        // and do not save the user data locally.
-        // Parse the responce JSON from the server.
+        // The server will send back a success integer,
+        // parse it and decide what to do next.
+        NSInteger success = 0;
+        success = [jsonData[@"success"] integerValue];
         
-        NSDictionary *result = [NSJSONSerialization JSONObjectWithData:operation.responseData options:NSJSONReadingMutableLeaves error:&error];
+        if (success == 1)
+        {
+            // The registration has been completed,
+            // go on to saving the user details locally.
+            [self saveUserData];
+            
+        } else {
+            // Parse the error message passed back from the server.
+            NSString *error_msg = (NSString *)jsonData[@"error_message"];
+            
+            // Display the error message to the user.
+            UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:error_msg delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+            
+            [errorAlert show];
+        }
         
-        NSLog(@"\n\n\n\n Server Responce: %@ \n\n\n\n", result);
+    } else {
         
-        UIAlertView *reqError = [[UIAlertView alloc] initWithTitle:@"Oooops" message:@"error" delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles: nil];
-        [reqError show];
-    }];
+        // There has been an issue with the connection
+        // to the server - probably internet connection.
+        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Connection Failed." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+        
+        [errorAlert show];
+    }
 }
-
 
 - (void)saveUserData
 {
-    
     // Save the username/password locally.
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     

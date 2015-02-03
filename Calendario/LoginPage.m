@@ -47,7 +47,7 @@
             NSString *post =[[NSString alloc] initWithFormat:@"username=%@&password=%@",[self.txtUsername text],[self.txtPassword text]];
             NSLog(@"PostData: %@",post);
             
-            NSURL *url=[NSURL URLWithString:@"http://calendario.emlinha.net/login.php"];
+            NSURL *url=[NSURL URLWithString:@"http://calendario.emlinha.net/v1/require/UserReq.php"];
             
             NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
             

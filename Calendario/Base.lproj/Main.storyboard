@@ -366,6 +366,9 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signinClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QRy-rr-uMC"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGo-dt-Fda">
                                 <rect key="frame" x="26" y="180" width="268" height="115"/>
@@ -3932,6 +3935,6 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
         <segue reference="XTw-Nc-knD"/>
         <segue reference="x0S-Jb-QkL"/>
         <segue reference="uB8-gG-cPu"/>
-        <segue reference="AYC-4H-dqM"/>
+        <segue reference="MQA-vl-5mD"/>
     </inferredMetricsTieBreakers>
 </document>
