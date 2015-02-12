@@ -285,6 +285,7 @@
 		B79481711A6459B30091332E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816D1A6459B30091332E /* FacebookSDK.framework */; };
 		B79481721A6459B30091332E /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816E1A6459B30091332E /* GoogleOpenSource.framework */; };
 		B79481731A6459B30091332E /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816F1A6459B30091332E /* GooglePlus.framework */; };
+		E15E40AC1A8CBB5A00887329 /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15E40AB1A8CBB5A00887329 /* NotificationsViewController.m */; };
 		E1C5BF681A74F1ED002726AB /* SettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C5BF671A74F1ED002726AB /* SettingsVC.m */; };
 /* End PBXBuildFile section */
 
@@ -625,6 +626,8 @@
 		B794816D1A6459B30091332E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		B794816E1A6459B30091332E /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
 		B794816F1A6459B30091332E /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
+		E15E40AA1A8CBB5A00887329 /* NotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationsViewController.h; sourceTree = "<group>"; };
+		E15E40AB1A8CBB5A00887329 /* NotificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsViewController.m; sourceTree = "<group>"; };
 		E1C5BF661A74F1ED002726AB /* SettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsVC.h; sourceTree = "<group>"; };
 		E1C5BF671A74F1ED002726AB /* SettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1187,6 +1190,8 @@
 			children = (
 				78DD6AED1A24C74E000FF878 /* HomeViewController.h */,
 				78DD6AEE1A24C74E000FF878 /* HomeViewController.m */,
+				E15E40AA1A8CBB5A00887329 /* NotificationsViewController.h */,
+				E15E40AB1A8CBB5A00887329 /* NotificationsViewController.m */,
 			);
 			name = Tabs;
 			path = ..;
@@ -1538,6 +1543,7 @@
 				78D680861A277C0900DBBEE4 /* RegisterPage.m in Sources */,
 				7841D29E1949CA5200F8351C /* main.m in Sources */,
 				0439213619B452BE00716F6C /* UIAlertView+AFNetworking.m in Sources */,
+				E15E40AC1A8CBB5A00887329 /* NotificationsViewController.m in Sources */,
 				0439213B19B452BE00716F6C /* UIWebView+AFNetworking.m in Sources */,
 				04B0A64A19CF9AD200A04F45 /* StatusUpdateDAO.m in Sources */,
 				0439213519B452BE00716F6C /* UIActivityIndicatorView+AFNetworking.m in Sources */,
