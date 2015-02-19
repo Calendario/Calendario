@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bDH-C0-VC9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bDH-C0-VC9">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -355,7 +355,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                     <constraint firstAttribute="width" secondItem="9Ps-FZ-x74" secondAttribute="height" multiplier="67:23" id="Gta-vI-c48"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mc9-MJ-3OJ">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mc9-MJ-3OJ">
                                 <rect key="frame" x="100" y="314" width="120" height="52"/>
                                 <color key="backgroundColor" red="0.12941176469999999" green="0.52941176469999995" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -427,7 +427,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                     <constraint firstItem="FTo-y1-7mT" firstAttribute="width" secondItem="1OA-fU-6X2" secondAttribute="width" id="x0Y-xW-bwD"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4qX-hZ-cPO">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4qX-hZ-cPO">
                                 <rect key="frame" x="26" y="374" width="268" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoT-Nb-KDS">
@@ -998,7 +998,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M84-gU-dYm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="78" y="4600"/>
+            <point key="canvasLocation" x="-12" y="4600"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Qp2-0y-ldx">
@@ -1084,7 +1084,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbk-7n-TOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-244" y="3874"/>
+            <point key="canvasLocation" x="-376" y="3894"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jCT-f4-tZi">
@@ -1270,7 +1270,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L52-6B-gWg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="558" y="4558"/>
+            <point key="canvasLocation" x="512" y="4600"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="oci-ax-I88">
@@ -1342,7 +1342,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="35J-EH-Yh0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="899" y="4564"/>
+            <point key="canvasLocation" x="907" y="4600"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cej-bi-iTF">
@@ -1625,13 +1625,13 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                         <segue destination="eQ5-ei-55H" kind="relationship" relationship="viewControllers" id="F0l-LK-Nep"/>
                         <segue destination="dPw-bT-76T" kind="relationship" relationship="viewControllers" id="zoX-xJ-49r"/>
                         <segue destination="aIz-fq-lmn" kind="relationship" relationship="viewControllers" id="JgQ-1N-tYX"/>
-                        <segue destination="l7k-LR-Rfa" kind="relationship" relationship="viewControllers" id="M7B-CV-Au2"/>
                         <segue destination="pOm-J6-pkM" kind="relationship" relationship="viewControllers" id="vLX-CN-HL5"/>
+                        <segue destination="l7k-LR-Rfa" kind="relationship" relationship="viewControllers" id="M7B-CV-Au2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJp-bN-AOP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="218" y="1710"/>
+            <point key="canvasLocation" x="148" y="1594"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="u6H-Yu-KLs">
@@ -1681,7 +1681,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1489" y="1657"/>
+            <point key="canvasLocation" x="1505" y="1667"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="n4Y-nW-1Fn">
@@ -2456,7 +2456,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightarrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="svK-8s-6Sj">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="rightarrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="svK-8s-6Sj">
                                                     <rect key="frame" x="284" y="14" width="28" height="28"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -2500,10 +2500,10 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                     <constraint firstAttribute="centerY" secondItem="MVm-9U-upJ" secondAttribute="centerY" id="YhC-mW-iZP"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZuA-gk-jow">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZuA-gk-jow">
                                 <rect key="frame" x="0.0" y="513" width="320" height="55"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MT9-hb-1ok">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MT9-hb-1ok">
                                         <rect key="frame" x="127" y="11" width="67" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Sign Out">
@@ -2524,7 +2524,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1X-n1-grL">
                                 <rect key="frame" x="0.0" y="423" width="320" height="46"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Private Post" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbT-0U-ePB">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Private Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbT-0U-ePB">
                                         <rect key="frame" x="18" y="13" width="150" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
@@ -2861,26 +2861,27 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calendar_green_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="yVF-gr-vl0">
                                 <rect key="frame" x="141" y="385" width="38" height="36"/>
                             </imageView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fm9-f6-2Mg">
-                                <rect key="frame" x="15" y="444" width="288" height="29"/>
-                                <segments>
-                                    <segment title="Galleries"/>
-                                    <segment title="Tagged Galleries"/>
-                                </segments>
-                            </segmentedControl>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default_profile_pic.png" translatesAutoresizingMaskIntoConstraints="NO" id="lqg-ey-wwb">
                                 <rect key="frame" x="120" y="84" width="80" height="75"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="outer_date_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="A69-p6-Qb6">
                                 <rect key="frame" x="129" y="376" width="61" height="54"/>
                             </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fm9-f6-2Mg">
+                                <rect key="frame" x="15" y="444" width="288" height="29"/>
+                                <segments>
+                                    <segment title="Galleries"/>
+                                    <segment title="Tagged Galleries"/>
+                                </segments>
+                                <color key="tintColor" red="0.13333333333333333" green="0.52941176470588236" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Hb-Ep-vnJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2472" y="2556"/>
+            <point key="canvasLocation" x="2499" y="2556"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4f9-S2-C8A">
@@ -2904,7 +2905,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                 <rect key="frame" x="-19" y="244" width="368" height="63"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="follow_button_grey.png" translatesAutoresizingMaskIntoConstraints="NO" id="dH6-Ky-TtX">
-                                <rect key="frame" x="60" y="307" width="210" height="44"/>
+                                <rect key="frame" x="60" y="309" width="210" height="44"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="outer_date_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="fmb-c2-KjY">
                                 <rect key="frame" x="129" y="367" width="62" height="55"/>
@@ -2921,14 +2922,6 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lock_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="EPi-bK-R3x">
                                 <rect key="frame" x="142" y="470" width="37" height="37"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4h-Zl-FgV">
-                                <rect key="frame" x="122" y="315" width="88" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Follow">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1H-ZM-KrE">
                                 <rect key="frame" x="268" y="28" width="46" height="30"/>
                                 <state key="normal" backgroundImage="more_button.png">
@@ -3026,6 +3019,14 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bookmark_ribbon.png" translatesAutoresizingMaskIntoConstraints="NO" id="t3v-VK-hSK">
                                 <rect key="frame" x="188" y="121" width="38" height="42"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4h-Zl-FgV">
+                                <rect key="frame" x="119" y="316" width="88" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Follow">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -3280,7 +3281,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WuV-F0-dZH" userLabel="UnderLay View">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WuV-F0-dZH" userLabel="UnderLay View">
                                 <rect key="frame" x="0.0" y="294" width="320" height="158"/>
                                 <color key="backgroundColor" red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -3315,13 +3316,13 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TMe-vC-Lh5">
                                 <rect key="frame" x="0.0" y="210" width="320" height="51"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email_grey.png" translatesAutoresizingMaskIntoConstraints="NO" id="4eZ-nL-N4E">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="email_grey.png" translatesAutoresizingMaskIntoConstraints="NO" id="4eZ-nL-N4E">
                                         <rect key="frame" x="11" y="8" width="37" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="4eZ-nL-N4E" secondAttribute="height" multiplier="37:36" id="VX8-Gk-6w2"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ZC-66-9Wq">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ZC-66-9Wq">
                                         <rect key="frame" x="56" y="17" width="256" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
@@ -3868,7 +3869,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
             </objects>
             <point key="canvasLocation" x="899" y="3874"/>
         </scene>
-        <!--Item-->
+        <!--Notifications View Controller-->
         <scene sceneID="k6g-eH-bM7">
             <objects>
                 <viewController storyboardIdentifier="Notifications" id="pOm-J6-pkM" customClass="NotificationsViewController" sceneMemberID="viewController">
@@ -3921,7 +3922,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9V-d6-0dg">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9V-d6-0dg">
                                                     <rect key="frame" x="97" y="54" width="215" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -3964,7 +3965,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                             <constraint firstItem="4yS-Cc-4aX" firstAttribute="top" secondItem="sMI-YL-pAA" secondAttribute="bottom" id="uWq-93-UJm"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="LDF-JF-9zb"/>
+                    <tabBarItem key="tabBarItem" title="" id="LDF-JF-9zb"/>
                     <navigationItem key="navigationItem" id="5Ni-WQ-JPL"/>
                     <connections>
                         <outlet property="notificationsTableView" destination="usT-sC-4dH" id="Dx8-zc-xGf"/>
@@ -4037,10 +4038,10 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="F0l-LK-Nep"/>
-        <segue reference="M7B-CV-Au2"/>
+        <segue reference="XTw-Nc-knD"/>
+        <segue reference="Ohx-8M-I22"/>
+        <segue reference="vzz-Mk-D6G"/>
         <segue reference="uB8-gG-cPu"/>
-        <segue reference="x0S-Jb-QkL"/>
-        <segue reference="SCy-9B-mdf"/>
+        <segue reference="MQA-vl-5mD"/>
     </inferredMetricsTieBreakers>
 </document>

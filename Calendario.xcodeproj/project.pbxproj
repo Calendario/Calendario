@@ -43,6 +43,7 @@
 		04B0A65619CF9B1E00A04F45 /* ReportDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B0A65519CF9B1E00A04F45 /* ReportDAO.m */; };
 		04B0A65919CF9B2F00A04F45 /* LikeTableDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B0A65819CF9B2F00A04F45 /* LikeTableDAO.m */; };
 		7806FE13196C403F00E4FEB5 /* unsure.png in Resources */ = {isa = PBXBuildFile; fileRef = 7806FE12196C403F00E4FEB5 /* unsure.png */; };
+		780DD3CB1A960540004A147A /* NotLoggedIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 780DD3CA1A960540004A147A /* NotLoggedIn.m */; };
 		7824B7711A23A6E30097F204 /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7824B7701A23A6E30097F204 /* GoogleOpenSource.framework */; };
 		7824B7731A23A7020097F204 /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7824B7721A23A7020097F204 /* GooglePlus.framework */; };
 		7824B7751A23A7330097F204 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7824B7741A23A7330097F204 /* AddressBook.framework */; };
@@ -371,6 +372,8 @@
 		04B0A65719CF9B2F00A04F45 /* LikeTableDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikeTableDAO.h; sourceTree = "<group>"; };
 		04B0A65819CF9B2F00A04F45 /* LikeTableDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikeTableDAO.m; sourceTree = "<group>"; };
 		7806FE12196C403F00E4FEB5 /* unsure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unsure.png; sourceTree = "<group>"; };
+		780DD3C91A960540004A147A /* NotLoggedIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotLoggedIn.h; path = Calendario/NotLoggedIn.h; sourceTree = "<group>"; };
+		780DD3CA1A960540004A147A /* NotLoggedIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotLoggedIn.m; path = Calendario/NotLoggedIn.m; sourceTree = "<group>"; };
 		7824B7701A23A6E30097F204 /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
 		7824B7721A23A7020097F204 /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
 		7824B7741A23A7330097F204 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
@@ -784,6 +787,8 @@
 		7824B7681A239B310097F204 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				780DD3C91A960540004A147A /* NotLoggedIn.h */,
+				780DD3CA1A960540004A147A /* NotLoggedIn.m */,
 				7895003F1A642F9D00763491 /* Log In */,
 				78D680831A276D6500DBBEE4 /* Register */,
 				78D6808A1A27844600DBBEE4 /* LogOut */,
@@ -1522,6 +1527,7 @@
 				04B0A64119CF80CE00A04F45 /* Comment.m in Sources */,
 				0439213019B452BE00716F6C /* AFURLConnectionOperation.m in Sources */,
 				0439214219B4539000716F6C /* UserDAO.m in Sources */,
+				780DD3CB1A960540004A147A /* NotLoggedIn.m in Sources */,
 				78DD6AF61A24D2EA000FF878 /* LoginPage.m in Sources */,
 				0439213919B452BE00716F6C /* UIProgressView+AFNetworking.m in Sources */,
 				0439212D19B452BE00716F6C /* AFHTTPSessionManager.m in Sources */,
