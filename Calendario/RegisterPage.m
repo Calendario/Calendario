@@ -84,8 +84,10 @@
     // Add the email, username and password to the POST request.
     NSString *paramPass = [NSString stringWithFormat:@"json_option=register&email=%@&user=%@&password=%@", _emailField.text, _usernameField.text, _passwordField.text];
     
+    NSString *paramPass2 = [NSString stringWithFormat:@"{json_option:'register', user: {email:'%@', username:'%@', pass:'%@'}}", _emailField.text, _usernameField.text, _passwordField.text];
+    
     // Format the data for the POST request.
-    NSData *postData = [paramPass dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    NSData *postData = [paramPass2 dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
     
     // Create the POST request.

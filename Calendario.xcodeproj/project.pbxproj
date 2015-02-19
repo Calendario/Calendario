@@ -282,6 +282,7 @@
 		78D680891A2782EF00DBBEE4 /* LogOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D680881A2782EF00DBBEE4 /* LogOut.m */; };
 		78DD6AEF1A24C74E000FF878 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD6AEE1A24C74E000FF878 /* HomeViewController.m */; };
 		78DD6AF61A24D2EA000FF878 /* LoginPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD6AF51A24D2EA000FF878 /* LoginPage.m */; };
+		A21D59B81A967D760085D784 /* ReportBugView.m in Sources */ = {isa = PBXBuildFile; fileRef = A21D59B71A967D760085D784 /* ReportBugView.m */; };
 		B79481701A6459B30091332E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816C1A6459B30091332E /* Bolts.framework */; };
 		B79481711A6459B30091332E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816D1A6459B30091332E /* FacebookSDK.framework */; };
 		B79481721A6459B30091332E /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816E1A6459B30091332E /* GoogleOpenSource.framework */; };
@@ -625,6 +626,8 @@
 		78DD6AEE1A24C74E000FF878 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Calendario/HomeViewController.m; sourceTree = "<group>"; };
 		78DD6AF41A24D2EA000FF878 /* LoginPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginPage.h; path = Calendario/LoginPage.h; sourceTree = "<group>"; };
 		78DD6AF51A24D2EA000FF878 /* LoginPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginPage.m; path = Calendario/LoginPage.m; sourceTree = "<group>"; };
+		A21D59B61A967D760085D784 /* ReportBugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportBugView.h; sourceTree = "<group>"; };
+		A21D59B71A967D760085D784 /* ReportBugView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportBugView.m; sourceTree = "<group>"; };
 		B794816C1A6459B30091332E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		B794816D1A6459B30091332E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		B794816E1A6459B30091332E /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
@@ -1207,6 +1210,8 @@
 			children = (
 				E1C5BF661A74F1ED002726AB /* SettingsVC.h */,
 				E1C5BF671A74F1ED002726AB /* SettingsVC.m */,
+				A21D59B61A967D760085D784 /* ReportBugView.h */,
+				A21D59B71A967D760085D784 /* ReportBugView.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -1549,6 +1554,7 @@
 				78D680861A277C0900DBBEE4 /* RegisterPage.m in Sources */,
 				7841D29E1949CA5200F8351C /* main.m in Sources */,
 				0439213619B452BE00716F6C /* UIAlertView+AFNetworking.m in Sources */,
+				A21D59B81A967D760085D784 /* ReportBugView.m in Sources */,
 				E15E40AC1A8CBB5A00887329 /* NotificationsViewController.m in Sources */,
 				0439213B19B452BE00716F6C /* UIWebView+AFNetworking.m in Sources */,
 				04B0A64A19CF9AD200A04F45 /* StatusUpdateDAO.m in Sources */,

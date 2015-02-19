@@ -44,7 +44,7 @@
             [self alertStatus:@"Please enter Email and Password" :@"Sign in Failed!" :0];
             
         } else {
-            NSString *post =[[NSString alloc] initWithFormat:@"username=%@&password=%@",[self.txtUsername text],[self.txtPassword text]];
+            NSString *post =[[NSString alloc] initWithFormat:@"json_option=login&username=%@&password=%@",[self.txtUsername text],[self.txtPassword text]];
             NSLog(@"PostData: %@",post);
             
             NSURL *url=[NSURL URLWithString:@"http://calendario.emlinha.net/v1/require/UserReq.php"];

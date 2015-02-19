@@ -113,12 +113,8 @@
     return myCell;
 }
 
-
-
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
     if (section == 0)
     {
         return 1;
@@ -146,6 +142,10 @@
         else if ([selectedObject isEqual:@"Terms of Service"])
         {
             [self performSegueWithIdentifier:@"termsOfServiceSegue" sender:self]; 
+        }
+        else if ([selectedObject isEqual:@"Report Bug"])
+        {
+            [self performSegueWithIdentifier:@"reportBugSegue" sender:self];
         }
     }
     
