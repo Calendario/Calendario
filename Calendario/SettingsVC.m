@@ -60,7 +60,7 @@
     
     headerLabel.backgroundColor = [UIColor clearColor];
     headerLabel.textAlignment = NSTextAlignmentLeft + 20;
-    [headerLabel setFont:[UIFont fontWithName:@"AppleSDGothicNeo-Light" size:17.0]];
+    [headerLabel setFont:[UIFont systemFontOfSize:17.0]];
     headerLabel.textColor = [UIColor darkGrayColor];
     [sectionHeaderView addSubview:headerLabel];
     
@@ -121,7 +121,7 @@
     }
     else if (section == 1)
     {
-        return 4;
+        return services.count;
         
     }
     else
@@ -132,7 +132,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 1)
+    /*if (indexPath.section == 1)
     {
         NSObject *selectedObject = [services objectAtIndex:indexPath.row];
         if ([selectedObject isEqual:@"Privacy Policy"])
@@ -147,8 +147,39 @@
         {
             [self performSegueWithIdentifier:@"reportBugSegue" sender:self];
         }
-    }
+    }*/
     
+    NSString *selectedObject = [services objectAtIndex:indexPath.row];
+    if (indexPath.section == 0)
+    {
+        [self performSegueWithIdentifier:@"privacyPolicySegue" sender:self]; //<------ change this segue identifier once the viewcontroller is completed
+
+    }
+    else if (indexPath.section == 1)
+    {
+     
+        if ([selectedObject isEqualToString:@"Privacy Policy"])
+        {
+            [self performSegueWithIdentifier:@"privacyPolicySegue" sender:self];
+        }
+        else if ([selectedObject isEqualToString:@"Terms of Service"])
+        {
+            [self performSegueWithIdentifier:@"termsOfServiceSegue" sender:self];
+        }
+        else if ([selectedObject isEqualToString:@"Report Bug"])
+        {
+            [self performSegueWithIdentifier:@"reportBugSegue" sender:self];
+        }
+        else
+        {
+            [self performSegueWithIdentifier:@"reportBugSegue" sender:self]; //<------ change this segue identifier once the viewcontroller is completed
+
+        }
+    }
+    else
+    {
+        [self performSegueWithIdentifier:@"reportBugSegue" sender:self]; //<------ change this segue identifier once the viewcontroller is completed
+    }
 }
 
 @end
