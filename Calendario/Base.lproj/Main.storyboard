@@ -69,9 +69,6 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                                 <state key="normal" image="left_icon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="CTu-VV-AQH" kind="push" id="DpD-sR-HSK"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -80,7 +77,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aeV-xI-7Eb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1370" y="151"/>
+            <point key="canvasLocation" x="-1246" y="-652"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Jl3-iM-EpK">
@@ -143,9 +140,6 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                 <state key="normal" image="left_icon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="CTu-VV-AQH" kind="push" id="g71-rI-A8a"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -154,7 +148,99 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZMY-1s-9cE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-567" y="97"/>
+            <point key="canvasLocation" x="-693" y="-652"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="E03-Ew-jW1">
+            <objects>
+                <viewController id="egb-6C-1vq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8bK-HZ-Bjy"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Pi-WO-MbM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GZI-9P-dpO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xas-DO-t1S">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.52941176469999995" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="qOr-y0-t6m"/>
+                                </constraints>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ao-W2-YOB">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="fmv-fY-cpL"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.12941176469999999" green="0.52941176469999995" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="21"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Terms of Service" id="t7t-09-IW1">
+                                        <barButtonItem key="leftBarButtonItem" image="left_icon.png" id="G5w-wI-VNC">
+                                            <inset key="imageInsets" minX="0.0" minY="18" maxX="35" maxY="16"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="CTu-VV-AQH" kind="push" id="Tkr-VA-ISj"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFK-AS-kC2">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">These Terms and conditions govern your access to and use of the services, including our various websites, SMS, APIs, email notifications, applications, buttons, and widgets, and any information, text, graphics, photos or other materials uploaded, downloaded or appearing on the Services. Your access to and use of the Services are conditioned on your acceptance of and compliance with these Terms. By accessing or using the Services you agree to be bound by these Terms.
+
+1.Basic Terms:
+
+you may use the Services only if you can form a binding contract with Calendario and are not a person barred from receiving services. If you are accepting these Terms and using the Services on behalf of a company, organization, government, or other legal entity, you represent and warrant that you are authorized to do so. You may use the Services only in compliance with these Terms and all applicable local, state, national, and international laws, rules and regulations.
+
+You are responsible for your use of the Services, for any Content you post to the Services, and for any consequences thereof. The Content you submit, post, or display will be able to be viewed by other users of the Services and through third party services and websites. You should only provide Content that you are comfortable sharing with others under these Terms.
+
+2.Privacy:
+
+Any information that you provide to Calendario is subject to our Privacy Policy, which governs our collection and use of your information. You understand that through your use of the Services you consent to the collection and use of this information, . As part of providing you the Services, we may need to provide you with certain communications, such as service announcements and administrative messages. These communications are considered part of the Services and your Calendario account, which you may not be able to opt-out from receiving.
+
+3.Password:
+
+You are responsible for protecting the password that you use to access your account and for any activities or actions under your password. We encourage you to use "strong" passwords (passwords that use a combination of upper and lower case letters, numbers and symbols) with your account. Calendario will not be responsible for any loss or damage arising from your failure to comply with the above.
+
+Content on the Account:
+Content, whether publicly posted or privately transmitted, is the sole responsibility of the person who originated such Content. We may not monitor or control the Content posted via the account and, we cannot take responsibility for such Content. Any use or reliance on any Content or materials posted via the Services or obtained by you through the Services is at your own risk.
+
+Your Rights:
+You retain your rights to any Content you submit, post or display on or through the Services. By submitting, posting or displaying Content on or through the Services, you grant us a worldwide, non-exclusive, royalty-free license (with the right to sublicense) to use, copy, reproduce, process, adapt, modify, publish, transmit, display and distribute such Content in any and all media or distribution methods.
+
+Your License To Use the Account :
+Calendario gives you a personal, worldwide, royalty-free, non-assignable license to use the software that is provided to you by Calendario as part of the Services. This license is for the sole purpose of enabling you to use and enjoy the benefit of the Account as provided by Calendario, in the manner permitted by these Terms.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="UFK-AS-kC2" secondAttribute="trailing" constant="-16" id="65J-QQ-92e"/>
+                            <constraint firstItem="UFK-AS-kC2" firstAttribute="top" secondItem="1Ao-W2-YOB" secondAttribute="bottom" id="6ER-q0-SCG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xas-DO-t1S" secondAttribute="trailing" constant="-16" id="KkF-tb-amQ"/>
+                            <constraint firstItem="xas-DO-t1S" firstAttribute="top" secondItem="GZI-9P-dpO" secondAttribute="topMargin" id="LhS-2A-Lp9"/>
+                            <constraint firstItem="1Ao-W2-YOB" firstAttribute="top" secondItem="8bK-HZ-Bjy" secondAttribute="bottom" id="RA9-xE-cY1"/>
+                            <constraint firstItem="UFK-AS-kC2" firstAttribute="leading" secondItem="GZI-9P-dpO" secondAttribute="leadingMargin" constant="-16" id="ai0-wb-o8I"/>
+                            <constraint firstItem="9Pi-WO-MbM" firstAttribute="top" secondItem="UFK-AS-kC2" secondAttribute="bottom" id="g2D-sy-8bd"/>
+                            <constraint firstItem="1Ao-W2-YOB" firstAttribute="leading" secondItem="GZI-9P-dpO" secondAttribute="leadingMargin" constant="-16" id="idg-s8-46I"/>
+                            <constraint firstItem="xas-DO-t1S" firstAttribute="leading" secondItem="GZI-9P-dpO" secondAttribute="leadingMargin" constant="-16" id="mdM-4Q-s99"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Ao-W2-YOB" secondAttribute="trailing" constant="-16" id="yAG-eq-h8p"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9AD-Nr-5Ha"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Myd-GN-EAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-693" y="37"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="D3k-4N-3ZD">
@@ -1319,151 +1405,6 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
             <point key="canvasLocation" x="585" y="3939"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="C8P-qy-Sf0">
-            <objects>
-                <viewController id="EuK-5F-aDy" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="VZp-hR-h1S"/>
-                        <viewControllerLayoutGuide type="bottom" id="Z7Y-Td-nCQ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vZR-rh-w5n">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundsettings.png" translatesAutoresizingMaskIntoConstraints="NO" id="IDU-oy-vii">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="headersettings.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZcU-rd-yqg">
-                                <rect key="frame" x="0.0" y="-9" width="320" height="85"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Privacy Policy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFu-pN-oB6">
-                                <rect key="frame" x="92" y="35" width="137" height="28"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="leftarrowblue.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZGp-SU-B3f">
-                                <rect key="frame" x="4" y="28" width="50" height="41"/>
-                            </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WhO-7V-PCe">
-                                <rect key="frame" x="0.0" y="77" width="320" height="1100"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bbj-YV-aqv">
-                                        <rect key="frame" x="3" y="2" width="314" height="1098"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <string key="text">Our Privacy Policy explains how we and some of the companies we work with collect, use, share and protect information in relation to our mobile services, web site, and any software provided on or in connection with Calendario.
-
-Info we collect: Your username, password and e-mail address when you register for an Calendario account.
-Profile information that you provide for your user profile (e.g., first and last name, picture, phone number). This information allows us to help you or others be "searched" on Calendario.
-User Content (photos, comments, etc) that you post in your account.
-How we use you info: remember info so you will not have to re-enter it during your visit or the next time you visit
-provide personalized content and info to you and others, which could include online ads or other types of marketing
-provide, improve, test, and monitor the effectiveness of our App
-develop and test new products and features
-monitor statistics such as total number of visitors, traffic, etc
-recognize or fix technological problems
-
-Sharing of your info: 
-We will not rent or sell your information to third parties outside Calendario without your consent, except as noted in this Policy
-We also may share your info as well as info from tools like cookies, log files, and device identifiers and location data, with third-party organizations that help us provide the Service to you . Our Service Providers will be given access to your information as is reasonably necessary to provide the Service under reasonable confidentiality terms.
-We may also share certain information such as cookie data with third-party advertising partners. This information would allow third-party ad networks to, among other things, deliver targeted advertisements that they believe will be of most interest to you.
-We may remove parts of data that can identify you and share anonymized data with other parties. We may also combine your information with other information in a way that it is no longer associated with you and share that aggregated information.
-Any information or content that you post to the app, such as User Content, becomes available to the public, as controlled by any applicable privacy settings that you set. To change your privacy settings on the Service, please change your profile setting.
-
-Your choice about your info: Update your account at any time by logging in and changing your account settings.
-
-Children Privacy: Calendario does not knowingly collect or solicit any information from anyone under the age of 13 . Calendario and its content are not directed at children under the age of 13. In the event that we learn that we have collected personal information from a child under age 13 without parental consent, we will delete that information as quickly as possible. If you believe that we might have any information from or about a child under 13, please contact us.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_dark_silver.png" translatesAutoresizingMaskIntoConstraints="NO" id="H7B-fs-1Xm">
-                                        <rect key="frame" x="-12" y="-9" width="334" height="3"/>
-                                    </imageView>
-                                </subviews>
-                            </scrollView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_dark_silver.png" translatesAutoresizingMaskIntoConstraints="NO" id="aqv-zZ-a1S">
-                                <rect key="frame" x="-11" y="73" width="343" height="3"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L52-6B-gWg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="585" y="4558"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="oci-ax-I88">
-            <objects>
-                <viewController id="oL8-M0-RSd" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="n1b-Id-F4J"/>
-                        <viewControllerLayoutGuide type="bottom" id="t4V-xU-VJ1"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tUw-pO-yev">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundsettings.png" translatesAutoresizingMaskIntoConstraints="NO" id="DoW-VG-qLq">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="headersettings.png" translatesAutoresizingMaskIntoConstraints="NO" id="U7M-qs-qEO">
-                                <rect key="frame" x="0.0" y="-9" width="320" height="85"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_dark_silver.png" translatesAutoresizingMaskIntoConstraints="NO" id="UM8-qA-hkN">
-                                <rect key="frame" x="-11" y="73" width="343" height="3"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Terms Service" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Og3-Cr-ul1">
-                                <rect key="frame" x="97" y="35" width="137" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="leftarrowblue.png" translatesAutoresizingMaskIntoConstraints="NO" id="AQg-79-Cpe">
-                                <rect key="frame" x="4" y="28" width="50" height="41"/>
-                            </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1rN-9H-CGD">
-                                <rect key="frame" x="0.0" y="77" width="320" height="1106"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dq-Hy-hKz">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1118"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <string key="text">These Terms and conditions govern your access to and use of the services, including our various websites, SMS, APIs, email notifications, applications, buttons, and widgets, and any information, text, graphics, photos or other materials uploaded, downloaded or appearing on the Services. Your access to and use of the Services are conditioned on your acceptance of and compliance with these Terms. By accessing or using the Services you agree to be bound by these Terms.
-
-1.Basic Terms:
-
-you may use the Services only if you can form a binding contract with Calendario and are not a person barred from receiving services. If you are accepting these Terms and using the Services on behalf of a company, organization, government, or other legal entity, you represent and warrant that you are authorized to do so. You may use the Services only in compliance with these Terms and all applicable local, state, national, and international laws, rules and regulations.
-
-You are responsible for your use of the Services, for any Content you post to the Services, and for any consequences thereof. The Content you submit, post, or display will be able to be viewed by other users of the Services and through third party services and websites. You should only provide Content that you are comfortable sharing with others under these Terms.
-
-2.Privacy:
-
-Any information that you provide to Calendario is subject to our Privacy Policy, which governs our collection and use of your information. You understand that through your use of the Services you consent to the collection and use of this information, . As part of providing you the Services, we may need to provide you with certain communications, such as service announcements and administrative messages. These communications are considered part of the Services and your Calendario account, which you may not be able to opt-out from receiving.
-
-3.Password:
-
-You are responsible for protecting the password that you use to access your account and for any activities or actions under your password. We encourage you to use "strong" passwords (passwords that use a combination of upper and lower case letters, numbers and symbols) with your account. Calendario will not be responsible for any loss or damage arising from your failure to comply with the above.
-
-Content on the Account:
-Content, whether publicly posted or privately transmitted, is the sole responsibility of the person who originated such Content. We may not monitor or control the Content posted via the account and, we cannot take responsibility for such Content. Any use or reliance on any Content or materials posted via the Services or obtained by you through the Services is at your own risk.
-
-Your Rights:
-You retain your rights to any Content you submit, post or display on or through the Services. By submitting, posting or displaying Content on or through the Services, you grant us a worldwide, non-exclusive, royalty-free license (with the right to sublicense) to use, copy, reproduce, process, adapt, modify, publish, transmit, display and distribute such Content in any and all media or distribution methods.
-
-Your License To Use the Account :
-Calendario gives you a personal, worldwide, royalty-free, non-assignable license to use the software that is provided to you by Calendario as part of the Services. This license is for the sole purpose of enabling you to use and enjoy the benefit of the Account as provided by Calendario, in the manner permitted by these Terms.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="35J-EH-Yh0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1067" y="4522"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="cej-bi-iTF">
             <objects>
                 <viewController id="SL2-TU-iLm" sceneMemberID="viewController">
@@ -1734,6 +1675,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
         <scene sceneID="lEo-Lq-hQY">
             <objects>
                 <tabBarController title="UITabbar" id="GIS-I7-wZ7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Czv-6f-ZQ2"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="w9y-7h-fxs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -3629,7 +3571,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="6J5-jE-G9B" kind="push" id="Did-93-jQQ"/>
+                                    <segue destination="bdr-RB-nFs" kind="push" id="UYU-kR-egE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfP-YB-8ys">
@@ -3638,14 +3580,14 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGx-HL-5zy">
-                                <rect key="frame" x="179" y="531" width="79" height="27"/>
+                                <rect key="frame" x="179" y="531" width="93" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="Terms Service">
+                                <state key="normal" title="Terms of Service">
                                     <color key="titleColor" red="0.12941176469999999" green="0.52941176469999995" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="KRp-V9-s5n" kind="push" id="BfE-np-4jE"/>
+                                    <segue destination="egb-6C-1vq" kind="push" id="a0K-Vh-oYc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -3764,115 +3706,6 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJV-ML-6yg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1498" y="1718"/>
-        </scene>
-        <!--Login Page-->
-        <scene sceneID="Q4W-Qu-SQa">
-            <objects>
-                <viewController storyboardIdentifier="Login Page Mock Up" id="eyz-99-JAI" customClass="LoginPage" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="U78-kR-piP"/>
-                        <viewControllerLayoutGuide type="bottom" id="mNb-JO-5kU"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oFH-kX-Ttv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="background3.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Sp-3j-FSc">
-                                <rect key="frame" x="0.0" y="2" width="320" height="568"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="774" id="fL2-ef-ofx"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fillbox.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tgk-Wz-Tkq">
-                                <rect key="frame" x="28" y="141" width="265" height="109"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaa-TR-Ofp">
-                                <rect key="frame" x="10" y="340" width="142" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Forgot Password? ">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXY-tv-BkF">
-                                <rect key="frame" x="203" y="342" width="101" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="hXY-tv-BkF" secondAttribute="height" multiplier="101:30" id="NT4-mJ-zPX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Sign Up">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="calendario_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="30Q-d5-uH7">
-                                <rect key="frame" x="63" y="46" width="195" height="71"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="71" id="wvx-FH-rUY"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WJL-7Z-DKc">
-                                <rect key="frame" x="34" y="153" width="241" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="eyz-99-JAI" id="fEN-ag-cDu"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iA7-ud-Bt8">
-                                <rect key="frame" x="123" y="280" width="75" height="30"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
-                                <state key="normal" title="Sign In">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="signinClicked:" destination="eyz-99-JAI" eventType="touchUpInside" id="uRs-FO-v4A"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GmE-Qj-zJg">
-                                <rect key="frame" x="34" y="202" width="241" height="37"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="eyz-99-JAI" id="K6r-i6-nRW"/>
-                                </connections>
-                            </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_button.png" translatesAutoresizingMaskIntoConstraints="NO" id="BY3-m9-6FM">
-                                <rect key="frame" x="97" y="258" width="125" height="74"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDZ-Ov-CLF">
-                                <rect key="frame" x="122" y="279" width="77" height="30"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <state key="normal" title="Sign In">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="signinClicked:" destination="eyz-99-JAI" eventType="touchUpInside" id="qy8-ms-UeZ"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="5Sp-3j-FSc" firstAttribute="trailing" secondItem="hXY-tv-BkF" secondAttribute="trailing" constant="19" id="8iV-3v-uvR"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="uDa-UK-Fa5"/>
-                    <connections>
-                        <outlet property="txtPassword" destination="GmE-Qj-zJg" id="F5L-HH-0xU"/>
-                        <outlet property="txtUsername" destination="WJL-7Z-DKc" id="Y9f-vp-eUW"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YMx-aV-tB9" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="tDa-a9-QRp">
-                    <connections>
-                        <action selector="backgroundTab:" destination="eyz-99-JAI" id="uqR-v1-0Vs"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="-363" y="1828"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="MWS-5K-9I1">
@@ -4095,6 +3928,96 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
             </objects>
             <point key="canvasLocation" x="1505" y="2327"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="XIj-WS-cqr">
+            <objects>
+                <viewController id="bdr-RB-nFs" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SQW-4d-A83"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pky-Ye-aD7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bXN-zN-Y7f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGl-DA-i4B">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.52941176469999995" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="O0l-mu-Emf"/>
+                                </constraints>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0X-8g-tYA">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="1L6-2U-P9V"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.12941176469999999" green="0.52941176469999995" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="21"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Privacy Policy" id="1tI-Zi-DAU">
+                                        <barButtonItem key="leftBarButtonItem" image="left_icon.png" id="A7N-JR-bsn">
+                                            <inset key="imageInsets" minX="0.0" minY="18" maxX="35" maxY="16"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="CTu-VV-AQH" kind="push" id="kVA-7U-c5x"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97M-f8-TGF">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Our Privacy Policy explains how we and some of the companies we work with collect, use, share and protect information in relation to our mobile services, web site, and any software provided on or in connection with Calendario.
+
+Info we collect: Your username, password and e-mail address when you register for an Calendario account.
+Profile information that you provide for your user profile (e.g., first and last name, picture, phone number). This information allows us to help you or others be "searched" on Calendario.
+User Content (photos, comments, etc) that you post in your account.
+How we use you info: remember info so you will not have to re-enter it during your visit or the next time you visit
+provide personalized content and info to you and others, which could include online ads or other types of marketing
+provide, improve, test, and monitor the effectiveness of our App
+develop and test new products and features
+monitor statistics such as total number of visitors, traffic, etc
+recognize or fix technological problems
+
+Sharing of your info: 
+We will not rent or sell your information to third parties outside Calendario without your consent, except as noted in this Policy
+We also may share your info as well as info from tools like cookies, log files, and device identifiers and location data, with third-party organizations that help us provide the Service to you . Our Service Providers will be given access to your information as is reasonably necessary to provide the Service under reasonable confidentiality terms.
+We may also share certain information such as cookie data with third-party advertising partners. This information would allow third-party ad networks to, among other things, deliver targeted advertisements that they believe will be of most interest to you.
+We may remove parts of data that can identify you and share anonymized data with other parties. We may also combine your information with other information in a way that it is no longer associated with you and share that aggregated information.
+Any information or content that you post to the app, such as User Content, becomes available to the public, as controlled by any applicable privacy settings that you set. To change your privacy settings on the Service, please change your profile setting.
+
+Your choice about your info: Update your account at any time by logging in and changing your account settings.
+
+Children Privacy: Calendario does not knowingly collect or solicit any information from anyone under the age of 13 . Calendario and its content are not directed at children under the age of 13. In the event that we learn that we have collected personal information from a child under age 13 without parental consent, we will delete that information as quickly as possible. If you believe that we might have any information from or about a child under 13, please contact us.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pky-Ye-aD7" firstAttribute="top" secondItem="97M-f8-TGF" secondAttribute="bottom" id="1aX-ca-1g6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="97M-f8-TGF" secondAttribute="trailing" constant="-16" id="64M-Fk-qfe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rGl-DA-i4B" secondAttribute="trailing" constant="-16" id="HZ9-mc-euN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J0X-8g-tYA" secondAttribute="trailing" constant="-16" id="bQf-qm-5pf"/>
+                            <constraint firstItem="rGl-DA-i4B" firstAttribute="top" secondItem="bXN-zN-Y7f" secondAttribute="topMargin" id="cYR-2j-2ex"/>
+                            <constraint firstItem="97M-f8-TGF" firstAttribute="top" secondItem="J0X-8g-tYA" secondAttribute="bottom" id="cvH-vG-6ZA"/>
+                            <constraint firstItem="J0X-8g-tYA" firstAttribute="leading" secondItem="bXN-zN-Y7f" secondAttribute="leadingMargin" constant="-16" id="dMc-cS-lPo"/>
+                            <constraint firstItem="rGl-DA-i4B" firstAttribute="leading" secondItem="bXN-zN-Y7f" secondAttribute="leadingMargin" constant="-16" id="k4p-Rz-Dgu"/>
+                            <constraint firstItem="J0X-8g-tYA" firstAttribute="top" secondItem="SQW-4d-A83" secondAttribute="bottom" id="p1u-om-oeu"/>
+                            <constraint firstItem="97M-f8-TGF" firstAttribute="leading" secondItem="bXN-zN-Y7f" secondAttribute="leadingMargin" constant="-16" id="pAN-mB-iii"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="t8G-DX-63D"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="utq-Vm-UeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1246" y="37"/>
+        </scene>
     </scenes>
     <resources>
         <image name="2nd_header.png" width="1000" height="150"/>
@@ -4116,7 +4039,6 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
         <image name="dots_mark_red.png" width="30" height="30"/>
         <image name="email_grey.png" width="256" height="256"/>
         <image name="facebook_icon_coloured.png" width="60" height="60"/>
-        <image name="fillbox.png" width="587" height="230"/>
         <image name="follow_button_grey.png" width="300" height="40"/>
         <image name="gallery_icon.png" width="60" height="60"/>
         <image name="gallery_icon_active.png" width="60" height="60"/>
@@ -4132,7 +4054,6 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
         <image name="loading_button.png" width="60" height="60"/>
         <image name="lock_grey_2.png" width="60" height="60"/>
         <image name="lock_icon.png" width="120" height="120"/>
-        <image name="login_button.png" width="100" height="50"/>
         <image name="love.png" width="60" height="60"/>
         <image name="mark_spot_green.png" width="60" height="60"/>
         <image name="mark_spot_red.png" width="60" height="60"/>
@@ -4158,10 +4079,10 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="XTw-Nc-knD"/>
         <segue reference="eG1-uK-xhy"/>
-        <segue reference="vzz-Mk-D6G"/>
+        <segue reference="M7B-CV-Au2"/>
+        <segue reference="AYC-4H-dqM"/>
         <segue reference="uB8-gG-cPu"/>
-        <segue reference="MQA-vl-5mD"/>
+        <segue reference="x0S-Jb-QkL"/>
     </inferredMetricsTieBreakers>
 </document>
