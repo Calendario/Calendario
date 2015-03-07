@@ -7,6 +7,7 @@
 //
 
 #import "RegisterPage.h"
+#import "KeychainItemWrapper.h"
 
 @interface RegisterPage ()
 
@@ -14,8 +15,8 @@
 
 @implementation RegisterPage
 
-- (void)viewDidLoad
-{
+-(void)viewDidLoad {
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
@@ -26,88 +27,89 @@
     [self.doneButton.layer setCornerRadius:5.0]; 
 }
 
-- (void)didReceiveMemoryWarning
-{
+-(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void) checkPasswordsMatch
-{
-    //check that the two apssword fields are identical
-    if ([_passwordField.text isEqualToString:_reEnterPasswordField.text])
-    {
+-(void)checkPasswordsMatch {
+    
+    // Check that the two apssword fields are identical.
+    if ([_passwordField.text isEqualToString:_reEnterPasswordField.text]) {
+        
         NSLog(@"passwords match!");
         [self registerNewUser];
     }
-    else
-    {
+    
+    else {
         UIAlertView *error = [[UIAlertView alloc] initWithTitle:@"Oooops" message:@"Your entered passwords do not match" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [error show];
     }
-    
 }
 
-- (IBAction)backgroundTab:(id)sender
-{
+-(IBAction)backgroundTab:(id)sender {
     [self.view endEditing:YES];
 }
 
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
     
     [textField resignFirstResponder];
     return YES;
 }
 
-- (IBAction)doneButton:(id)sender
-{
-    //check if all text fields are completed
+-(IBAction)doneButton:(id)sender {
+    
+    // Check if all text fields are completed.
     if ([_usernameField.text isEqualToString:@""] || [_passwordField.text isEqualToString:@""] || [_reEnterPasswordField.text isEqualToString:@""] || [_emailField.text isEqualToString:@""])
     {
         
         UIAlertView *error = [[UIAlertView alloc] initWithTitle:@"Oooops" message:@"You must complete all fields" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [error show];
     }
-    else
-    {
+    else {
         [self checkPasswordsMatch];
     }
 }
 
-- (void)registerNewUser
-{
+-(void)registerNewUser {
+    
+    // Before adding the password to the URL, we need
+    // to encrypt it for obvious reasons. We will use
+    // Apple's keychain API to encrypt the password.
+    
+    // This is a work in progress. I have sent all Calendario
+    // team members a message about this because we really
+    // do need server side encryption to get this working.
+    // For the time being the app can store the information
+    // securely in the keychain (which we need anyway) and
+    // currently passes the non-encrypted versions to the
+    // register PHP files (this is a TEMPORARY solution.
+    
+    // Now that the username/password have been encrypted,
+    // lets store them securly in the iOS Keychain.
+    KeychainItemWrapper *keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"UserLoginData" accessGroup:nil];
+    [keychain setObject:_usernameField.text forKey:(__bridge id)kSecAttrAccount];
+    [keychain setObject:_passwordField.text forKey:(__bridge id)kSecValueData];
+    
     // Create the URL to the User Register PHP file.
-    NSString *urlFormatted = [NSString stringWithFormat:@"%@v1/require/UserReq.php", webServiceAddress];
-    NSURL *URL = [NSURL URLWithString:urlFormatted];
+    NSString *urlFormatted = [NSString stringWithFormat:@"%@register/%@/%@/%@/", webServiceAddress, _usernameField.text, _passwordField.text, _emailField.text];
     
-    // Add the email, username and password to the POST request.
-    NSString *paramPass = [NSString stringWithFormat:@"json_option=register&email=%@&user=%@&password=%@", _emailField.text, _usernameField.text, _passwordField.text];
+    // Ensure the string is in UTF8 format.
+    NSString *urlTextEscaped = [urlFormatted stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
-    NSString *paramPass2 = [NSString stringWithFormat:@"{json_option:'register', user: {email:'%@', username:'%@', pass:'%@'}}", _emailField.text, _usernameField.text, _passwordField.text];
+    // Create the request and add the URL.
+    NSURLRequest *registerRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlTextEscaped]];
     
-    // Format the data for the POST request.
-    NSData *postData = [paramPass2 dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-    NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
+    // Store the JSON responce and check for
+    // any response errors before parsing.
+    NSURLResponse *response = nil;
+    NSError *requestError = nil;
+    NSData *urlData = [NSURLConnection sendSynchronousRequest:registerRequest returningResponse:&response error:&requestError];
     
-    // Create the POST request.
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:URL];
-    [request setHTTPMethod:@"POST"];
-    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-    [request setHTTPBody:postData];
-    
-    // Server responce - Register PHP file.
-    NSError *error = [[NSError alloc] init];
-    NSHTTPURLResponse *response = nil;
-    NSData *urlData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    
-    // Check if the responce is between 200 - 299.
-    if ([response statusCode] >= 200 && [response statusCode] < 300)
-    {
-        NSString *responseData = [[NSString alloc]initWithData:urlData encoding:NSUTF8StringEncoding];
+    if ((requestError == nil) && (urlData != nil)) {
+        
+        NSString *responseData = [[NSString alloc] initWithData:urlData encoding:NSUTF8StringEncoding];
         NSLog(@"Response ==> %@", responseData);
         
         NSError *error = nil;
@@ -120,13 +122,17 @@
         NSInteger success = 0;
         success = [jsonData[@"success"] integerValue];
         
-        if (success == 1)
-        {
+        if (success == 1) {
             // The registration has been completed,
             // go on to saving the user details locally.
             [self saveUserData];
             
         } else {
+            
+            // There has been an error so delete the username
+            // and password from the keychain.
+            [keychain resetKeychainItem];
+            
             // Parse the error message passed back from the server.
             NSString *error_msg = (NSString *)jsonData[@"error_message"];
             
@@ -135,29 +141,21 @@
             
             [errorAlert show];
         }
-        
-    } else {
+    }
+    
+    else {
         
         // There has been an issue with the connection
         // to the server - probably internet connection.
-        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Connection Failed." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:[NSString stringWithFormat:@"%@", requestError] delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
         
         [errorAlert show];
     }
 }
 
-- (void)saveUserData
-{
-    // Save the username/password locally.
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+-(void)saveUserData {
     
-    // write the username and password and set BOOL value in NSUserDefaults.
-    [defaults setObject:_usernameField.text forKey:@"username"];
-    [defaults setObject:_passwordField.text forKey:@"password"];
-    [defaults setBool:YES forKey:@"registered"];
-    
-    [defaults synchronize];
-    
+    // Alert the user of the account creation success.
     UIAlertView *success = [[UIAlertView alloc] initWithTitle:@"Success" message:@"You have registered a new user" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
     
     [success show];
@@ -165,7 +163,4 @@
     [self performSegueWithIdentifier:@"signUpSegue" sender:self];
 }
 
-
 @end
-
-

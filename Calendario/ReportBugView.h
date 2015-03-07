@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ReportBugView : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface ReportBugView : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *reportBugTableView;
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bDH-C0-VC9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bDH-C0-VC9">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -441,7 +441,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                     <constraint firstAttribute="width" secondItem="9Ps-FZ-x74" secondAttribute="height" multiplier="67:23" id="Gta-vI-c48"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mc9-MJ-3OJ">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mc9-MJ-3OJ">
                                 <rect key="frame" x="100" y="314" width="120" height="52"/>
                                 <color key="backgroundColor" red="0.12941176469999999" green="0.52941176469999995" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -513,7 +513,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                     <constraint firstItem="FTo-y1-7mT" firstAttribute="width" secondItem="1OA-fU-6X2" secondAttribute="width" id="x0Y-xW-bwD"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4qX-hZ-cPO">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4qX-hZ-cPO">
                                 <rect key="frame" x="26" y="374" width="268" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoT-Nb-KDS">
@@ -1186,7 +1186,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="145" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GGa-4M-PmF">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.90196078431372551" green="0.89803921568627454" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GGa-4M-PmF" secondAttribute="height" multiplier="40:63" id="Ps8-w5-Eqt"/>
                                 </constraints>
@@ -1197,11 +1197,14 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RWX-tG-AYe" id="dNk-nC-niR">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" misplaced="YES" text="uitextview 1" translatesAutoresizingMaskIntoConstraints="NO" id="nEF-d0-HrP">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nEF-d0-HrP">
                                                     <rect key="frame" x="0.0" y="1" width="320" height="41"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="9PM-eT-yNn" id="xod-fp-GAt"/>
+                                                    </connections>
                                                 </textView>
                                             </subviews>
                                             <constraints>
@@ -1209,27 +1212,6 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                                 <constraint firstItem="nEF-d0-HrP" firstAttribute="top" secondItem="dNk-nC-niR" secondAttribute="topMargin" constant="-8" id="MIC-58-bXO"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="nEF-d0-HrP" secondAttribute="trailing" constant="-8" id="cdz-Sf-LVi"/>
                                                 <constraint firstItem="nEF-d0-HrP" firstAttribute="leading" secondItem="dNk-nC-niR" secondAttribute="leadingMargin" constant="-8" id="jdm-Vx-0sG"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bugCell2" id="08E-W1-wln">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="08E-W1-wln" id="LpX-bt-zRJ">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" text="uitextview 2" translatesAutoresizingMaskIntoConstraints="NO" id="LYQ-8J-TEK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="144"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="LYQ-8J-TEK" secondAttribute="trailing" constant="-8" id="4TP-3L-RTR"/>
-                                                <constraint firstItem="LYQ-8J-TEK" firstAttribute="leading" secondItem="LpX-bt-zRJ" secondAttribute="leadingMargin" constant="-8" id="7ed-EH-8u0"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="LYQ-8J-TEK" secondAttribute="bottom" constant="-8" id="vOM-yG-Rtm"/>
-                                                <constraint firstItem="LYQ-8J-TEK" firstAttribute="top" secondItem="LpX-bt-zRJ" secondAttribute="topMargin" constant="-8" id="yj0-gO-8LP"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1289,7 +1271,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9fA-ey-gJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="3944"/>
+            <point key="canvasLocation" x="131" y="3939"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jCT-f4-tZi">
@@ -1473,12 +1455,12 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.58039215686274515" green="0.69411764705882351" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lAx-8L-ERq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1591" y="3874"/>
+            <point key="canvasLocation" x="-310" y="4134"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Lap-CB-Tdb">
@@ -1669,7 +1651,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fzu-df-KTB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="957" y="995"/>
+            <point key="canvasLocation" x="957" y="955"/>
         </scene>
         <!--UITabbar-->
         <scene sceneID="lEo-Lq-hQY">
@@ -2517,7 +2499,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightarrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="svK-8s-6Sj">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="rightarrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="svK-8s-6Sj">
                                                     <rect key="frame" x="284" y="14" width="28" height="28"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -3343,7 +3325,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WuV-F0-dZH" userLabel="UnderLay View">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WuV-F0-dZH" userLabel="UnderLay View">
                                 <rect key="frame" x="0.0" y="294" width="320" height="158"/>
                                 <color key="backgroundColor" red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -3378,13 +3360,13 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TMe-vC-Lh5">
                                 <rect key="frame" x="0.0" y="210" width="320" height="51"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email_grey.png" translatesAutoresizingMaskIntoConstraints="NO" id="4eZ-nL-N4E">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="email_grey.png" translatesAutoresizingMaskIntoConstraints="NO" id="4eZ-nL-N4E">
                                         <rect key="frame" x="11" y="8" width="37" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="4eZ-nL-N4E" secondAttribute="height" multiplier="37:36" id="VX8-Gk-6w2"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ZC-66-9Wq">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ZC-66-9Wq">
                                         <rect key="frame" x="56" y="17" width="256" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
@@ -3875,7 +3857,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9V-d6-0dg">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9V-d6-0dg">
                                                     <rect key="frame" x="97" y="54" width="215" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -4080,9 +4062,9 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="eG1-uK-xhy"/>
-        <segue reference="M7B-CV-Au2"/>
-        <segue reference="AYC-4H-dqM"/>
+        <segue reference="XTw-Nc-knD"/>
         <segue reference="uB8-gG-cPu"/>
-        <segue reference="x0S-Jb-QkL"/>
+        <segue reference="Iss-dh-NUq"/>
+        <segue reference="AYC-4H-dqM"/>
     </inferredMetricsTieBreakers>
 </document>

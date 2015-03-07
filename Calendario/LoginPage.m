@@ -35,7 +35,83 @@
 }
 */
 
+-(void)loginUserV2 {
+    
+    // Get the current date/time string.
+    NSDate *currentTime = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"YYYYMMddhhmmss"];
+    NSString *resultDate = [dateFormatter stringFromDate: currentTime];
+    
+    // Create the URL to the User Register PHP file.
+    NSString *urlFormatted = [NSString stringWithFormat:@"%@singin/%@/%@/%@/", webServiceAddress, _txtUsername.text, _txtPassword.text, resultDate];
+    
+    // Ensure the string is in UTF8 format.
+    NSString *urlTextEscaped = [urlFormatted stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    NSLog(@"%@", urlTextEscaped);
+    
+    // Create the request and add the URL.
+    NSURLRequest *registerRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlTextEscaped]];
+    
+    // Store the JSON responce and check for
+    // any response errors before parsing.
+    NSURLResponse *response = nil;
+    NSError *requestError = nil;
+    NSData *urlData = [NSURLConnection sendSynchronousRequest:registerRequest returningResponse:&response error:&requestError];
+    
+    if ((requestError == nil) && (urlData != nil)) {
+        
+        NSString *responseData = [[NSString alloc] initWithData:urlData encoding:NSUTF8StringEncoding];
+        NSLog(@"Response ==> %@", responseData);
+        
+        NSError *error = nil;
+        NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:urlData options:NSJSONReadingMutableContainers error:&error];
+        
+        NSLog(@"\n\n JSON DATA RETURNED: %@\n\n", jsonData);
+        
+        // The server will send back a success integer,
+        // parse it and decide what to do next.
+        NSInteger success = 0;
+        success = [jsonData[@"success"] integerValue];
+        
+        if (success == 1) {
+            
+            // The login has been completed,
+            // go on to alert and then home view.
+            
+            UIAlertView *loginAlert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Login has been successful" delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+            [loginAlert show];
+            
+            // [self performSegueWithIdentifier:@"login_success" sender:self];
+            
+        } else {
+            
+            // Parse the error message passed back from the server.
+            NSString *error_msg = (NSString *)jsonData[@"error_message"];
+            
+            // Display the error message to the user.
+            UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:error_msg delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+            
+            [errorAlert show];
+        }
+    }
+    
+    else {
+        
+        // There has been an issue with the connection
+        // to the server - probably internet connection.
+        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:[NSString stringWithFormat:@"%@", requestError] delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+        
+        [errorAlert show];
+    }
+}
+
 - (IBAction)signinClicked:(id)sender {
+    
+    [self loginUserV2];
+    
+    /*
     NSInteger success = 0;
     @try {
         
@@ -105,6 +181,8 @@
     if (success) {
         [self performSegueWithIdentifier:@"login_success" sender:self];
     }
+     
+     */
 }
 
 - (void) alertStatus:(NSString *)msg :(NSString *)title :(int) tag
