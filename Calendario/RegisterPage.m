@@ -9,7 +9,14 @@
 #import "RegisterPage.h"
 #import "KeychainItemWrapper.h"
 
-@interface RegisterPage ()
+@interface RegisterPage () {
+    
+    // Alert which appears after registration.
+    UIAlertView *successAlert;
+    
+    // Keychain wrapper class instance.
+    KeychainItemWrapper *keychain;
+}
 
 @end
 
@@ -74,24 +81,6 @@
 
 -(void)registerNewUser {
     
-    // Before adding the password to the URL, we need
-    // to encrypt it for obvious reasons. We will use
-    // Apple's keychain API to encrypt the password.
-    
-    // This is a work in progress. I have sent all Calendario
-    // team members a message about this because we really
-    // do need server side encryption to get this working.
-    // For the time being the app can store the information
-    // securely in the keychain (which we need anyway) and
-    // currently passes the non-encrypted versions to the
-    // register PHP files (this is a TEMPORARY solution.
-    
-    // Now that the username/password have been encrypted,
-    // lets store them securly in the iOS Keychain.
-    KeychainItemWrapper *keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"UserLoginData" accessGroup:nil];
-    [keychain setObject:_usernameField.text forKey:(__bridge id)kSecAttrAccount];
-    [keychain setObject:_passwordField.text forKey:(__bridge id)kSecValueData];
-    
     // Create the URL to the User Register PHP file.
     NSString *urlFormatted = [NSString stringWithFormat:@"%@register/%@/%@/%@/", webServiceAddress, _usernameField.text, _passwordField.text, _emailField.text];
     
@@ -108,21 +97,15 @@
     NSData *urlData = [NSURLConnection sendSynchronousRequest:registerRequest returningResponse:&response error:&requestError];
     
     if ((requestError == nil) && (urlData != nil)) {
-        
-        NSString *responseData = [[NSString alloc] initWithData:urlData encoding:NSUTF8StringEncoding];
-        NSLog(@"Response ==> %@", responseData);
-        
+    
         NSError *error = nil;
         NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:urlData options:NSJSONReadingMutableContainers error:&error];
         
-        NSLog(@"\n\n JSON DATA RETURNED: %@\n\n", jsonData);
-        
         // The server will send back a success integer,
         // parse it and decide what to do next.
-        NSInteger success = 0;
-        success = [jsonData[@"success"] integerValue];
+        NSString *success = jsonData[@"msg"];
         
-        if (success == 1) {
+        if ([success isEqual:@"sucess"] || [success isEqual:@"success"]) {
             // The registration has been completed,
             // go on to saving the user details locally.
             [self saveUserData];
@@ -155,12 +138,33 @@
 
 -(void)saveUserData {
     
+    // Securely save username and password to the Keychain.
+    keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"UserLoginData" accessGroup:nil];
+    [keychain setObject:_usernameField.text forKey:(__bridge id)kSecAttrAccount];
+    [keychain setObject:_passwordField.text forKey:(__bridge id)kSecValueData];
+    
     // Alert the user of the account creation success.
-    UIAlertView *success = [[UIAlertView alloc] initWithTitle:@"Success" message:@"You have registered a new user" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    successAlert = [[UIAlertView alloc] initWithTitle:@"Welcome" message:@"You have been registered. Press OK to continue." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
     
-    [success show];
+    [successAlert show];
+}
+
+// UIAlertView delegate methods.
+
+-(void)alertView:(UIAlertView *)successAlert clickedButtonAtIndex:(NSInteger)buttonIndex {
     
-    [self performSegueWithIdentifier:@"signUpSegue" sender:self];
+    if (buttonIndex == 0) {
+        
+        // Now present the home view.
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+        [self presentViewController:myController animated:YES completion:nil];
+        
+        // The below code crashes for some reason. It says that there is no
+        // segue with the identifier "HomeViewController" - even though there
+        // is. I know this because I set it in Interface builder (Dan).
+        //[self performSegueWithIdentifier:@"HomeViewController" sender:self];
+    }
 }
 
 @end
