@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bDH-C0-VC9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bDH-C0-VC9">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -242,10 +242,10 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
             </objects>
             <point key="canvasLocation" x="-693" y="37"/>
         </scene>
-        <!--View Controller-->
+        <!--Forgot Password-->
         <scene sceneID="D3k-4N-3ZD">
             <objects>
-                <viewController id="xxn-9Z-pXB" sceneMemberID="viewController">
+                <viewController id="xxn-9Z-pXB" customClass="ForgotPassword" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IPD-yJ-nm4"/>
                         <viewControllerLayoutGuide type="bottom" id="AQ7-R8-onI"/>
@@ -274,12 +274,15 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                             <inset key="imageInsets" minX="-6" minY="18" maxX="41" maxY="16"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
-                                                <segue destination="vXZ-lx-hvc" kind="push" id="O30-Ng-gMe"/>
+                                                <segue destination="vXZ-lx-hvc" kind="push" id="qtQ-xv-wxT"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="right_icon.png" id="SFg-h9-exb">
                                             <inset key="imageInsets" minX="29" minY="18" maxX="6" maxY="16"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="fowardClicked:" destination="xxn-9Z-pXB" id="oad-j2-oEe"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -297,7 +300,10 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z59-0q-WNO">
                                         <rect key="frame" x="53" y="19" width="259" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="xxn-9Z-pXB" id="4I2-Au-zVu"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.95686274509803926" green="0.95294117647058818" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
@@ -326,6 +332,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.90196078431372551" green="0.89803921568627454" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="v0D-px-Dkh" secondAttribute="trailing" constant="-16" id="2SN-Bw-Fw0"/>
                             <constraint firstItem="sfd-5g-saD" firstAttribute="top" secondItem="v0D-px-Dkh" secondAttribute="bottom" id="2wx-j5-Qyu"/>
@@ -343,10 +350,21 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                             <constraint firstItem="krt-4k-HUG" firstAttribute="top" secondItem="sfd-5g-saD" secondAttribute="bottom" id="pTN-8d-TgY"/>
                             <constraint firstItem="P86-JS-aZr" firstAttribute="top" secondItem="5Zh-ae-pnA" secondAttribute="topMargin" id="vOC-Pq-Vcf"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="qHL-2R-uos" appends="YES" id="mG9-Df-ahs"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="MkC-Ym-Kpo"/>
+                    <connections>
+                        <outlet property="txtEmailaddress" destination="sfd-5g-saD" id="vSY-fO-GpJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nk8-PI-vL7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qHL-2R-uos">
+                    <connections>
+                        <action selector="backgroundTap:" destination="xxn-9Z-pXB" id="96a-hp-n21"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-907" y="2689"/>
         </scene>
@@ -2030,12 +2048,6 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CW3-f3-Iae">
-                                <rect key="frame" x="141" y="387" width="38" height="37"/>
-                                <state key="normal" image="calendar_green_logo.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWY-C6-bsn">
                                 <rect key="frame" x="112" y="337" width="96" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -2044,9 +2056,6 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="outer_date_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="quF-s3-upR">
-                                <rect key="frame" x="131" y="377" width="58" height="57"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="greyline.png" translatesAutoresizingMaskIntoConstraints="NO" id="aqQ-hL-RfJ">
                                 <rect key="frame" x="0.0" y="437" width="320" height="3"/>
                             </imageView>
@@ -2058,6 +2067,12 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                                 <connections>
                                     <segue destination="ApX-H0-8Tb" kind="push" id="Ohx-8M-I22"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CW3-f3-Iae">
+                                <rect key="frame" x="134" y="382" width="53" height="47"/>
+                                <state key="normal" image="calendar_logo-(1).png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -2902,14 +2917,8 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calendar_green_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="yVF-gr-vl0">
-                                <rect key="frame" x="141" y="385" width="38" height="36"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default_profile_pic.png" translatesAutoresizingMaskIntoConstraints="NO" id="lqg-ey-wwb">
                                 <rect key="frame" x="120" y="84" width="80" height="75"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="outer_date_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="A69-p6-Qb6">
-                                <rect key="frame" x="129" y="376" width="61" height="54"/>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fm9-f6-2Mg">
                                 <rect key="frame" x="15" y="444" width="288" height="29"/>
@@ -2919,6 +2928,9 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                                 </segments>
                                 <color key="tintColor" red="0.13333333333333333" green="0.52941176470588236" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calendar_logo-(1).png" translatesAutoresizingMaskIntoConstraints="NO" id="yVF-gr-vl0">
+                                <rect key="frame" x="132" y="377" width="54" height="48"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -2951,9 +2963,6 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="follow_button_grey.png" translatesAutoresizingMaskIntoConstraints="NO" id="dH6-Ky-TtX">
                                 <rect key="frame" x="60" y="309" width="210" height="44"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="outer_date_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="fmb-c2-KjY">
-                                <rect key="frame" x="129" y="367" width="62" height="55"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="greyline.png" translatesAutoresizingMaskIntoConstraints="NO" id="6CR-ho-MUj">
                                 <rect key="frame" x="0.0" y="432" width="320" height="3"/>
                             </imageView>
@@ -2969,12 +2978,6 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1H-ZM-KrE">
                                 <rect key="frame" x="268" y="28" width="46" height="30"/>
                                 <state key="normal" backgroundImage="more_button.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ww7-Oa-bWW">
-                                <rect key="frame" x="140" y="374" width="40" height="41"/>
-                                <state key="normal" image="calendar_green_logo.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -3068,6 +3071,12 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Follow">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ww7-Oa-bWW">
+                                <rect key="frame" x="133" y="368" width="61" height="54"/>
+                                <state key="normal" image="calendar_logo-(1).png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -4011,7 +4020,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
         <image name="background_silver.png" width="380" height="100"/>
         <image name="backgroundsettings.png" width="350" height="50"/>
         <image name="bookmark_ribbon.png" width="120" height="120"/>
-        <image name="calendar_green_logo.png" width="60" height="60"/>
+        <image name="calendar_logo-(1).png" width="60" height="60"/>
         <image name="calendario_text.png" width="300" height="70"/>
         <image name="camera_icon.png" width="120" height="120"/>
         <image name="chat_buble.png" width="60" height="60"/>
@@ -4061,10 +4070,10 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="eG1-uK-xhy"/>
+        <segue reference="Ohx-8M-I22"/>
         <segue reference="XTw-Nc-knD"/>
+        <segue reference="qtQ-xv-wxT"/>
         <segue reference="uB8-gG-cPu"/>
-        <segue reference="Iss-dh-NUq"/>
         <segue reference="AYC-4H-dqM"/>
     </inferredMetricsTieBreakers>
 </document>

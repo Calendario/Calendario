@@ -282,6 +282,8 @@
 		78D680891A2782EF00DBBEE4 /* LogOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D680881A2782EF00DBBEE4 /* LogOut.m */; };
 		78DD6AEF1A24C74E000FF878 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD6AEE1A24C74E000FF878 /* HomeViewController.m */; };
 		78DD6AF61A24D2EA000FF878 /* LoginPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD6AF51A24D2EA000FF878 /* LoginPage.m */; };
+		78E423FB1AB979EE000BA584 /* ForgotPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E423FA1AB979EE000BA584 /* ForgotPassword.m */; };
+		78E423FD1AB97AA0000BA584 /* calendar_logo-(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 78E423FC1AB97AA0000BA584 /* calendar_logo-(1).png */; };
 		A21D59B81A967D760085D784 /* ReportBugView.m in Sources */ = {isa = PBXBuildFile; fileRef = A21D59B71A967D760085D784 /* ReportBugView.m */; };
 		A28A0CD41A9D262E0059E124 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = A28A0CD31A9D262E0059E124 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B79481701A6459B30091332E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816C1A6459B30091332E /* Bolts.framework */; };
@@ -627,6 +629,9 @@
 		78DD6AEE1A24C74E000FF878 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Calendario/HomeViewController.m; sourceTree = "<group>"; };
 		78DD6AF41A24D2EA000FF878 /* LoginPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginPage.h; path = Calendario/LoginPage.h; sourceTree = "<group>"; };
 		78DD6AF51A24D2EA000FF878 /* LoginPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginPage.m; path = Calendario/LoginPage.m; sourceTree = "<group>"; };
+		78E423F91AB979EE000BA584 /* ForgotPassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForgotPassword.h; path = Calendario/ForgotPassword.h; sourceTree = "<group>"; };
+		78E423FA1AB979EE000BA584 /* ForgotPassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForgotPassword.m; path = Calendario/ForgotPassword.m; sourceTree = "<group>"; };
+		78E423FC1AB97AA0000BA584 /* calendar_logo-(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "calendar_logo-(1).png"; path = "../../../../../calendario's design team (resources)/11-8-2014/calendar_logo-(1).png"; sourceTree = "<group>"; };
 		A21D59B61A967D760085D784 /* ReportBugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportBugView.h; sourceTree = "<group>"; };
 		A21D59B71A967D760085D784 /* ReportBugView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportBugView.m; sourceTree = "<group>"; };
 		A28A0CD21A9D262E0059E124 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
@@ -794,6 +799,8 @@
 		7824B7681A239B310097F204 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				78E423FA1AB979EE000BA584 /* ForgotPassword.m */,
+				78E423F91AB979EE000BA584 /* ForgotPassword.h */,
 				780DD3C91A960540004A147A /* NotLoggedIn.h */,
 				780DD3CA1A960540004A147A /* NotLoggedIn.m */,
 				A28A0CD11A9D261E0059E124 /* Keychain Wrapper Class */,
@@ -905,6 +912,7 @@
 		7841D2CA1949CAEA00F8351C /* icon */ = {
 			isa = PBXGroup;
 			children = (
+				78E423FC1AB97AA0000BA584 /* calendar_logo-(1).png */,
 				7831CBA0196AD8B100657506 /* fbicon2.png */,
 				78AB4EE919D441B6003D028C /* background3.png */,
 				78A31C04196D424200A86759 /* ios7-arrow-leftwhite.png */,
@@ -1343,6 +1351,7 @@
 				7841D3711949CAEA00F8351C /* background.psd alias in Resources */,
 				7841D3761949CAEA00F8351C /* login_button.png in Resources */,
 				7841D39C1949CAEA00F8351C /* image_preview copy.png in Resources */,
+				78E423FD1AB97AA0000BA584 /* calendar_logo-(1).png in Resources */,
 				7841D3861949CAEA00F8351C /* navicon.png in Resources */,
 				7841D3681949CAEA00F8351C /* facebook.png in Resources */,
 				7841D3781949CAEA00F8351C /* rectangle.png in Resources */,
@@ -1569,6 +1578,7 @@
 				0439213719B452BE00716F6C /* UIButton+AFNetworking.m in Sources */,
 				789500361A64217500763491 /* WelcomeView.m in Sources */,
 				04B0A64719CF80EA00A04F45 /* LikeTable.m in Sources */,
+				78E423FB1AB979EE000BA584 /* ForgotPassword.m in Sources */,
 				04B0A65319CF9B1300A04F45 /* CommentDAO.m in Sources */,
 				0439213819B452BE00716F6C /* UIImageView+AFNetworking.m in Sources */,
 				7841D2A21949CA5200F8351C /* AppDelegate.m in Sources */,

@@ -63,8 +63,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "133"
             endingLineNumber = "133"
-            landmarkName = "@implementation LoginPage"
-            landmarkType = "3">
+            landmarkName = "-alertView:clickedButtonAtIndex:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -137,7 +137,7 @@
                   symbolName = "-[FacebookLogin nameLabel]"
                   moduleName = "Calendario"
                   urlString = "file:///Users/harith/Dropbox/Calendario/Code/Xcode/Calendario/Calendario/FacebookLogin.h"
-                  timestampString = "444595060.707201"
+                  timestampString = "448369645.485876"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -151,7 +151,7 @@
                   symbolName = "-[FacebookLogin setNameLabel:]"
                   moduleName = "Calendario"
                   urlString = "file:///Users/harith/Dropbox/Calendario/Code/Xcode/Calendario/Calendario/FacebookLogin.h"
-                  timestampString = "444595060.707356"
+                  timestampString = "448369645.486078"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -183,7 +183,7 @@
                   symbolName = "-[GooglePlus signInButton]"
                   moduleName = "Calendario"
                   urlString = "file:///Users/harith/Dropbox/Calendario/Code/Xcode/Calendario/Calendario/GooglePlus.h"
-                  timestampString = "444595060.708595"
+                  timestampString = "448369645.499969"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -197,7 +197,7 @@
                   symbolName = "-[GooglePlus setSignInButton:]"
                   moduleName = "Calendario"
                   urlString = "file:///Users/harith/Dropbox/Calendario/Code/Xcode/Calendario/Calendario/GooglePlus.h"
-                  timestampString = "444595060.708779"
+                  timestampString = "448369645.500154"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -205,6 +205,22 @@
                   offsetFromSymbolStart = "20">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Calendario/ForgotPassword.m"
+            timestampString = "448366620.973645"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "-fowardClicked:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
