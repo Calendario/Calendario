@@ -255,6 +255,7 @@
 		7841D4381949E7A900F8351C /* x_icon.psd in Resources */ = {isa = PBXBuildFile; fileRef = 7841D4361949E7A900F8351C /* x_icon.psd */; };
 		7841D43B1949E7D900F8351C /* check_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7841D4391949E7D900F8351C /* check_icon.png */; };
 		7841D43C1949E7D900F8351C /* check_icon.psd in Resources */ = {isa = PBXBuildFile; fileRef = 7841D43A1949E7D900F8351C /* check_icon.psd */; };
+		785F90391AC0EC8200F78763 /* calendar_logo-(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 785F90381AC0EC8200F78763 /* calendar_logo-(1).png */; };
 		786AAFCD1A28C8C400B1A622 /* FacebookLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 786AAFCC1A28C8C400B1A622 /* FacebookLogin.m */; };
 		786AAFD31A290CFB00B1A622 /* GooglePlus.m in Sources */ = {isa = PBXBuildFile; fileRef = 786AAFD21A290CFB00B1A622 /* GooglePlus.m */; };
 		7884184B1967D05C0028E0C3 /* mail_icon_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 7884184A1967D05C0028E0C3 /* mail_icon_gray.png */; };
@@ -283,7 +284,6 @@
 		78DD6AEF1A24C74E000FF878 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD6AEE1A24C74E000FF878 /* HomeViewController.m */; };
 		78DD6AF61A24D2EA000FF878 /* LoginPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD6AF51A24D2EA000FF878 /* LoginPage.m */; };
 		78E423FB1AB979EE000BA584 /* ForgotPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E423FA1AB979EE000BA584 /* ForgotPassword.m */; };
-		78E423FD1AB97AA0000BA584 /* calendar_logo-(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 78E423FC1AB97AA0000BA584 /* calendar_logo-(1).png */; };
 		A21D59B81A967D760085D784 /* ReportBugView.m in Sources */ = {isa = PBXBuildFile; fileRef = A21D59B71A967D760085D784 /* ReportBugView.m */; };
 		A28A0CD41A9D262E0059E124 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = A28A0CD31A9D262E0059E124 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B79481701A6459B30091332E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816C1A6459B30091332E /* Bolts.framework */; };
@@ -595,6 +595,7 @@
 		7841D4361949E7A900F8351C /* x_icon.psd */ = {isa = PBXFileReference; lastKnownFileType = file; name = x_icon.psd; path = ../x_icon.psd; sourceTree = "<group>"; };
 		7841D4391949E7D900F8351C /* check_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check_icon.png; sourceTree = "<group>"; };
 		7841D43A1949E7D900F8351C /* check_icon.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = check_icon.psd; sourceTree = "<group>"; };
+		785F90381AC0EC8200F78763 /* calendar_logo-(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "calendar_logo-(1).png"; path = "../../../../../calendario/Code/Calendario-Harith/icon/calendar_logo-(1).png"; sourceTree = "<group>"; };
 		786AAFCB1A28C8C400B1A622 /* FacebookLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FacebookLogin.h; path = Calendario/FacebookLogin.h; sourceTree = "<group>"; };
 		786AAFCC1A28C8C400B1A622 /* FacebookLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacebookLogin.m; path = Calendario/FacebookLogin.m; sourceTree = "<group>"; };
 		786AAFD11A290CFB00B1A622 /* GooglePlus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GooglePlus.h; path = Calendario/GooglePlus.h; sourceTree = "<group>"; };
@@ -631,7 +632,6 @@
 		78DD6AF51A24D2EA000FF878 /* LoginPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginPage.m; path = Calendario/LoginPage.m; sourceTree = "<group>"; };
 		78E423F91AB979EE000BA584 /* ForgotPassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForgotPassword.h; path = Calendario/ForgotPassword.h; sourceTree = "<group>"; };
 		78E423FA1AB979EE000BA584 /* ForgotPassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForgotPassword.m; path = Calendario/ForgotPassword.m; sourceTree = "<group>"; };
-		78E423FC1AB97AA0000BA584 /* calendar_logo-(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "calendar_logo-(1).png"; path = "../../../../../calendario's design team (resources)/11-8-2014/calendar_logo-(1).png"; sourceTree = "<group>"; };
 		A21D59B61A967D760085D784 /* ReportBugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportBugView.h; sourceTree = "<group>"; };
 		A21D59B71A967D760085D784 /* ReportBugView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportBugView.m; sourceTree = "<group>"; };
 		A28A0CD21A9D262E0059E124 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
@@ -912,7 +912,6 @@
 		7841D2CA1949CAEA00F8351C /* icon */ = {
 			isa = PBXGroup;
 			children = (
-				78E423FC1AB97AA0000BA584 /* calendar_logo-(1).png */,
 				7831CBA0196AD8B100657506 /* fbicon2.png */,
 				78AB4EE919D441B6003D028C /* background3.png */,
 				78A31C04196D424200A86759 /* ios7-arrow-leftwhite.png */,
@@ -927,6 +926,7 @@
 				78A31BFC196D3D2D00A86759 /* Emma-Watson1.png */,
 				78A31BF2196D37A200A86759 /* facebook_icon_coloured.png */,
 				7831CBA6196ADA3400657506 /* google+2.png */,
+				785F90381AC0EC8200F78763 /* calendar_logo-(1).png */,
 				7831CBA8196AEA4600657506 /* mail-01.png */,
 				78A31BF4196D37A800A86759 /* google_icon_coloured.png */,
 				7831CBA4196AD93400657506 /* google+.png */,
@@ -1351,7 +1351,7 @@
 				7841D3711949CAEA00F8351C /* background.psd alias in Resources */,
 				7841D3761949CAEA00F8351C /* login_button.png in Resources */,
 				7841D39C1949CAEA00F8351C /* image_preview copy.png in Resources */,
-				78E423FD1AB97AA0000BA584 /* calendar_logo-(1).png in Resources */,
+				785F90391AC0EC8200F78763 /* calendar_logo-(1).png in Resources */,
 				7841D3861949CAEA00F8351C /* navicon.png in Resources */,
 				7841D3681949CAEA00F8351C /* facebook.png in Resources */,
 				7841D3781949CAEA00F8351C /* rectangle.png in Resources */,
