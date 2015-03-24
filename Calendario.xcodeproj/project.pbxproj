@@ -52,7 +52,6 @@
 		7824B77B1A23A7640097F204 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7824B77A1A23A7640097F204 /* CoreMotion.framework */; };
 		7824B77D1A23A7760097F204 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7824B77C1A23A7760097F204 /* CoreText.framework */; };
 		7824B77F1A23A77D0097F204 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7824B77E1A23A77D0097F204 /* MediaPlayer.framework */; };
-		7827CFEB1AC1239900A019A1 /* calendar_logo-(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 7827CFEA1AC1239900A019A1 /* calendar_logo-(1).png */; };
 		7831CBA1196AD8B100657506 /* fbicon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7831CBA0196AD8B100657506 /* fbicon2.png */; };
 		7831CBA3196AD8FC00657506 /* fbicon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7831CBA2196AD8FC00657506 /* fbicon3.png */; };
 		7831CBA5196AD93400657506 /* google+.png in Resources */ = {isa = PBXBuildFile; fileRef = 7831CBA4196AD93400657506 /* google+.png */; };
@@ -281,6 +280,12 @@
 		78AB4EEE19D441C9003D028C /* fillbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 78AB4EED19D441C9003D028C /* fillbox.png */; };
 		78D680861A277C0900DBBEE4 /* RegisterPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D680851A277C0900DBBEE4 /* RegisterPage.m */; };
 		78D680891A2782EF00DBBEE4 /* LogOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D680881A2782EF00DBBEE4 /* LogOut.m */; };
+		78D970601AC2075C001B82EF /* calendar_logo-(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 78D9705F1AC2075C001B82EF /* calendar_logo-(1).png */; };
+		78D970621AC20774001B82EF /* unsure.png in Resources */ = {isa = PBXBuildFile; fileRef = 78D970611AC20774001B82EF /* unsure.png */; };
+		78D970641AC20782001B82EF /* calendar_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 78D970631AC20782001B82EF /* calendar_logo.png */; };
+		78D970661AC2078A001B82EF /* calendarlogo_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 78D970651AC2078A001B82EF /* calendarlogo_login.png */; };
+		78D970681AC20792001B82EF /* Emma-Watson1.png in Resources */ = {isa = PBXBuildFile; fileRef = 78D970671AC20792001B82EF /* Emma-Watson1.png */; };
+		78D9706A1AC207F6001B82EF /* google.png in Resources */ = {isa = PBXBuildFile; fileRef = 78D970691AC207F6001B82EF /* google.png */; };
 		78DD6AEF1A24C74E000FF878 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD6AEE1A24C74E000FF878 /* HomeViewController.m */; };
 		78DD6AF61A24D2EA000FF878 /* LoginPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DD6AF51A24D2EA000FF878 /* LoginPage.m */; };
 		78E423FB1AB979EE000BA584 /* ForgotPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E423FA1AB979EE000BA584 /* ForgotPassword.m */; };
@@ -386,7 +391,6 @@
 		7824B77A1A23A7640097F204 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		7824B77C1A23A7760097F204 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		7824B77E1A23A77D0097F204 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		7827CFEA1AC1239900A019A1 /* calendar_logo-(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "calendar_logo-(1).png"; path = "../../../../../calendario/Code/Xcode/Calendario/icon/calendar_logo-(1).png"; sourceTree = "<group>"; };
 		7831CBA0196AD8B100657506 /* fbicon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fbicon2.png; sourceTree = "<group>"; };
 		7831CBA2196AD8FC00657506 /* fbicon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fbicon3.png; sourceTree = "<group>"; };
 		7831CBA4196AD93400657506 /* google+.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google+.png"; sourceTree = "<group>"; };
@@ -626,6 +630,12 @@
 		78D680851A277C0900DBBEE4 /* RegisterPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterPage.m; sourceTree = "<group>"; };
 		78D680871A2782EF00DBBEE4 /* LogOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogOut.h; sourceTree = "<group>"; };
 		78D680881A2782EF00DBBEE4 /* LogOut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogOut.m; sourceTree = "<group>"; };
+		78D9705F1AC2075C001B82EF /* calendar_logo-(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar_logo-(1).png"; sourceTree = "<group>"; };
+		78D970611AC20774001B82EF /* unsure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unsure.png; sourceTree = "<group>"; };
+		78D970631AC20782001B82EF /* calendar_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar_logo.png; sourceTree = "<group>"; };
+		78D970651AC2078A001B82EF /* calendarlogo_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendarlogo_login.png; sourceTree = "<group>"; };
+		78D970671AC20792001B82EF /* Emma-Watson1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Emma-Watson1.png"; sourceTree = "<group>"; };
+		78D970691AC207F6001B82EF /* google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google.png; sourceTree = "<group>"; };
 		78DD6AED1A24C74E000FF878 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Calendario/HomeViewController.h; sourceTree = "<group>"; };
 		78DD6AEE1A24C74E000FF878 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Calendario/HomeViewController.m; sourceTree = "<group>"; };
 		78DD6AF41A24D2EA000FF878 /* LoginPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginPage.h; path = Calendario/LoginPage.h; sourceTree = "<group>"; };
@@ -912,7 +922,11 @@
 		7841D2CA1949CAEA00F8351C /* icon */ = {
 			isa = PBXGroup;
 			children = (
-				7827CFEA1AC1239900A019A1 /* calendar_logo-(1).png */,
+				78D970691AC207F6001B82EF /* google.png */,
+				78D970671AC20792001B82EF /* Emma-Watson1.png */,
+				78D970651AC2078A001B82EF /* calendarlogo_login.png */,
+				78D970631AC20782001B82EF /* calendar_logo.png */,
+				78D9705F1AC2075C001B82EF /* calendar_logo-(1).png */,
 				7831CBA0196AD8B100657506 /* fbicon2.png */,
 				78AB4EE919D441B6003D028C /* background3.png */,
 				78A31C04196D424200A86759 /* ios7-arrow-leftwhite.png */,
@@ -972,6 +986,7 @@
 				7841D35E1949CAEA00F8351C /* video-play-256.png */,
 				7841D35F1949CAEA00F8351C /* video-play-32.png */,
 				7841D3601949CAEA00F8351C /* video-play-64.png */,
+				78D970611AC20774001B82EF /* unsure.png */,
 			);
 			path = icon;
 			sourceTree = "<group>";
@@ -1338,6 +1353,7 @@
 				7841D3D21949CAEA00F8351C /* person_icon.psd in Resources */,
 				7806FE13196C403F00E4FEB5 /* unsure.png in Resources */,
 				78A31BF7196D393600A86759 /* email_grey.png in Resources */,
+				78D9706A1AC207F6001B82EF /* google.png in Resources */,
 				7841D3E01949CAEA00F8351C /* rightarrow.psd in Resources */,
 				7841D3B31949CAEA00F8351C /* default_profile_pic.png in Resources */,
 				7841D4381949E7A900F8351C /* x_icon.psd in Resources */,
@@ -1351,7 +1367,7 @@
 				7841D3711949CAEA00F8351C /* background.psd alias in Resources */,
 				7841D3761949CAEA00F8351C /* login_button.png in Resources */,
 				7841D39C1949CAEA00F8351C /* image_preview copy.png in Resources */,
-				7827CFEB1AC1239900A019A1 /* calendar_logo-(1).png in Resources */,
+				78D970601AC2075C001B82EF /* calendar_logo-(1).png in Resources */,
 				7841D3861949CAEA00F8351C /* navicon.png in Resources */,
 				7841D3681949CAEA00F8351C /* facebook.png in Resources */,
 				7841D3781949CAEA00F8351C /* rectangle.png in Resources */,
@@ -1371,6 +1387,7 @@
 				7841D36C1949CAEA00F8351C /* leftarrowblue.png in Resources */,
 				7841D2AA1949CA5200F8351C /* Images.xcassets in Resources */,
 				7841D39F1949CAEA00F8351C /* left_icon.png in Resources */,
+				78D970621AC20774001B82EF /* unsure.png in Resources */,
 				7841D41C1949DB1500F8351C /* header.psd in Resources */,
 				7831CBA7196ADA3400657506 /* google+2.png in Resources */,
 				7841D3E71949CAEA00F8351C /* calendar_logo.psd in Resources */,
@@ -1409,6 +1426,7 @@
 				78AB4EEE19D441C9003D028C /* fillbox.png in Resources */,
 				7841D3B61949CAEA00F8351C /* divider_gap.psd in Resources */,
 				7841D3951949CAEA00F8351C /* dots_mark_grey.psd in Resources */,
+				78D970641AC20782001B82EF /* calendar_logo.png in Resources */,
 				78A31BF9196D3A8D00A86759 /* greyline.png in Resources */,
 				7841D3CA1949CAEA00F8351C /* more_button.psd in Resources */,
 				7841D4261949DB1500F8351C /* mark_spot_green.psd in Resources */,
@@ -1475,6 +1493,7 @@
 				7841D3CD1949CAEA00F8351C /* newsfeed_icon.png in Resources */,
 				7841D3621949CAEA00F8351C /* bookmark_ribbon.psd in Resources */,
 				7841D3A71949CAEA00F8351C /* plus_icon.png in Resources */,
+				78D970681AC20792001B82EF /* Emma-Watson1.png in Resources */,
 				78A31C01196D3FD100A86759 /* ios7-arrow-left.png in Resources */,
 				7841D4201949DB1500F8351C /* left_icon.psd in Resources */,
 				7841D41B1949DB1500F8351C /* header.png in Resources */,
@@ -1498,6 +1517,7 @@
 				7832A3D4194B238900EC62F6 /* rightarrow1.png in Resources */,
 				78A31BFB196D3D1D00A86759 /* loading_button.png in Resources */,
 				7841D3DA1949CAEA00F8351C /* setting_icon.psd in Resources */,
+				78D970661AC2078A001B82EF /* calendarlogo_login.png in Resources */,
 				7841D4211949DB1500F8351C /* love.png in Resources */,
 				7841D4151949DB1500F8351C /* 2nd_headerz.png in Resources */,
 				7841D3BE1949CAEA00F8351C /* gallery_icon_active.psd in Resources */,
