@@ -52,6 +52,7 @@
 		7824B77B1A23A7640097F204 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7824B77A1A23A7640097F204 /* CoreMotion.framework */; };
 		7824B77D1A23A7760097F204 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7824B77C1A23A7760097F204 /* CoreText.framework */; };
 		7824B77F1A23A77D0097F204 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7824B77E1A23A77D0097F204 /* MediaPlayer.framework */; };
+		7827CFEB1AC1239900A019A1 /* calendar_logo-(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 7827CFEA1AC1239900A019A1 /* calendar_logo-(1).png */; };
 		7831CBA1196AD8B100657506 /* fbicon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7831CBA0196AD8B100657506 /* fbicon2.png */; };
 		7831CBA3196AD8FC00657506 /* fbicon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7831CBA2196AD8FC00657506 /* fbicon3.png */; };
 		7831CBA5196AD93400657506 /* google+.png in Resources */ = {isa = PBXBuildFile; fileRef = 7831CBA4196AD93400657506 /* google+.png */; };
@@ -255,7 +256,6 @@
 		7841D4381949E7A900F8351C /* x_icon.psd in Resources */ = {isa = PBXBuildFile; fileRef = 7841D4361949E7A900F8351C /* x_icon.psd */; };
 		7841D43B1949E7D900F8351C /* check_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7841D4391949E7D900F8351C /* check_icon.png */; };
 		7841D43C1949E7D900F8351C /* check_icon.psd in Resources */ = {isa = PBXBuildFile; fileRef = 7841D43A1949E7D900F8351C /* check_icon.psd */; };
-		785F90391AC0EC8200F78763 /* calendar_logo-(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 785F90381AC0EC8200F78763 /* calendar_logo-(1).png */; };
 		786AAFCD1A28C8C400B1A622 /* FacebookLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 786AAFCC1A28C8C400B1A622 /* FacebookLogin.m */; };
 		786AAFD31A290CFB00B1A622 /* GooglePlus.m in Sources */ = {isa = PBXBuildFile; fileRef = 786AAFD21A290CFB00B1A622 /* GooglePlus.m */; };
 		7884184B1967D05C0028E0C3 /* mail_icon_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 7884184A1967D05C0028E0C3 /* mail_icon_gray.png */; };
@@ -386,6 +386,7 @@
 		7824B77A1A23A7640097F204 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		7824B77C1A23A7760097F204 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		7824B77E1A23A77D0097F204 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		7827CFEA1AC1239900A019A1 /* calendar_logo-(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "calendar_logo-(1).png"; path = "../../../../../calendario/Code/Xcode/Calendario/icon/calendar_logo-(1).png"; sourceTree = "<group>"; };
 		7831CBA0196AD8B100657506 /* fbicon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fbicon2.png; sourceTree = "<group>"; };
 		7831CBA2196AD8FC00657506 /* fbicon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fbicon3.png; sourceTree = "<group>"; };
 		7831CBA4196AD93400657506 /* google+.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google+.png"; sourceTree = "<group>"; };
@@ -595,7 +596,6 @@
 		7841D4361949E7A900F8351C /* x_icon.psd */ = {isa = PBXFileReference; lastKnownFileType = file; name = x_icon.psd; path = ../x_icon.psd; sourceTree = "<group>"; };
 		7841D4391949E7D900F8351C /* check_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check_icon.png; sourceTree = "<group>"; };
 		7841D43A1949E7D900F8351C /* check_icon.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = check_icon.psd; sourceTree = "<group>"; };
-		785F90381AC0EC8200F78763 /* calendar_logo-(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "calendar_logo-(1).png"; path = "../../../../../calendario/Code/Calendario-Harith/icon/calendar_logo-(1).png"; sourceTree = "<group>"; };
 		786AAFCB1A28C8C400B1A622 /* FacebookLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FacebookLogin.h; path = Calendario/FacebookLogin.h; sourceTree = "<group>"; };
 		786AAFCC1A28C8C400B1A622 /* FacebookLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacebookLogin.m; path = Calendario/FacebookLogin.m; sourceTree = "<group>"; };
 		786AAFD11A290CFB00B1A622 /* GooglePlus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GooglePlus.h; path = Calendario/GooglePlus.h; sourceTree = "<group>"; };
@@ -912,6 +912,7 @@
 		7841D2CA1949CAEA00F8351C /* icon */ = {
 			isa = PBXGroup;
 			children = (
+				7827CFEA1AC1239900A019A1 /* calendar_logo-(1).png */,
 				7831CBA0196AD8B100657506 /* fbicon2.png */,
 				78AB4EE919D441B6003D028C /* background3.png */,
 				78A31C04196D424200A86759 /* ios7-arrow-leftwhite.png */,
@@ -926,7 +927,6 @@
 				78A31BFC196D3D2D00A86759 /* Emma-Watson1.png */,
 				78A31BF2196D37A200A86759 /* facebook_icon_coloured.png */,
 				7831CBA6196ADA3400657506 /* google+2.png */,
-				785F90381AC0EC8200F78763 /* calendar_logo-(1).png */,
 				7831CBA8196AEA4600657506 /* mail-01.png */,
 				78A31BF4196D37A800A86759 /* google_icon_coloured.png */,
 				7831CBA4196AD93400657506 /* google+.png */,
@@ -1351,7 +1351,7 @@
 				7841D3711949CAEA00F8351C /* background.psd alias in Resources */,
 				7841D3761949CAEA00F8351C /* login_button.png in Resources */,
 				7841D39C1949CAEA00F8351C /* image_preview copy.png in Resources */,
-				785F90391AC0EC8200F78763 /* calendar_logo-(1).png in Resources */,
+				7827CFEB1AC1239900A019A1 /* calendar_logo-(1).png in Resources */,
 				7841D3861949CAEA00F8351C /* navicon.png in Resources */,
 				7841D3681949CAEA00F8351C /* facebook.png in Resources */,
 				7841D3781949CAEA00F8351C /* rectangle.png in Resources */,
