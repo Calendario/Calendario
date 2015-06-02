@@ -140,7 +140,6 @@
         UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
         [self presentViewController:myController animated:YES completion:nil];
         
-        
         // The below code crashes for some reason. It says that there is no
         // segue with the identifier "HomeViewController" - even though there
         // is. I know this because I set it in Interface builder (Dan).

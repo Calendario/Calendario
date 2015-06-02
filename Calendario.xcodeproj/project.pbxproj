@@ -291,6 +291,7 @@
 		78E423FB1AB979EE000BA584 /* ForgotPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E423FA1AB979EE000BA584 /* ForgotPassword.m */; };
 		A21D59B81A967D760085D784 /* ReportBugView.m in Sources */ = {isa = PBXBuildFile; fileRef = A21D59B71A967D760085D784 /* ReportBugView.m */; };
 		A28A0CD41A9D262E0059E124 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = A28A0CD31A9D262E0059E124 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A2BD299C1B0B439500BB30A0 /* ProfilePage.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BD299B1B0B439500BB30A0 /* ProfilePage.m */; };
 		B79481701A6459B30091332E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816C1A6459B30091332E /* Bolts.framework */; };
 		B79481711A6459B30091332E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816D1A6459B30091332E /* FacebookSDK.framework */; };
 		B79481721A6459B30091332E /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816E1A6459B30091332E /* GoogleOpenSource.framework */; };
@@ -646,6 +647,8 @@
 		A21D59B71A967D760085D784 /* ReportBugView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportBugView.m; sourceTree = "<group>"; };
 		A28A0CD21A9D262E0059E124 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		A28A0CD31A9D262E0059E124 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		A2BD299A1B0B439500BB30A0 /* ProfilePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePage.h; sourceTree = "<group>"; };
+		A2BD299B1B0B439500BB30A0 /* ProfilePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePage.m; sourceTree = "<group>"; };
 		B794816C1A6459B30091332E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		B794816D1A6459B30091332E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		B794816E1A6459B30091332E /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
@@ -751,6 +754,7 @@
 		048E8C5A19884783002301C7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A2BD29991B0B435C00BB30A0 /* Profile Page */,
 				A28A0D201AA50B360059E124 /* Report Bug */,
 				E1C5BF651A74F1D1002726AB /* Settings */,
 				7841D2A31949CA5200F8351C /* Main.storyboard */,
@@ -1251,6 +1255,15 @@
 			name = "Report Bug";
 			sourceTree = "<group>";
 		};
+		A2BD29991B0B435C00BB30A0 /* Profile Page */ = {
+			isa = PBXGroup;
+			children = (
+				A2BD299A1B0B439500BB30A0 /* ProfilePage.h */,
+				A2BD299B1B0B439500BB30A0 /* ProfilePage.m */,
+			);
+			name = "Profile Page";
+			sourceTree = "<group>";
+		};
 		E1C5BF651A74F1D1002726AB /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -1586,6 +1599,7 @@
 				78DD6AF61A24D2EA000FF878 /* LoginPage.m in Sources */,
 				0439213919B452BE00716F6C /* UIProgressView+AFNetworking.m in Sources */,
 				0439212D19B452BE00716F6C /* AFHTTPSessionManager.m in Sources */,
+				A2BD299C1B0B439500BB30A0 /* ProfilePage.m in Sources */,
 				04B0A63B19CF80A100A04F45 /* FollowUser.m in Sources */,
 				0439213119B452BE00716F6C /* AFURLRequestSerialization.m in Sources */,
 				786AAFD31A290CFB00B1A622 /* GooglePlus.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "RegisterPage.h"
 #import "KeychainItemWrapper.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface RegisterPage () {
     
@@ -16,6 +17,19 @@
     
     // Keychain wrapper class instance.
     KeychainItemWrapper *keychain;
+    
+    // Alert type.
+    // 1 = No action needed.
+    // 2 = Show the home view.
+    // 3 = Photo selecter.
+    int alertType;
+    
+    // Profile picture.
+    UIImage *chosenImage;
+    
+    // Image type.
+    // 1 = library, 2 = camera photo.
+    int imageType;
 }
 
 @end
@@ -31,7 +45,15 @@
     NSUserDefaults *defaults;
     defaults = [NSUserDefaults standardUserDefaults];
     
-    [self.doneButton.layer setCornerRadius:5.0]; 
+    [self.doneButton.layer setCornerRadius:5.0];
+    
+    // Set the scroll view properties.
+    [_registerScroll setScrollEnabled:YES];
+    [_registerScroll setContentSize:CGSizeMake(self.view.bounds.size.width, 800)];
+    
+    // Roudn the edges of the picture button.
+    _pictureButton.layer.cornerRadius = 36;
+    _pictureButton.layer.masksToBounds = YES;
 }
 
 -(void)didReceiveMemoryWarning {
@@ -45,10 +67,12 @@
     if ([_passwordField.text isEqualToString:_reEnterPasswordField.text]) {
         
         NSLog(@"passwords match!");
-        [self registerNewUser];
+        [self registerNewUserV2];
     }
     
     else {
+        alertType = 1;
+        
         UIAlertView *error = [[UIAlertView alloc] initWithTitle:@"Oooops" message:@"Your entered passwords do not match" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [error show];
     }
@@ -65,11 +89,22 @@
     return YES;
 }
 
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    
+    if ([text isEqualToString:@"\n"]) {
+        [_descriptionField resignFirstResponder];
+    }
+    
+    return YES;
+}
+
 -(IBAction)doneButton:(id)sender {
     
     // Check if all text fields are completed.
     if ([_usernameField.text isEqualToString:@""] || [_passwordField.text isEqualToString:@""] || [_reEnterPasswordField.text isEqualToString:@""] || [_emailField.text isEqualToString:@""])
     {
+        
+        alertType = 1;
         
         UIAlertView *error = [[UIAlertView alloc] initWithTitle:@"Oooops" message:@"You must complete all fields" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [error show];
@@ -79,47 +114,84 @@
     }
 }
 
--(void)registerNewUser {
+- (IBAction)addImage:(id)sender {
     
-    // Create the URL to the User Register PHP file.
-    NSString *urlFormatted = [NSString stringWithFormat:@"%@register/%@/%@/%@/", webServiceAddress, _usernameField.text, _passwordField.text, _emailField.text];
+    alertType = 3;
     
-    // Ensure the string is in UTF8 format.
-    NSString *urlTextEscaped = [urlFormatted stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    UIAlertView *error = [[UIAlertView alloc] initWithTitle:@"Info" message:@"Would you like to use an existing image or take new a photo?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Photo Library", @"Take Photo", nil];
+    [error show];
+}
+
+-(void)registerNewUserV2 {
     
-    // Create the request and add the URL.
-    NSURLRequest *registerRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlTextEscaped]];
+    // Setup the register POST request.
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@register", webServiceAddress]]];
+    [request setHTTPMethod:@"POST"];
     
-    // Store the JSON responce and check for
-    // any response errors before parsing.
-    NSURLResponse *response = nil;
-    NSError *requestError = nil;
-    NSData *urlData = [NSURLConnection sendSynchronousRequest:registerRequest returningResponse:&response error:&requestError];
+    // 1. Set the header - Content-Type.
+    NSDictionary *the_header = @{@"Content-type" : @"application/json"};
+    [request setAllHTTPHeaderFields:the_header];
     
-    if ((requestError == nil) && (urlData != nil)) {
+    // Get the UIImage (profile picture) and convert
+    // it to a data string which can be passed to the
+    // server for processing.
+    NSData *imageData = UIImagePNGRepresentation(chosenImage);
+    NSString *imageString = [[NSString alloc] initWithBytes:[imageData bytes] length:[imageData length] encoding:NSUTF8StringEncoding];
     
-        NSError *error = nil;
-        NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:urlData options:NSJSONReadingMutableContainers error:&error];
+    // 2. Set the paramters & metadata for the video (eg: title).
+    NSDictionary *metadata;
+    
+    metadata = @{@"username" : _usernameField.text,
+                 @"password" : _passwordField.text,
+                 @"emailuser" : _emailField.text,
+                 @"fullname" : _fullNameField.text,
+                 @"website" : _websiteField.text,
+                 @"image" : imageString,
+                 @"description" : _descriptionField.text};
+    
+    // 3. Convert metadata into JSON format and submit.
+    NSError *jError = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:metadata options:NSJSONWritingPrettyPrinted error:&jError];
+    [request setHTTPBody:jsonData];
+    
+    NSHTTPURLResponse *response = nil;
+    NSError *error = nil;
+    
+    NSData *returnedData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+    NSLog(@"Returned Data: %@", returnedData);
+    
+    if ((returnedData != nil) && (error == nil)) {
+        
+        NSError *jsonError = nil;
+        NSDictionary *responseData = [NSJSONSerialization JSONObjectWithData:returnedData options:NSJSONReadingMutableContainers error:&jsonError];
+        
+        NSLog(@"REGISTER RESPONCE: %@", responseData);
         
         // The server will send back a success integer,
         // parse it and decide what to do next.
-        NSString *success = jsonData[@"msg"];
+        NSString *success = responseData[@"msg"];
         
         if ([success isEqual:@"sucess"] || [success isEqual:@"success"]) {
             // The registration has been completed,
             // go on to saving the user details locally.
             [self saveUserData];
             
-        } else {
+        }
+        
+        else {
             
             // There has been an error so delete the username
             // and password from the keychain.
             [keychain resetKeychainItem];
             
             // Parse the error message passed back from the server.
-            NSString *error_msg = (NSString *)jsonData[@"error_message"];
+            NSString *error_msg = (NSString *)responseData[@"error_message"];
             
             // Display the error message to the user.
+            alertType = 1;
+            
             UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:error_msg delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
             
             [errorAlert show];
@@ -130,7 +202,9 @@
         
         // There has been an issue with the connection
         // to the server - probably internet connection.
-        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:[NSString stringWithFormat:@"%@", requestError] delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+        alertType = 1;
+        
+        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:[NSString stringWithFormat:@"%@", error] delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
         
         [errorAlert show];
     }
@@ -144,6 +218,8 @@
     [keychain setObject:_passwordField.text forKey:(__bridge id)kSecValueData];
     
     // Alert the user of the account creation success.
+    alertType = 2;
+    
     successAlert = [[UIAlertView alloc] initWithTitle:@"Welcome" message:@"You have been registered. Press OK to continue." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
     
     [successAlert show];
@@ -153,18 +229,111 @@
 
 -(void)alertView:(UIAlertView *)successAlert clickedButtonAtIndex:(NSInteger)buttonIndex {
     
-    if (buttonIndex == 0) {
-        
-        // Now present the home view.
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
-        [self presentViewController:myController animated:YES completion:nil];
-        
-        // The below code crashes for some reason. It says that there is no
-        // segue with the identifier "HomeViewController" - even though there
-        // is. I know this because I set it in Interface builder (Dan).
-        //[self performSegueWithIdentifier:@"HomeViewController" sender:self];
+    // Alert type.
+    // 1 = No action needed.
+    // 2 = Show the home view.
+    // 3 = Photo selecter.
+    
+    if (alertType == 1) {
+        // No action needed.
     }
+    
+    else if (alertType == 2) {
+        
+        if (buttonIndex == 0) {
+            
+            // Now present the home view.
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+            UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+            [self presentViewController:myController animated:YES completion:nil];
+            
+            // The below code crashes for some reason. It says that there is no
+            // segue with the identifier "HomeViewController" - even though there
+            // is. I know this because I set it in Interface builder (Dan).
+            //[self performSegueWithIdentifier:@"HomeViewController" sender:self];
+        }
+    }
+    
+    else if (alertType == 3) {
+        
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.allowsEditing = YES;
+        
+        if (buttonIndex == 1) {
+            
+            // Photo library.
+            imageType = 1;
+            
+            if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+                
+                picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+                [self presentViewController:picker animated:YES completion:NULL];
+            }
+            
+            else {
+                
+                // No action is needed.
+                alertType = 1;
+                
+                // Display the camera error alert.
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"There was an error accessing your photo library. Make sure you have granted Calendario access to your photos." delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+                [alert show];
+            }
+        }
+        
+        else if (buttonIndex == 2) {
+            
+            // Take a new image.
+            imageType = 2;
+            
+            if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+                
+                picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+                
+                if ([UIImagePickerController isCameraDeviceAvailable: UIImagePickerControllerCameraDeviceFront]) {
+                    picker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+                }
+                
+                [self presentViewController:picker animated:YES completion:NULL];
+            }
+            
+            else {
+                
+                // No action is needed.
+                alertType = 1;
+                
+                // Display the camera error alert.
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"You can not take a photo because your device does not have a camera." delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+                [alert show];
+            }
+        }
+    }
+}
+
+// Image picker delegate methods.
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    // Store the photo if one has been taken.
+    chosenImage = info[UIImagePickerControllerEditedImage];
+    
+    if (imageType == 2) {
+        
+        // Save the image to the users library
+        // if the photo was taken via the camera.
+        UIImageWriteToSavedPhotosAlbum(chosenImage, nil, nil, nil);
+    }
+    
+    // Now dismiss the picker view and add
+    // the image to the profile picture button.
+    [picker dismissViewControllerAnimated:YES completion:^{
+        [_pictureButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
+    }];
+}
+
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

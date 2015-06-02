@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UIViewController
+@interface HomeViewController : UIViewController {
+
+}
+
+// Testing.... TEMPORARY ONLY...
+-(IBAction)open_profile:(id)sender;
 
 @end

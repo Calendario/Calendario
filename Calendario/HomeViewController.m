@@ -14,6 +14,17 @@
 
 @implementation HomeViewController
 
+-(IBAction)open_profile:(id)sender {
+    
+    // Testing.... TEMPORARY ONLY...
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"ProfilePage"];
+    [self presentViewController:myController animated:YES completion:nil];
+    
+    // Testing.... TEMPORARY ONLY...
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
