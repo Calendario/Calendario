@@ -57,29 +57,69 @@
         
         NSError *error = nil;
         NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:urlData options:NSJSONReadingMutableContainers error:&error];
-        
+    
         // The server will send back a success integer,
         // parse it and decide what to do next.
         NSString *success = jsonData[@"msg"];
         
         if ([success isEqual:@"sucess"] || [success isEqual:@"success"]) {
+            
             // The profile data has been loaded correctly,
             // lets parse the data & present it to the user.
-            
             NSArray *profileInfo = [[jsonData objectForKey:@"userprofile"] objectForKey:@"User"];
+            NSArray *otherInfo = [jsonData objectForKey:@"userprofile"];
             
-            // Set the appropriate labels.
-            [_fullNameLabel setTitle:[profileInfo valueForKey:@"fullname"] forState:UIControlStateNormal];
-            //[_userWebsite setTitle:[profileInfo valueForKey:@"website"] forState:UIControlStateNormal];
-            //_descriptionLabel.text = [profileInfo valueForKey:@"description"];
+            // Data parsed array.
+            NSMutableArray *parsedData = [[NSMutableArray alloc] init];
+            [parsedData addObject:[NSString stringWithFormat:@"%@", [profileInfo valueForKey:@"fullname"]]];
+            [parsedData addObject:[NSString stringWithFormat:@"%@", [profileInfo valueForKey:@"website"]]];
+            [parsedData addObject:[NSString stringWithFormat:@"%@", [profileInfo valueForKey:@"description"]]];
+            [parsedData addObject:[NSString stringWithFormat:@"%@", [otherInfo valueForKey:@"followers"]]];
+            [parsedData addObject:[NSString stringWithFormat:@"%@", [otherInfo valueForKey:@"following"]]];
+            [parsedData addObject:[NSString stringWithFormat:@"%@", [otherInfo valueForKey:@"posts"]]];
             
-            /*
-             "id": "11",
-             "username": "chavesdev",
-             "fullname": null,
-             "email": "epxter@gmail.com",
-             "joined": "2015-02-23 00:47:23"
-             */
+            // No value set label array.
+            NSArray *noData = @[@"No name set.", @"No website set.", @"No description set.", @"0", @"0", @"0"];
+            
+            // Now set the labels/buttons accordingly.
+            // Check for any nil/NULL/Blank values first.
+            for (int loop = 0; loop < 6; loop++) {
+                
+                NSString *currentString = [parsedData objectAtIndex:loop];
+                
+                if ((currentString == nil) || (currentString == NULL) || ([currentString isEqualToString:@"<null>"]) || ([currentString isEqualToString:@""])) {
+                    [parsedData replaceObjectAtIndex:loop withObject:[NSString stringWithFormat:@"%@", noData[loop]]];
+                }
+            }
+    
+            // Set the various labels.
+            [_fullNameLabel setTitle:[NSString stringWithFormat:@"%@", parsedData[0]] forState:UIControlStateNormal];
+            [_userWebsite setTitle:[NSString stringWithFormat:@"%@", parsedData[1]] forState:UIControlStateNormal];
+            _descriptionLabel.text = [NSString stringWithFormat:@"%@", parsedData[2]];
+            [_followerCountLabel setTitle:[NSString stringWithFormat:@"%@", parsedData[3]] forState:UIControlStateNormal];
+            [_followingCountLabel setTitle:[NSString stringWithFormat:@"%@", parsedData[4]] forState:UIControlStateNormal];
+            _postCountLabel.text = [NSString stringWithFormat:@"%@", parsedData[5]];
+            
+            // Set the posts loaded by label.
+            _postsLoadedBy.text = [NSString stringWithFormat:@"Posts that uploaded by %@", parsedData[0]];
+            
+            // Download the user's profile image.
+            UIImage *profileImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", [profileInfo valueForKey:@"image"]]]]];
+            
+            if (profileImage != nil) {
+                [_profilePicture setImage:profileImage];
+            }
+            
+            // Check if the user is verified or not.
+            int verified = [[profileInfo valueForKey:@"verified"] intValue];
+            
+            if (verified == 1) {
+                [_verifiedRibbon setAlpha:1.0];
+            }
+            
+            else {
+                [_verifiedRibbon setAlpha:0.0];
+            }
         }
         
         else {

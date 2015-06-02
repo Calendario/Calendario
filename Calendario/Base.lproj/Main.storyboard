@@ -927,7 +927,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qtn-6O-05Y">
-                                <rect key="frame" x="7" y="28" width="41" height="30"/>
+                                <rect key="frame" x="7" y="28" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="PROF">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1972,14 +1972,14 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay Hungry , Stay Foolish." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hH0-Js-M7F">
-                                <rect key="frame" x="70" y="191" width="200" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay Hungry , Stay Foolish." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hH0-Js-M7F">
+                                <rect key="frame" x="16" y="191" width="288" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qjd-bf-0sJ">
-                                <rect key="frame" x="87" y="214" width="167" height="30"/>
+                                <rect key="frame" x="80" y="214" width="167" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="www.calendario.com">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -2037,8 +2037,8 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posts that uploaded by Bryan Giggs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="78F-Y0-w9z">
-                                <rect key="frame" x="26" y="479" width="288" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posts that uploaded by Bryan Giggs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="78F-Y0-w9z">
+                                <rect key="frame" x="16" y="479" width="288" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -2102,6 +2102,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                         <outlet property="followingCountLabel" destination="b53-ro-FdL" id="XgG-19-1d4"/>
                         <outlet property="fullNameLabel" destination="sDI-52-4ha" id="CKf-mJ-nEX"/>
                         <outlet property="postCountLabel" destination="4Kb-0V-0KT" id="MxA-hI-Mdf"/>
+                        <outlet property="postsLoadedBy" destination="78F-Y0-w9z" id="Wda-bi-DCY"/>
                         <outlet property="profilePicture" destination="AMl-EJ-2z3" id="vni-ic-uGs"/>
                         <outlet property="userWebsite" destination="Qjd-bf-0sJ" id="RsL-rN-cuH"/>
                         <outlet property="verifiedRibbon" destination="GTk-nz-bGZ" id="e5w-Gd-UJ4"/>

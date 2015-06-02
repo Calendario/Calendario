@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *userWebsite;
 
+@property (weak, nonatomic) IBOutlet UILabel *postsLoadedBy;
 @property (weak, nonatomic) IBOutlet UILabel *postCountLabel;
 @property (weak, nonatomic) IBOutlet UIButton *followerCountLabel;
 @property (weak, nonatomic) IBOutlet UIButton *followingCountLabel;
