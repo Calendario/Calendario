@@ -1193,9 +1193,10 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                 <color key="backgroundColor" red="0.90196078431372551" green="0.89803921568627454" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bugCell" rowHeight="48" id="RWX-tG-AYe">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="22" width="320" height="48"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RWX-tG-AYe" id="dNk-nC-niR">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" id="nEF-d0-HrP">
@@ -2579,9 +2580,10 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingsCell" rowHeight="55" id="IB8-nG-pCs">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="22" width="320" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IB8-nG-pCs" id="Xe0-qx-qfh">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5Lx-7a-Yty">
@@ -3412,17 +3414,17 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
             </objects>
             <point key="canvasLocation" x="2030" y="-1002"/>
         </scene>
-        <!--View Controller-->
+        <!--Webpage View-->
         <scene sceneID="cXO-7z-BeE">
             <objects>
-                <viewController id="ziF-rW-Bld" sceneMemberID="viewController">
+                <viewController id="ziF-rW-Bld" customClass="WebpageView" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SUW-uo-R45">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header.png" id="DEm-dg-dlI">
                                 <rect key="frame" x="0.0" y="-9" width="320" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IMM-YW-9QZ">
                                 <rect key="frame" x="14" y="31" width="30" height="30"/>
@@ -3430,31 +3432,67 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                                 <state key="normal" image="left_icon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="done:" destination="ziF-rW-Bld" eventType="touchUpInside" id="giz-Ny-sRl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Dbl-sy-1MN">
-                                <rect key="frame" x="256" y="29" width="52" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="266" y="29" width="42" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ios7-refresh-empty.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="reload" destination="QN2-57-ky2" eventType="touchUpInside" id="pQi-i4-NJW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4Fh-xd-zFd">
-                                <rect key="frame" x="172" y="29" width="51" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="188" y="29" width="35" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ios7-arrow-leftwhite.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="goBack" destination="QN2-57-ky2" eventType="touchUpInside" id="8kB-c0-wfX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oog-Iq-IZV">
-                                <rect key="frame" x="210" y="29" width="50" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="227" y="29" width="38" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ios7-arrow-right.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="goForward" destination="QN2-57-ky2" eventType="touchUpInside" id="Y8i-kH-eoR"/>
+                                </connections>
                             </button>
+                            <webView contentMode="scaleToFill" id="QN2-57-ky2">
+                                <rect key="frame" x="0.0" y="69" width="320" height="506"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tCZ-pv-a3I">
+                                <rect key="frame" x="140" y="25" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="more_button.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openInBrowser:" destination="ziF-rW-Bld" eventType="touchUpInside" id="T5X-oE-OfX"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" id="O4V-nH-rZk">
+                                <rect key="frame" x="57" y="36" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="active" destination="O4V-nH-rZk" id="HHD-XA-VDl"/>
+                        <outlet property="openBrowserButton" destination="tCZ-pv-a3I" id="Kgj-JC-bdW"/>
+                        <outlet property="webpage" destination="QN2-57-ky2" id="vUz-JG-SGC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVI-hc-1YM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3951,9 +3989,10 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="84" id="pcF-fd-MpQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="22" width="320" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pcF-fd-MpQ" id="A9n-RN-vmx">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="inT-1c-Hgb">
