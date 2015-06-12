@@ -7,12 +7,12 @@
 //
 
 #import "ReportBugView.h"
+#import "KeychainItemWrapper.h"
 
 @interface ReportBugView () {
     
-    NSArray *bugItems;
-    UITextView *bugLevel;
-    UITextView *bugDesc;
+    // Keychain wrapper class instance.
+    KeychainItemWrapper *keychain;
 }
 
 @end
@@ -22,12 +22,6 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    // Set the tableview delegate and source.
-    self.reportBugTableView.delegate = self;
-    self.reportBugTableView.dataSource = self;
-    
-    bugItems = [[NSArray alloc] initWithObjects:@"Bug Level", @"Description", nil];
 }
 
 -(void)didReceiveMemoryWarning {
@@ -37,18 +31,152 @@
 
 #pragma mark - Report bug method
 
--(void)submitBugReport {
+-(int)getUserID {
     
-    // Submit the bug report to the server, this feature
-    // cant be completed yet because the report bug PHP
-    // script has not been made and stored on the server.
+    // User ID number.
+    int userID;
     
-    NSLog(@"\n\n");
-    NSLog(@"THIS IS A TEST:\n");
-    NSLog(@"\n As the PHP script for the Report Bug has not been made, we will not be submitting any data yet. Once the PHP script is complete, this section of the app can be completed.\n\n");
-    NSLog(@"Thanks - Daniel\n");
-    NSLog(@"Bug Level: %@\n", bugLevel.text);
-    NSLog(@"Bug description: %@\n\n", bugDesc.text);
+    // Get the user ID - we need to pass this
+    // to the user profile PHP file.
+    keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"UserLoginData" accessGroup:nil];
+    NSString *username = [keychain objectForKey:(__bridge id)(kSecAttrAccount)];
+    
+    // Create the URL to the User profile PHP file.
+    NSString *urlFormatted = [NSString stringWithFormat:@"%@profile/%@", webServiceAddress, username];
+    
+    // Ensure the string is in UTF8 format.
+    NSString *urlTextEscaped = [urlFormatted stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    // Create the request and add the URL.
+    NSURLRequest *registerRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlTextEscaped]];
+    
+    // Store the JSON responce and check for
+    // any response errors before parsing.
+    NSURLResponse *response = nil;
+    NSError *requestError = nil;
+    NSData *urlData = [NSURLConnection sendSynchronousRequest:registerRequest returningResponse:&response error:&requestError];
+    
+    if ((requestError == nil) && (urlData != nil)) {
+        
+        NSError *error = nil;
+        NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:urlData options:NSJSONReadingMutableContainers error:&error];
+        
+        // The server will send back a success integer,
+        // parse it and decide what to do next.
+        NSString *success = jsonData[@"msg"];
+        
+        if ([success isEqual:@"sucess"] || [success isEqual:@"success"]) {
+            
+            // The profile data has been loaded correctly,
+            // lets parse the data & get the ID number.
+            userID = [[[[jsonData objectForKey:@"userprofile"] objectForKey:@"User"] valueForKey:@"id"] intValue];
+        }
+        
+        else {
+            
+            // Error user ID not found.
+            return -1;
+        }
+    }
+    
+    else {
+        
+        // Error user ID not found.
+        return -1;
+    }
+    
+    return userID;
+}
+
+-(IBAction)sendBugReport:(id)sender {
+    
+    // Submit the bug report to the server.
+    
+    if ((_bugTitle.text == nil) || (_bugDesc.text == nil) || ([_bugTitle.text isEqualToString:@""]) || ([_bugDesc.text isEqualToString:@""])) {
+        
+        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"You cannot send an empty bug report. Please fill in some details and then press send." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+        
+        [errorAlert show];
+    }
+    
+    else {
+        
+        // Setup the register POST request.
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+        [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@newbug", webServiceAddress]]];
+        [request setHTTPMethod:@"POST"];
+        
+        // 1. Set the header - Content-Type.
+        NSDictionary *the_header = @{@"Content-type" : @"application/x-www-form-urlencoded"};
+        [request setAllHTTPHeaderFields:the_header];
+        
+        // 2. Get the user ID number.
+        int userIDNumber = [self getUserID];
+        
+        if (userIDNumber == -1) {
+            
+            // The user ID number has not been obtained
+            // thus the bug report cannot be sent because
+            // we don't know the ID number of the user.
+            UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"The bug report could not be sent because your user ID number is not known." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+            
+            [errorAlert show];
+        }
+        
+        else {
+            
+            // 3. Set the paramters & metadata for the request (eg: title).
+            NSString *postString = [NSString stringWithFormat:@"user=%d&title=%@&msg=%@", userIDNumber, _bugTitle.text, _bugDesc.text];
+            
+            // 4. Convert metadata into form format and submit.
+            [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
+            
+            // 5. Get the response back from the server and parse it.
+            NSHTTPURLResponse *response = nil;
+            NSError *error = nil;
+            NSData *returnedData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+            
+            if ((returnedData != nil) && (error == nil)) {
+                
+                NSError *jsonError = nil;
+                NSDictionary *responseData = [NSJSONSerialization JSONObjectWithData:returnedData options:NSJSONReadingMutableContainers error:&jsonError];
+                
+                // The server will send back a success integer,
+                // parse it and decide what to do next.
+                NSString *success = responseData[@"msg"];
+                
+                if ([success isEqual:@"sucess"] || [success isEqual:@"success"]) {
+                    
+                    // The registration has been completed,
+                    // go on to saving the user details locally.
+                    
+                    UIAlertView *successAlert = [[UIAlertView alloc] initWithTitle:@"Bug report sent" message:@"The bug report has been submitted." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+                    
+                    [successAlert show];
+                }
+                
+                else {
+                    
+                    // Parse the error message passed back from the server.
+                    NSString *error_msg = (NSString *)responseData[@"error_message"];
+                    
+                    // Display the error message to the user.
+                    UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:error_msg delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+                    
+                    [errorAlert show];
+                }
+            }
+            
+            else {
+                
+                // There has been an issue with the connection
+                // to the server - probably internet connection.
+                UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:[NSString stringWithFormat:@"%@", error] delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+                
+                [errorAlert show];
+            }
+        }
+    }
 }
 
 #pragma mark - Other methods
@@ -58,109 +186,13 @@
     return YES;
 }
 
-#pragma mark - UITableView methods
-
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 30.0f;
-}
-
-// Create custom view for header.
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
     
-    // Create custom header for section title.
-    UIView *sectionHeaderView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, tableView.frame.size.width, 30.0)];
-    sectionHeaderView.backgroundColor = [UIColor colorWithRed:246/255.0 green:246/255.0 blue:246/255.0 alpha:1.0];
-    
-    UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, sectionHeaderView.frame.size.width, 25.0)];
-    
-    headerLabel.backgroundColor = [UIColor clearColor];
-    headerLabel.textAlignment = NSTextAlignmentLeft + 20;
-    [headerLabel setFont:[UIFont fontWithName:@"AppleSDGothicNeo-Light" size:17.0]];
-    headerLabel.textColor = [UIColor darkGrayColor];
-    [sectionHeaderView addSubview:headerLabel];
-    
-    switch (section) {
-            
-        case 0: headerLabel.text = @"Bug Level"; break;
-        case 1: headerLabel.text = @"Description"; break;
-        default: break;
+    if ([text isEqualToString:@"\n"]) {
+        [_bugDesc resignFirstResponder];
     }
     
-    return sectionHeaderView;
+    return YES;
 }
-
--(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-    return tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-}
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    // Cell identifier - as set in the prototype cell in interface builder.
-    NSString *cellIdentifier = @"bugCell";
-    
-    // Create your default cell that will act as the cell you add elements to.
-    UITableViewCell *myCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    // Create variables to access the labels. Already specified their tags in storyboard.
-    bugLevel = (UITextView *)[myCell.contentView viewWithTag:1];
-    bugDesc = (UITextView *)[myCell.contentView viewWithTag:2];
-    
-    if (indexPath.section == 0) {
-        bugLevel.text = @"Enter bug level...";
-    }
-    
-    else if (indexPath.section == 1) {
-        
-        if (indexPath.row == 0) {
-            bugDesc.text = [NSString stringWithFormat:@"Enter bug description..."];
-        }
-        
-        else {
-            [myCell setBackgroundColor:[UIColor clearColor]];
-            
-            UIButton *submitButton = [[UIButton alloc] initWithFrame:CGRectMake((myCell.bounds.size.width / 2), 0, 100.0, 50.0)];
-            [submitButton setBackgroundImage:[UIImage imageNamed:@"login_button.png"] forState:UIControlStateNormal];
-            [submitButton setTitle:@"Submit" forState:UIControlStateNormal];
-            [submitButton addTarget:self action:@selector(submitBugReport) forControlEvents:UIControlEventTouchUpInside];
-            [myCell addSubview:submitButton];
-            
-            submitButton.clipsToBounds = YES;
-        }
-    }
-    
-    return myCell;
-}
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    if (section == 0) {
-        return 1;
-    }
-    
-    else {
-        return 2;
-    }
-}
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (indexPath.section == 1) {
-        
-        NSObject *selectedObject = [bugItems objectAtIndex:indexPath.row];
-        
-        if ([selectedObject isEqual:@"Bug Level"]) {
-            //[self performSegueWithIdentifier:@"bugLevelSegue" sender:self];
-        }
-        
-        else if ([selectedObject isEqual:@"Description"]) {
-            //[self performSegueWithIdentifier:@"descriptionSegue" sender:self];
-        }
-    }
-}
-
 
 @end

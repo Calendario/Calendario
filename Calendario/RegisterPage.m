@@ -139,7 +139,7 @@
     NSData *imageData = UIImagePNGRepresentation(chosenImage);
     NSString *imageString = [[NSString alloc] initWithBytes:[imageData bytes] length:[imageData length] encoding:NSUTF8StringEncoding];
     
-    // 2. Set the paramters & metadata for the video (eg: title).
+    // 2. Set the paramters & metadata for the request (eg: title).
     NSString *postString = [NSString stringWithFormat:@"username=%@&password=%@&emailuser=%@&fullname=%@&website=%@&image=%@&description=%@", _usernameField.text, _passwordField.text, _emailField.text, _fullNameField.text, _websiteField.text, imageString, _descriptionField.text];
     
     // 3. Convert metadata into form format and submit.
