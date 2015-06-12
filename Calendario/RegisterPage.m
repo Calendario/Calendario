@@ -130,7 +130,7 @@
     [request setHTTPMethod:@"POST"];
     
     // 1. Set the header - Content-Type.
-    NSDictionary *the_header = @{@"Content-type" : @"application/json"};
+    NSDictionary *the_header = @{@"Content-type" : @"application/x-www-form-urlencoded"};
     [request setAllHTTPHeaderFields:the_header];
     
     // Get the UIImage (profile picture) and convert
@@ -140,34 +140,20 @@
     NSString *imageString = [[NSString alloc] initWithBytes:[imageData bytes] length:[imageData length] encoding:NSUTF8StringEncoding];
     
     // 2. Set the paramters & metadata for the video (eg: title).
-    NSDictionary *metadata;
+    NSString *postString = [NSString stringWithFormat:@"username=%@&password=%@&emailuser=%@&fullname=%@&website=%@&image=%@&description=%@", _usernameField.text, _passwordField.text, _emailField.text, _fullNameField.text, _websiteField.text, imageString, _descriptionField.text];
     
-    metadata = @{@"username" : _usernameField.text,
-                 @"password" : _passwordField.text,
-                 @"emailuser" : _emailField.text,
-                 @"fullname" : _fullNameField.text,
-                 @"website" : _websiteField.text,
-                 @"image" : imageString,
-                 @"description" : _descriptionField.text};
+    // 3. Convert metadata into form format and submit.
+    [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
     
-    // 3. Convert metadata into JSON format and submit.
-    NSError *jError = nil;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:metadata options:NSJSONWritingPrettyPrinted error:&jError];
-    [request setHTTPBody:jsonData];
-    
+    // 4. Get the response back from the server and parse it.
     NSHTTPURLResponse *response = nil;
     NSError *error = nil;
-    
     NSData *returnedData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    
-    NSLog(@"Returned Data: %@", returnedData);
     
     if ((returnedData != nil) && (error == nil)) {
         
         NSError *jsonError = nil;
         NSDictionary *responseData = [NSJSONSerialization JSONObjectWithData:returnedData options:NSJSONReadingMutableContainers error:&jsonError];
-        
-        NSLog(@"REGISTER RESPONCE: %@", responseData);
         
         // The server will send back a success integer,
         // parse it and decide what to do next.
@@ -177,7 +163,6 @@
             // The registration has been completed,
             // go on to saving the user details locally.
             [self saveUserData];
-            
         }
         
         else {
