@@ -1658,52 +1658,92 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
             </objects>
             <point key="canvasLocation" x="148" y="1594"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Table View Controller-->
         <scene sceneID="u6H-Yu-KLs">
             <objects>
-                <viewController id="aIz-fq-lmn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aIz-fq-lmn" customClass="SearchTableViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OJv-4Q-7tb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Search Users, Hashtags" id="iv4-3o-Ibu">
-                                <rect key="frame" x="0.0" y="65" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="68" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                                 <connections>
-                                    <outlet property="delegate" destination="aIz-fq-lmn" id="zWe-po-FLk"/>
+                                    <outlet property="delegate" destination="aIz-fq-lmn" id="fy7-pY-bA5"/>
                                 </connections>
                             </searchBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header.png" id="KjP-zs-E9L">
                                 <rect key="frame" x="0.0" y="-9" width="320" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xJ7-Fj-5o7">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xJ7-Fj-5o7">
                                 <rect key="frame" x="124" y="33" width="75" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="D3S-gW-sSf">
+                                <rect key="frame" x="0.0" y="112" width="320" height="456"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCell" rowHeight="80" id="fbK-Ys-EIV" customClass="SearchCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fbK-Ys-EIV" id="1S0-Mb-sKf">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nzA-J1-lN7">
+                                                    <rect key="frame" x="77" y="8" width="235" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="fMI-v5-fES">
+                                                    <rect key="frame" x="8" y="8" width="63" height="63"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PCk-wt-fyl">
+                                                    <rect key="frame" x="77" y="37" width="235" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descLabel" destination="PCk-wt-fyl" id="non-Nu-pKu"/>
+                                            <outlet property="picture" destination="fMI-v5-fES" id="ZnP-Oe-op1"/>
+                                            <outlet property="titleLabel" destination="nzA-J1-lN7" id="ZgH-Bk-Uz4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="aIz-fq-lmn" id="GS5-It-Cav"/>
+                                    <outlet property="delegate" destination="aIz-fq-lmn" id="Qxk-Ph-1gF"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="YwX-1k-REV"/>
                     <navigationItem key="navigationItem" id="iJF-Gr-wI7"/>
                     <connections>
-                        <outlet property="searchDisplayController" destination="ql0-kX-0VT" id="ty0-hK-mxP"/>
+                        <outlet property="searchBar" destination="iv4-3o-Ibu" id="j0I-UH-hfe"/>
+                        <outlet property="searchTable" destination="D3S-gW-sSf" id="DgF-Zj-rge"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tOF-wA-akh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="ql0-kX-0VT">
-                    <connections>
-                        <outlet property="delegate" destination="aIz-fq-lmn" id="pYr-xG-aE3"/>
-                        <outlet property="searchBar" destination="iv4-3o-Ibu" id="3Yg-u7-mxs"/>
-                        <outlet property="searchContentsController" destination="aIz-fq-lmn" id="Mkl-TO-jwF"/>
-                        <outlet property="searchResultsDataSource" destination="aIz-fq-lmn" id="z4z-7L-5F8"/>
-                        <outlet property="searchResultsDelegate" destination="aIz-fq-lmn" id="uUi-gG-r3M"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1442" y="1631"/>
         </scene>

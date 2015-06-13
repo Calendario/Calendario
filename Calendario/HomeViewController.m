@@ -20,9 +20,10 @@
     
     // ProfilePage
     // ReportBugViewController
+    // SearchView
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"ProfilePage"];
+    UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"SearchView"];
     [self presentViewController:myController animated:YES completion:nil];
     
     // Testing.... TEMPORARY ONLY...
