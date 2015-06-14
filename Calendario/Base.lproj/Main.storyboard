@@ -940,7 +940,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="LnA-ah-znm"/>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="UITabBar.png" id="LnA-ah-znm"/>
                     <navigationItem key="navigationItem" id="Ldz-ze-6dS"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -1627,7 +1627,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="hmj-uS-V4Q"/>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="UITabBar.png" id="hmj-uS-V4Q"/>
                     <navigationItem key="navigationItem" id="DAJ-a9-JcX"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -1647,16 +1647,16 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="eQ5-ei-55H" kind="relationship" relationship="viewControllers" id="F0l-LK-Nep"/>
-                        <segue destination="dPw-bT-76T" kind="relationship" relationship="viewControllers" id="zoX-xJ-49r"/>
-                        <segue destination="aIz-fq-lmn" kind="relationship" relationship="viewControllers" id="JgQ-1N-tYX"/>
-                        <segue destination="pOm-J6-pkM" kind="relationship" relationship="viewControllers" id="vLX-CN-HL5"/>
-                        <segue destination="l7k-LR-Rfa" kind="relationship" relationship="viewControllers" id="M7B-CV-Au2"/>
+                        <segue destination="eQ5-ei-55H" kind="relationship" relationship="viewControllers" id="sIc-ws-kCY"/>
+                        <segue destination="dPw-bT-76T" kind="relationship" relationship="viewControllers" id="OL9-wN-Hig"/>
+                        <segue destination="aIz-fq-lmn" kind="relationship" relationship="viewControllers" id="z9o-y6-89o"/>
+                        <segue destination="pOm-J6-pkM" kind="relationship" relationship="viewControllers" id="C2X-vK-uCe"/>
+                        <segue destination="l7k-LR-Rfa" kind="relationship" relationship="viewControllers" id="lY7-YU-Z8g"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJp-bN-AOP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148" y="1594"/>
+            <point key="canvasLocation" x="112" y="1572"/>
         </scene>
         <!--Search Table View Controller-->
         <scene sceneID="u6H-Yu-KLs">
@@ -1705,7 +1705,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                                                     <rect key="frame" x="77" y="8" width="235" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="fMI-v5-fES">
@@ -1716,7 +1716,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                                                     <rect key="frame" x="77" y="37" width="235" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1736,7 +1736,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="YwX-1k-REV"/>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="UITabBar.png" id="YwX-1k-REV"/>
                     <navigationItem key="navigationItem" id="iJF-Gr-wI7"/>
                     <connections>
                         <outlet property="searchBar" destination="iv4-3o-Ibu" id="j0I-UH-hfe"/>
@@ -2131,7 +2131,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="Hzl-5L-KSy"/>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="UITabBar.png" id="Hzl-5L-KSy"/>
                     <navigationItem key="navigationItem" id="69W-6h-llp"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="hH0-Js-M7F" id="qdS-C3-Sp6"/>
@@ -2274,7 +2274,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IY8-1v-dUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2146" y="2556"/>
+            <point key="canvasLocation" x="1532" y="3010"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4ye-Q6-esB">
@@ -2426,7 +2426,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z1M-fb-52U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1356" y="-379"/>
+            <point key="canvasLocation" x="1432" y="-303"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="owK-5o-UsF">
@@ -3064,7 +3064,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Hb-Ep-vnJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2499" y="2556"/>
+            <point key="canvasLocation" x="1957" y="3020"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4f9-S2-C8A">
@@ -3233,7 +3233,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qPq-GQ-R2N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2859" y="2556"/>
+            <point key="canvasLocation" x="2409" y="3020"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="oaA-RR-SpV">
@@ -3908,7 +3908,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJV-ML-6yg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1498" y="1718"/>
+            <point key="canvasLocation" x="-1500" y="1666"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="MWS-5K-9I1">
@@ -4061,7 +4061,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="LDF-JF-9zb"/>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="UITabBar.png" id="LDF-JF-9zb"/>
                     <navigationItem key="navigationItem" id="5Ni-WQ-JPL"/>
                     <connections>
                         <outlet property="notificationsTableView" destination="usT-sC-4dH" id="Dx8-zc-xGf"/>
@@ -4147,6 +4147,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
         <image name="2nd_header.png" width="1000" height="150"/>
         <image name="2nd_headerz.png" width="1000" height="140"/>
         <image name="Emma-Watson1.png" width="788" height="788"/>
+        <image name="UITabBar.png" width="350" height="50"/>
         <image name="address_book.png" width="128" height="128"/>
         <image name="background3.png" width="640" height="1136"/>
         <image name="background_dark_silver.png" width="380" height="60"/>
@@ -4203,10 +4204,10 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="x0S-Jb-QkL"/>
+        <segue reference="Ohx-8M-I22"/>
+        <segue reference="lY7-YU-Z8g"/>
+        <segue reference="sIc-ws-kCY"/>
         <segue reference="uB8-gG-cPu"/>
-        <segue reference="AYC-4H-dqM"/>
-        <segue reference="eG1-uK-xhy"/>
-        <segue reference="XTw-Nc-knD"/>
+        <segue reference="Iss-dh-NUq"/>
     </inferredMetricsTieBreakers>
 </document>
