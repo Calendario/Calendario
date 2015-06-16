@@ -294,6 +294,7 @@
 		A29912AE1B2A1D4800128AD1 /* WebpageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A29912AD1B2A1D4800128AD1 /* WebpageView.m */; };
 		A29912B21B2C819600128AD1 /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29912B11B2C819600128AD1 /* SearchTableViewController.m */; };
 		A29912B51B2C962000128AD1 /* SearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A29912B41B2C962000128AD1 /* SearchCell.m */; };
+		A2ACB8E21B30B5A600FB2AB8 /* FollowUserAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = A2ACB8E11B30B5A600FB2AB8 /* FollowUserAccount.m */; };
 		A2BD299C1B0B439500BB30A0 /* ProfilePage.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BD299B1B0B439500BB30A0 /* ProfilePage.m */; };
 		B79481701A6459B30091332E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816C1A6459B30091332E /* Bolts.framework */; };
 		B79481711A6459B30091332E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816D1A6459B30091332E /* FacebookSDK.framework */; };
@@ -656,6 +657,8 @@
 		A29912B11B2C819600128AD1 /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
 		A29912B31B2C962000128AD1 /* SearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCell.h; sourceTree = "<group>"; };
 		A29912B41B2C962000128AD1 /* SearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCell.m; sourceTree = "<group>"; };
+		A2ACB8E01B30B5A600FB2AB8 /* FollowUserAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowUserAccount.h; sourceTree = "<group>"; };
+		A2ACB8E11B30B5A600FB2AB8 /* FollowUserAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowUserAccount.m; sourceTree = "<group>"; };
 		A2BD299A1B0B439500BB30A0 /* ProfilePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePage.h; sourceTree = "<group>"; };
 		A2BD299B1B0B439500BB30A0 /* ProfilePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePage.m; sourceTree = "<group>"; };
 		B794816C1A6459B30091332E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -1286,11 +1289,29 @@
 			name = "Search Class";
 			sourceTree = "<group>";
 		};
-		A2BD29991B0B435C00BB30A0 /* Profile Page */ = {
+		A2ACB8DE1B30B56700FB2AB8 /* FollowUser Class */ = {
+			isa = PBXGroup;
+			children = (
+				A2ACB8E01B30B5A600FB2AB8 /* FollowUserAccount.h */,
+				A2ACB8E11B30B5A600FB2AB8 /* FollowUserAccount.m */,
+			);
+			name = "FollowUser Class";
+			sourceTree = "<group>";
+		};
+		A2ACB8DF1B30B57100FB2AB8 /* Profile View Controller Class */ = {
 			isa = PBXGroup;
 			children = (
 				A2BD299A1B0B439500BB30A0 /* ProfilePage.h */,
 				A2BD299B1B0B439500BB30A0 /* ProfilePage.m */,
+			);
+			name = "Profile View Controller Class";
+			sourceTree = "<group>";
+		};
+		A2BD29991B0B435C00BB30A0 /* Profile Page */ = {
+			isa = PBXGroup;
+			children = (
+				A2ACB8DF1B30B57100FB2AB8 /* Profile View Controller Class */,
+				A2ACB8DE1B30B56700FB2AB8 /* FollowUser Class */,
 			);
 			name = "Profile Page";
 			sourceTree = "<group>";
@@ -1659,6 +1680,7 @@
 				0439213519B452BE00716F6C /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				0439212C19B452BE00716F6C /* AFHTTPRequestOperationManager.m in Sources */,
 				04B0A64419CF80DD00A04F45 /* Report.m in Sources */,
+				A2ACB8E21B30B5A600FB2AB8 /* FollowUserAccount.m in Sources */,
 				0439213A19B452BE00716F6C /* UIRefreshControl+AFNetworking.m in Sources */,
 				A28A0CD41A9D262E0059E124 /* KeychainItemWrapper.m in Sources */,
 				A29912AE1B2A1D4800128AD1 /* WebpageView.m in Sources */,

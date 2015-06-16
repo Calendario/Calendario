@@ -13,6 +13,7 @@
 @end
 
 @implementation HomeViewController
+@synthesize userData;
 
 -(IBAction)open_profile:(id)sender {
     
@@ -27,6 +28,22 @@
     [self presentViewController:myController animated:YES completion:nil];
     
     // Testing.... TEMPORARY ONLY...
+}
+
+-(IBAction)followUserTEST:(id)sender {
+    [self followAUser:34];
+}
+
+-(void)followAUser:(int)userID {
+    
+    self.userData = [[FollowUserAccount alloc] init];
+    NSArray *responseData = [self.userData followUserAccount:userID];
+    
+    // User follow response info.
+    // Returned in the form of an array like so:
+    // [@ 1 or 0, @"string response message"].
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Info" message:[NSString stringWithFormat:@"%@", responseData[1]] delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+    [alert show];
 }
 
 - (void)viewDidLoad {
