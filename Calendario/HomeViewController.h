@@ -19,5 +19,6 @@
 -(IBAction)followUserTEST:(id)sender;
 
 @property (nonatomic, retain) FollowUserAccount *userData;
+@property (weak, nonatomic) IBOutlet UIButton *centerTabBarButton;
 
 @end

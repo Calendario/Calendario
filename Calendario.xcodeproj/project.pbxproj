@@ -301,6 +301,7 @@
 		B79481721A6459B30091332E /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816E1A6459B30091332E /* GoogleOpenSource.framework */; };
 		B79481731A6459B30091332E /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816F1A6459B30091332E /* GooglePlus.framework */; };
 		E15E40AC1A8CBB5A00887329 /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15E40AB1A8CBB5A00887329 /* NotificationsViewController.m */; };
+		E15F1E591B328085009A2C26 /* customTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F1E581B328085009A2C26 /* customTabBarViewController.m */; };
 		E1C5BF681A74F1ED002726AB /* SettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C5BF671A74F1ED002726AB /* SettingsVC.m */; };
 /* End PBXBuildFile section */
 
@@ -667,6 +668,8 @@
 		B794816F1A6459B30091332E /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
 		E15E40AA1A8CBB5A00887329 /* NotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationsViewController.h; sourceTree = "<group>"; };
 		E15E40AB1A8CBB5A00887329 /* NotificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsViewController.m; sourceTree = "<group>"; };
+		E15F1E571B328085009A2C26 /* customTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customTabBarViewController.h; sourceTree = "<group>"; };
+		E15F1E581B328085009A2C26 /* customTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customTabBarViewController.m; sourceTree = "<group>"; };
 		E1C5BF661A74F1ED002726AB /* SettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsVC.h; sourceTree = "<group>"; };
 		E1C5BF671A74F1ED002726AB /* SettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -915,6 +918,8 @@
 				7841D29A1949CA5200F8351C /* InfoPlist.strings */,
 				7841D29D1949CA5200F8351C /* main.m */,
 				7841D29F1949CA5200F8351C /* Calendario-Prefix.pch */,
+				E15F1E571B328085009A2C26 /* customTabBarViewController.h */,
+				E15F1E581B328085009A2C26 /* customTabBarViewController.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1651,6 +1656,7 @@
 				78DD6AF61A24D2EA000FF878 /* LoginPage.m in Sources */,
 				0439213919B452BE00716F6C /* UIProgressView+AFNetworking.m in Sources */,
 				0439212D19B452BE00716F6C /* AFHTTPSessionManager.m in Sources */,
+				E15F1E591B328085009A2C26 /* customTabBarViewController.m in Sources */,
 				A2BD299C1B0B439500BB30A0 /* ProfilePage.m in Sources */,
 				04B0A63B19CF80A100A04F45 /* FollowUser.m in Sources */,
 				0439213119B452BE00716F6C /* AFURLRequestSerialization.m in Sources */,

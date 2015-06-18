@@ -7,6 +7,8 @@
 //
 
 #import "HomeViewController.h"
+#import "customTabBarViewController.h"
+
 
 @interface HomeViewController ()
 
@@ -50,28 +52,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    //THIS IS ALL MY CODE BELOW! LEFT OFF WITH TRYING TO ADD CENTER BUTTON THROUGH STORYBOARDS AS I DID ON THE CF APP. NEED TO LOOK UP HOW TO ADD BIGGER CENTER BUTTON TO UITAB BAR!
-    
-    
-   /* //center tabBar button properties
-    UITabBar *tabBar = [UITabBar appearance];
-    
-    UIImage *buttonImage = [UIImage imageNamed:@"tabBarCenterImage"];
-    self.tabBarCenterButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.tabBarCenterButton.frame = CGRectMake(0.0, 0.0, buttonImage.size.width, buttonImage.size.height);
-    [self.tabBarCenterButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
-    //[button setBackgroundImage:highlightImage forState:UIControlStateHighlighted];
-    
-    CGFloat heightDifference = buttonImage.size.height - tabBar.frame.size.height;
-    if (heightDifference < 0)
-        self.tabBarCenterButton.center = tabBar.center;
-    else
-    {
-        CGPoint center = tabBar.center;
-        center.y = center.y - heightDifference/2.0;
-        self.tabBarCenterButton.center = center;
-    }*/
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -79,6 +59,7 @@
     // Dispose of any resources that can be recreated.
     [self performSegueWithIdentifier:@"login_success" sender:self];
 }
+
 
 /*
 #pragma mark - Navigation
