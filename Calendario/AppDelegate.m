@@ -13,7 +13,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-     UITabBar *tabBar = [UITabBar appearance]; [tabBar setBackgroundImage:[UIImage imageNamed:@"UITabBar" ]];
+    //reference the uitabBar
+    UITabBar *tabBar = [UITabBar appearance];
+    
+    //uiTabBar appearance properties
+    tabBar.backgroundColor = [UIColor colorWithRed:46/255.0 green:153/255.0 blue:80/255.0 alpha:1.0];
+    tabBar.barTintColor = [UIColor colorWithRed:46/255.0 green:153/255.0 blue:80/255.0 alpha:1.0];
+    tabBar.tintColor = [UIColor whiteColor];
+    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    [[UIView appearanceWhenContainedIn:[UITabBar class], nil] setTintColor:[UIColor whiteColor]];
+    [[UITabBar appearance] setSelectedImageTintColor:[UIColor whiteColor]];
     return YES;
     
     [FBLoginView class];

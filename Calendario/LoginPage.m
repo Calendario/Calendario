@@ -10,6 +10,7 @@
 #import "FacebookLogin.h"
 #import "GooglePlus.h"
 #import "KeychainItemWrapper.h"
+#import "AppDelegate.h"
 
 @interface LoginPage () {
     
@@ -135,10 +136,22 @@
         [keychain setObject:_txtUsername.text forKey:(__bridge id)kSecAttrAccount];
         [keychain setObject:_txtPassword.text forKey:(__bridge id)kSecValueData];
         
-        // Now present the home view.
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
-        [self presentViewController:myController animated:YES completion:nil];
+        /* // Now present the home view.
+         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+         UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+         [self presentViewController:myController animated:YES completion:nil]; <--- THIS CODE DOES NOT WORK BECAUSE THE TABBARCONTROLLER IS BEING OVERLOOKED AND THEREFORE NEVER SHOWING UP AFTER THE USER SIGNS IN. (SEE CODE BELOW "LB CHANGES" INSTEAD*/
+        
+        //LB CHANGES
+        AppDelegate *reference = [[UIApplication sharedApplication]delegate];
+        reference.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier: @"tabBar"];
+        
+        reference.window.rootViewController = viewController;
+        [reference.window makeKeyAndVisible];
+
         
         // The below code crashes for some reason. It says that there is no
         // segue with the identifier "HomeViewController" - even though there
