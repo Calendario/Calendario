@@ -867,7 +867,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="newsFeedIcon" id="IKU-90-Wao">
-                        <inset key="imageInsets" minX="1" minY="5" maxX="1" maxY="-4"/>
+                        <inset key="imageInsets" minX="2" minY="7" maxX="-2" maxY="-7"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="Ldz-ze-6dS"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -1499,7 +1499,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="timelineIcon" id="hmj-uS-V4Q">
-                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-5"/>
+                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="DAJ-a9-JcX"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -1608,7 +1608,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="searchIcon" id="YwX-1k-REV">
-                        <inset key="imageInsets" minX="-1" minY="4" maxX="0.0" maxY="-6"/>
+                        <inset key="imageInsets" minX="-2" minY="6" maxX="2" maxY="-6"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="iJF-Gr-wI7"/>
                     <connections>
@@ -1954,7 +1954,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="profileIcon" id="Hzl-5L-KSy">
-                        <inset key="imageInsets" minX="-1" minY="5" maxX="-1" maxY="-8"/>
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="69W-6h-llp"/>
                     <connections>
@@ -3679,7 +3679,7 @@ Calendario gives you a personal, worldwide, royalty-free, non-assignable license
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="notificationsIcon" id="LDF-JF-9zb">
-                        <inset key="imageInsets" minX="4" minY="6" maxX="-1" maxY="-5"/>
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="5Ni-WQ-JPL"/>
                     <connections>
@@ -3828,10 +3828,10 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="uB8-gG-cPu"/>
-        <segue reference="Iss-dh-NUq"/>
+        <segue reference="Ohx-8M-I22"/>
         <segue reference="T31-jE-1IV"/>
         <segue reference="mii-4x-HO4"/>
-        <segue reference="Ohx-8M-I22"/>
+        <segue reference="uB8-gG-cPu"/>
+        <segue reference="Iss-dh-NUq"/>
     </inferredMetricsTieBreakers>
 </document>
