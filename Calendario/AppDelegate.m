@@ -8,15 +8,27 @@
 
 #import "AppDelegate.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "customTabBarViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-     UITabBar *tabBar = [UITabBar appearance]; [tabBar setBackgroundImage:[UIImage imageNamed:@"UITabBar" ]];
+    
+    //reference the uitabBar
+    UITabBar *tabBar = [UITabBar appearance];
+    
+    //uiTabBar appearance properties
+    tabBar.backgroundColor = [UIColor colorWithRed:46/255.0 green:153/255.0 blue:80/255.0 alpha:1.0];
+    tabBar.barTintColor = [UIColor colorWithRed:46/255.0 green:153/255.0 blue:80/255.0 alpha:1.0];
+    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UITabBar appearance] setShadowImage:nil];
+    return YES;
+    
+    [FBLoginView class];
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

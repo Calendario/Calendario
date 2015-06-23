@@ -18,6 +18,4 @@
 #endif
 
 // The base address of the web service
-static NSString *const webServiceAddress = @"http://calendario.emlinha.net/";
-
-//static NSString *const webServiceAddress = @"http://localhost:8888/calendario/";
+static NSString *const webServiceAddress = @"http://calendario.iwebangola.com/v2/";

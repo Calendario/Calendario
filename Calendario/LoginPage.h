@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import <GooglePlus/GooglePlus.h>
 
 @interface LoginPage : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *txtUsername;
 @property (weak, nonatomic) IBOutlet UITextField *txtPassword;
+
 
 - (IBAction)signinClicked:(id)sender;
 
