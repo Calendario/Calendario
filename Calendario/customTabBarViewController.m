@@ -39,7 +39,6 @@
     [self.view addSubview:button];
     [button addTarget:self action:@selector(centerButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
 
-
     //tabBar icon properties **IF THESE ARE NOT IMPLEMENTED THEN THE ICONS WILL NOT STAY WHITE
     [self.tabBar setTintColor:[UIColor whiteColor]];
     
@@ -70,7 +69,7 @@
 - (IBAction)centerButtonClicked:(id)sender
 {
     NSLog(@"center button pressed");
-    
+    [self setSelectedIndex:2];
     
 }
 
