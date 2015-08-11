@@ -296,6 +296,8 @@
 		A29912B51B2C962000128AD1 /* SearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A29912B41B2C962000128AD1 /* SearchCell.m */; };
 		A2ACB8E21B30B5A600FB2AB8 /* FollowUserAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = A2ACB8E11B30B5A600FB2AB8 /* FollowUserAccount.m */; };
 		A2BD299C1B0B439500BB30A0 /* ProfilePage.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BD299B1B0B439500BB30A0 /* ProfilePage.m */; };
+		A2F8A7751B5D9695009F80F3 /* FollowersView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F8A7741B5D9695009F80F3 /* FollowersView.m */; };
+		A2F8A7781B5E16FB009F80F3 /* FollowerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F8A7771B5E16FB009F80F3 /* FollowerCell.m */; };
 		B79481701A6459B30091332E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816C1A6459B30091332E /* Bolts.framework */; };
 		B79481711A6459B30091332E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816D1A6459B30091332E /* FacebookSDK.framework */; };
 		B79481721A6459B30091332E /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B794816E1A6459B30091332E /* GoogleOpenSource.framework */; };
@@ -662,6 +664,10 @@
 		A2ACB8E11B30B5A600FB2AB8 /* FollowUserAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowUserAccount.m; sourceTree = "<group>"; };
 		A2BD299A1B0B439500BB30A0 /* ProfilePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePage.h; sourceTree = "<group>"; };
 		A2BD299B1B0B439500BB30A0 /* ProfilePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePage.m; sourceTree = "<group>"; };
+		A2F8A7731B5D9695009F80F3 /* FollowersView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowersView.h; sourceTree = "<group>"; };
+		A2F8A7741B5D9695009F80F3 /* FollowersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowersView.m; sourceTree = "<group>"; };
+		A2F8A7761B5E16FB009F80F3 /* FollowerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowerCell.h; sourceTree = "<group>"; };
+		A2F8A7771B5E16FB009F80F3 /* FollowerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowerCell.m; sourceTree = "<group>"; };
 		B794816C1A6459B30091332E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		B794816D1A6459B30091332E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		B794816E1A6459B30091332E /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
@@ -769,6 +775,7 @@
 		048E8C5A19884783002301C7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A2F8A7721B5D9530009F80F3 /* Followers View */,
 				A29912AF1B2C815C00128AD1 /* Search Class */,
 				A29912AB1B2A1D1400128AD1 /* Webpage Viewer */,
 				A2BD29991B0B435C00BB30A0 /* Profile Page */,
@@ -1321,6 +1328,17 @@
 			name = "Profile Page";
 			sourceTree = "<group>";
 		};
+		A2F8A7721B5D9530009F80F3 /* Followers View */ = {
+			isa = PBXGroup;
+			children = (
+				A2F8A7731B5D9695009F80F3 /* FollowersView.h */,
+				A2F8A7741B5D9695009F80F3 /* FollowersView.m */,
+				A2F8A7761B5E16FB009F80F3 /* FollowerCell.h */,
+				A2F8A7771B5E16FB009F80F3 /* FollowerCell.m */,
+			);
+			name = "Followers View";
+			sourceTree = "<group>";
+		};
 		E1C5BF651A74F1D1002726AB /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -1662,6 +1680,7 @@
 				0439213119B452BE00716F6C /* AFURLRequestSerialization.m in Sources */,
 				786AAFD31A290CFB00B1A622 /* GooglePlus.m in Sources */,
 				78DD6AEF1A24C74E000FF878 /* HomeViewController.m in Sources */,
+				A2F8A7781B5E16FB009F80F3 /* FollowerCell.m in Sources */,
 				A29912B51B2C962000128AD1 /* SearchCell.m in Sources */,
 				04B0A63E19CF80BF00A04F45 /* FollowTimeline.m in Sources */,
 				04B0A65619CF9B1E00A04F45 /* ReportDAO.m in Sources */,
@@ -1672,6 +1691,7 @@
 				789500361A64217500763491 /* WelcomeView.m in Sources */,
 				04B0A64719CF80EA00A04F45 /* LikeTable.m in Sources */,
 				78E423FB1AB979EE000BA584 /* ForgotPassword.m in Sources */,
+				A2F8A7751B5D9695009F80F3 /* FollowersView.m in Sources */,
 				04B0A65319CF9B1300A04F45 /* CommentDAO.m in Sources */,
 				0439213819B452BE00716F6C /* UIImageView+AFNetworking.m in Sources */,
 				7841D2A21949CA5200F8351C /* AppDelegate.m in Sources */,

@@ -9,6 +9,7 @@
 #import "RegisterPage.h"
 #import "KeychainItemWrapper.h"
 #import <QuartzCore/QuartzCore.h>
+#import "AppDelegate.h"
 
 @interface RegisterPage () {
     
@@ -228,14 +229,12 @@
         if (buttonIndex == 0) {
             
             // Now present the home view.
-            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-            UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
-            [self presentViewController:myController animated:YES completion:nil];
-            
-            // The below code crashes for some reason. It says that there is no
-            // segue with the identifier "HomeViewController" - even though there
-            // is. I know this because I set it in Interface builder (Dan).
-            //[self performSegueWithIdentifier:@"HomeViewController" sender:self];
+            AppDelegate *reference = [[UIApplication sharedApplication]delegate];
+            reference.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier: @"tabBar"];
+            reference.window.rootViewController = viewController;
+            [reference.window makeKeyAndVisible];
         }
     }
     
