@@ -102,20 +102,20 @@
 -(IBAction)doneButton:(id)sender {
     
     // Check if all text fields are completed.
-    if ([_usernameField.text isEqualToString:@""] || [_passwordField.text isEqualToString:@""] || [_reEnterPasswordField.text isEqualToString:@""] || [_emailField.text isEqualToString:@""])
-    {
+    if ([_usernameField.text isEqualToString:@""] || [_passwordField.text isEqualToString:@""] || [_reEnterPasswordField.text isEqualToString:@""] || [_emailField.text isEqualToString:@""]) {
         
         alertType = 1;
         
         UIAlertView *error = [[UIAlertView alloc] initWithTitle:@"Oooops" message:@"You must complete all fields" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [error show];
     }
+    
     else {
         [self checkPasswordsMatch];
     }
 }
 
-- (IBAction)addImage:(id)sender {
+-(IBAction)addImage:(id)sender {
     
     alertType = 3;
     

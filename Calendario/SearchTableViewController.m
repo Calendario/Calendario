@@ -13,6 +13,7 @@
     NSArray *parsedDataName;
     NSArray *parsedDataDesc;
     NSArray *parsedDataImage;
+    NSArray *parshedHashtags;
 }
 
 @end
@@ -36,17 +37,15 @@
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     
     [searchBar resignFirstResponder];
-    [self getSearchData:searchBar.text];
+    [self getSearchDataUsers:searchBar.text];
 }
 
 /// DATA METHODS ///
 
--(void)getSearchData:(NSString *)searchTerm {
+-(void)getSearchDataUsers:(NSString *)searchTerm {
     
-    // Create the URL to the User profile PHP file.
+    // Create the URL to the Search user PHP file.
     NSString *urlFormatted = [NSString stringWithFormat:@"%@searchuser/%@", webServiceAddress, searchTerm];
-    
-    NSLog(@"search url: %@", urlFormatted);
     
     // Ensure the string is in UTF8 format.
     NSString *urlTextEscaped = [urlFormatted stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -65,8 +64,6 @@
         NSError *error = nil;
         NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:urlData options:NSJSONReadingMutableContainers error:&error];
         
-        NSLog(@"%@", jsonData);
-        
         // The server will send back a success integer,
         // parse it and decide what to do next.
         NSString *success = jsonData[@"msg"];
@@ -82,6 +79,72 @@
             parsedDataDesc = [profileInfo valueForKey:@"description"];
             parsedDataImage = [profileInfo valueForKey:@"image"];
             
+            // Now search for the possible hashtags.
+            [self getSearchDataHashtags:searchTerm];
+        }
+        
+        else if ([success isEqual:@"Nothing found"]) {
+            
+            // Display the error message to the user.
+            UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"No users have been found for your search." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+            
+            [errorAlert show];
+        }
+        
+        else {
+            
+            // Parse the error message passed back from the server.
+            NSString *error_msg = (NSString *)jsonData[@"error_message"];
+            
+            // Display the error message to the user.
+            UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:error_msg delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+            
+            [errorAlert show];
+        }
+    }
+    
+    else {
+        
+        // There has been an issue with the connection
+        // to the server - probably internet connection.
+        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:[NSString stringWithFormat:@"%@", requestError] delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+        
+        [errorAlert show];
+    }
+}
+
+-(void)getSearchDataHashtags:(NSString *)searchTerm {
+    
+    // Create the URL to the Search hashtags PHP file.
+    NSString *urlFormatted = [NSString stringWithFormat:@"%@hashtag/search/%@", webServiceAddress, searchTerm];
+    
+    // Ensure the string is in UTF8 format.
+    NSString *urlTextEscaped = [urlFormatted stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    // Create the request and add the URL.
+    NSURLRequest *registerRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlTextEscaped]];
+    
+    // Store the JSON responce and check for
+    // any response errors before parsing.
+    NSURLResponse *response = nil;
+    NSError *requestError = nil;
+    NSData *urlData = [NSURLConnection sendSynchronousRequest:registerRequest returningResponse:&response error:&requestError];
+    
+    if ((requestError == nil) && (urlData != nil)) {
+        
+        NSError *error = nil;
+        NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:urlData options:NSJSONReadingMutableContainers error:&error];
+        
+        // The server will send back a success integer,
+        // parse it and decide what to do next.
+        NSString *success = jsonData[@"msg"];
+        
+        if ([success isEqual:@"sucess"] || [success isEqual:@"success"]) {
+            
+            // The hashtag data has been loaded correctly,
+            // lets parse the data & present it to the user.
+            parshedHashtags = [[[jsonData objectForKey:@"list"] valueForKey:@"Hashtag"] valueForKey:@"name"];
+            
             // Present the data in the tableview.
             [_searchTable reloadData];
         }
@@ -89,7 +152,7 @@
         else if ([success isEqual:@"Nothing found"]) {
             
             // Display the error message to the user.
-            UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"No results have been found for your search." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+            UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"No hashtags have been found for your search." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
             
             [errorAlert show];
         }
@@ -119,11 +182,22 @@
 /// TABLE VIEW METHODS ///
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [parsedDataName count];
+    
+    NSUInteger data_count;
+    
+    if (section == 0) {
+        data_count = [parsedDataName count];
+    }
+    
+    else if (section == 1) {
+        data_count = [parshedHashtags count];
+    }
+    
+    return data_count;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -131,7 +205,7 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
     SearchCell *cell = (SearchCell *)[_searchTable dequeueReusableCellWithIdentifier:@"SearchCell"];
     
     // Set the labels.
@@ -149,14 +223,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

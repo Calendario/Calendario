@@ -1389,7 +1389,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tOF-wA-akh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1442" y="1631"/>
+            <point key="canvasLocation" x="1446" y="1612"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="n4Y-nW-1Fn">
@@ -2749,7 +2749,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9G-xQ-Vn2">
                                                     <rect key="frame" x="85" y="16" width="145" height="25"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="bookmark_ribbon.png" translatesAutoresizingMaskIntoConstraints="NO" id="rpw-qa-FCy">
@@ -3147,7 +3147,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cdp-ys-Att">
                                                 <rect key="frame" x="56" y="17" width="256" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="CTu-VV-AQH" id="2mr-9z-MZu"/>
                                                 </connections>
@@ -3554,10 +3554,10 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="uB8-gG-cPu"/>
-        <segue reference="Iss-dh-NUq"/>
-        <segue reference="XTw-Nc-knD"/>
         <segue reference="Ohx-8M-I22"/>
-        <segue reference="mii-4x-HO4"/>
+        <segue reference="XTw-Nc-knD"/>
+        <segue reference="AYC-4H-dqM"/>
+        <segue reference="uB8-gG-cPu"/>
+        <segue reference="x0S-Jb-QkL"/>
     </inferredMetricsTieBreakers>
 </document>
