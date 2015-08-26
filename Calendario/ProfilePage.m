@@ -13,11 +13,40 @@
     
     // Keychain wrapper class instance.
     KeychainItemWrapper *keychain;
+    
+    // User ID/Password (for edit page).
+    NSString *userIDNum;
+    NSString *userPassword;
+    
+    // Reload data check.
+    BOOL reloadCheck;
 }
 
 @end
 
 @implementation ProfilePage
+
+/// BUTTONS ///
+
+-(IBAction)editUserProfile:(id)sender {
+    
+    if (userIDNum != nil) {
+
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        EditProfile *editPage = [storyboard instantiateViewControllerWithIdentifier:@"EditMyProfile"];
+        [editPage setPassInID:userIDNum];
+        [editPage setPassInPass:userPassword];
+        editPage.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+        [self presentViewController:editPage animated:YES completion:nil];
+    }
+    
+    else {
+        
+        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"No user ID number - cannot open user edit page." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+        
+        [errorAlert show];
+    }
+}
 
 /// VIEW DID LOAD ///
 
@@ -25,8 +54,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    // Load the profile information.
+    reloadCheck = NO;
     [self loadProfileData];
+}
+
+/// VIEW DID APPEAR ///
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    if (reloadCheck == YES) {
+        
+        // Load the profile information.
+        [self loadProfileData];
+    }
 }
 
 /// DATA LOAD METHODS ///
@@ -37,6 +78,7 @@
     // to the user profile PHP file.
     keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"UserLoginData" accessGroup:nil];
     NSString *userID = [keychain objectForKey:(__bridge id)(kSecAttrAccount)];
+    userPassword = [keychain objectForKey:(__bridge id)(kSecValueData)];
     
     // Create the URL to the User profile PHP file.
     NSString *urlFormatted = [NSString stringWithFormat:@"%@profile/%@", webServiceAddress, userID];
@@ -68,6 +110,9 @@
             // lets parse the data & present it to the user.
             NSArray *profileInfo = [[jsonData objectForKey:@"userprofile"] objectForKey:@"User"];
             NSArray *otherInfo = [jsonData objectForKey:@"userprofile"];
+            
+            // Set the user ID number (for user edit).
+            userIDNum = [profileInfo valueForKey:@"id"];
             
             // Data parsed array.
             NSMutableArray *parsedData = [[NSMutableArray alloc] init];
@@ -120,9 +165,15 @@
             else {
                 [_verifiedRibbon setAlpha:0.0];
             }
+            
+            // Allow the data to be reloaded when required.
+            reloadCheck = YES;
         }
         
         else {
+            
+            // Allow the data to be reloaded when required.
+            reloadCheck = YES;
             
             // Parse the error message passed back from the server.
             NSString *error_msg = (NSString *)jsonData[@"error_message"];
@@ -135,6 +186,9 @@
     }
     
     else {
+        
+        // Allow the data to be reloaded when required.
+        reloadCheck = YES;
         
         // There has been an issue with the connection
         // to the server - probably internet connection.

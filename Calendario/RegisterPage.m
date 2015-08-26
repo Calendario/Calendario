@@ -52,7 +52,7 @@
     [_registerScroll setScrollEnabled:YES];
     [_registerScroll setContentSize:CGSizeMake(self.view.bounds.size.width, 800)];
     
-    // Roudn the edges of the picture button.
+    // Round the edges of the picture button.
     _pictureButton.layer.cornerRadius = 36;
     _pictureButton.layer.masksToBounds = YES;
 }
@@ -119,8 +119,8 @@
     
     alertType = 3;
     
-    UIAlertView *error = [[UIAlertView alloc] initWithTitle:@"Info" message:@"Would you like to use an existing image or take new a photo?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Photo Library", @"Take Photo", nil];
-    [error show];
+    UIAlertView *choiceAlert = [[UIAlertView alloc] initWithTitle:@"Info" message:@"Would you like to use an existing image or take new a photo?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Photo Library", @"Take Photo", nil];
+    [choiceAlert show];
 }
 
 -(void)registerNewUserV2 {
@@ -229,10 +229,10 @@
         if (buttonIndex == 0) {
             
             // Now present the home view.
-            AppDelegate *reference = [[UIApplication sharedApplication]delegate];
+            AppDelegate *reference = [[UIApplication sharedApplication] delegate];
             reference.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-            UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier: @"tabBar"];
+            UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"tabBar"];
             reference.window.rootViewController = viewController;
             [reference.window makeKeyAndVisible];
         }
