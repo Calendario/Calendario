@@ -306,6 +306,8 @@
 		E15E40AC1A8CBB5A00887329 /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15E40AB1A8CBB5A00887329 /* NotificationsViewController.m */; };
 		E15F1E591B328085009A2C26 /* customTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15F1E581B328085009A2C26 /* customTabBarViewController.m */; };
 		E1C5BF681A74F1ED002726AB /* SettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C5BF671A74F1ED002726AB /* SettingsVC.m */; };
+		E2FAFC921BB62CCE00CCB6FC /* DCStatusUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FAFC911BB62CCE00CCB6FC /* DCStatusUpdate.m */; settings = {ASSET_TAGS = (); }; };
+		E2FAFC951BB6302100CCB6FC /* StatusUpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FAFC941BB6302100CCB6FC /* StatusUpdateViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -681,6 +683,10 @@
 		E15F1E581B328085009A2C26 /* customTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customTabBarViewController.m; sourceTree = "<group>"; };
 		E1C5BF661A74F1ED002726AB /* SettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsVC.h; sourceTree = "<group>"; };
 		E1C5BF671A74F1ED002726AB /* SettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsVC.m; sourceTree = "<group>"; };
+		E2FAFC901BB62CCE00CCB6FC /* DCStatusUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStatusUpdate.h; sourceTree = "<group>"; };
+		E2FAFC911BB62CCE00CCB6FC /* DCStatusUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStatusUpdate.m; sourceTree = "<group>"; };
+		E2FAFC931BB6302100CCB6FC /* StatusUpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusUpdateViewController.h; sourceTree = "<group>"; };
+		E2FAFC941BB6302100CCB6FC /* StatusUpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusUpdateViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -857,6 +863,10 @@
 		7841D2851949CA5200F8351C = {
 			isa = PBXGroup;
 			children = (
+				E2FAFC931BB6302100CCB6FC /* StatusUpdateViewController.h */,
+				E2FAFC941BB6302100CCB6FC /* StatusUpdateViewController.m */,
+				E2FAFC901BB62CCE00CCB6FC /* DCStatusUpdate.h */,
+				E2FAFC911BB62CCE00CCB6FC /* DCStatusUpdate.m */,
 				7841D2971949CA5200F8351C /* Calendario */,
 				7841D2B61949CA5200F8351C /* CalendarioTests */,
 				7841D2901949CA5200F8351C /* Frameworks */,
@@ -1686,6 +1696,7 @@
 				0439214219B4539000716F6C /* UserDAO.m in Sources */,
 				780DD3CB1A960540004A147A /* NotLoggedIn.m in Sources */,
 				78DD6AF61A24D2EA000FF878 /* LoginPage.m in Sources */,
+				E2FAFC921BB62CCE00CCB6FC /* DCStatusUpdate.m in Sources */,
 				0439213919B452BE00716F6C /* UIProgressView+AFNetworking.m in Sources */,
 				0439212D19B452BE00716F6C /* AFHTTPSessionManager.m in Sources */,
 				E15F1E591B328085009A2C26 /* customTabBarViewController.m in Sources */,
@@ -1693,6 +1704,7 @@
 				04B0A63B19CF80A100A04F45 /* FollowUser.m in Sources */,
 				0439213119B452BE00716F6C /* AFURLRequestSerialization.m in Sources */,
 				786AAFD31A290CFB00B1A622 /* GooglePlus.m in Sources */,
+				E2FAFC951BB6302100CCB6FC /* StatusUpdateViewController.m in Sources */,
 				78DD6AEF1A24C74E000FF878 /* HomeViewController.m in Sources */,
 				A2F8A7781B5E16FB009F80F3 /* FollowerCell.m in Sources */,
 				A29912B51B2C962000128AD1 /* SearchCell.m in Sources */,
