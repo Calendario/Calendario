@@ -19,6 +19,15 @@
 
 
 -(NSString *)getUpdateText;
+-(NSString *)getUrl;
+-(NSDate *)gettimedata;
+-(void)sendData;
+
+
+
+
+
+
 
 
 

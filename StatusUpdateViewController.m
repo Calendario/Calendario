@@ -8,6 +8,8 @@
 
 #import "StatusUpdateViewController.h"
 #import "DCStatusUpdate.h"
+#import "AFNetworking.h"
+
 
 @interface StatusUpdateViewController ()
 
@@ -17,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+         
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,13 +40,20 @@
 - (IBAction)PostUpdate:(id)sender {
     
     
-    //NSDate
+       //NSDate
     
     NSDate *date = [NSDate date];
+    
+   
+    
+
     
     DCStatusUpdate *statusupdate = [[DCStatusUpdate alloc ] initWithText:self.statusTextField.text withWebsite:@"google.com" AndDate:date];
     
     self.UpdateLabel.text = statusupdate.getUpdateText;
+    
+    
+    statusupdate.sendData;
     
     
 }
