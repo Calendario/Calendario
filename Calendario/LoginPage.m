@@ -88,6 +88,8 @@
             
             // Display the error message to the user.
             [self alertStatus:error_msg :@"Error" :0];
+            
+            NSLog(@"%@", error_msg); // I belive the bug is here 
         }
     }
     

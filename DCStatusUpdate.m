@@ -38,6 +38,7 @@
     return self.timeData;
 }
 
+// AFnetworking and JSON Methods, may contains bug
 -(void)sendData
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -69,7 +70,7 @@
 
 
 
-// AFnetworking and JSON Methods, may contains bug
+
 
 
 
