@@ -83,13 +83,8 @@
         
         else {
             
-            // Parse the error message passed back from the server.
-            NSString *error_msg = (NSString *)jsonData[@"error_message"];
-            
             // Display the error message to the user.
-            [self alertStatus:error_msg :@"Error" :0];
-            
-            NSLog(@"%@", error_msg); // I belive the bug is here 
+            [self alertStatus:successString :@"Error" :0];
         }
     }
     

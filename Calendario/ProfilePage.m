@@ -8,6 +8,8 @@
 
 #import "ProfilePage.h"
 #import "KeychainItemWrapper.h"
+#import "EditProfile.h"
+#import "WebpageView.h"
 
 @interface ProfilePage () {
     
@@ -20,6 +22,9 @@
     
     // Reload data check.
     BOOL reloadCheck;
+    
+    // User website URL.
+    NSString *userURL;
 }
 
 @end
@@ -43,6 +48,25 @@
     else {
         
         UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"No user ID number - cannot open user edit page." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+        
+        [errorAlert show];
+    }
+}
+
+-(IBAction)openUserWebsite:(id)sender {
+    
+    if (userURL != nil) {
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        WebpageView *webPage = [storyboard instantiateViewControllerWithIdentifier:@"WebsiteView"];
+        [webPage setPass_URL:userURL];
+        webPage.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+        [self presentViewController:webPage animated:YES completion:nil];
+    }
+    
+    else {
+        
+        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"This user does not have a valid website URL." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
         
         [errorAlert show];
     }
@@ -137,9 +161,19 @@
                 }
             }
     
+            // Enusre the URL has a valid scheme.
+            userURL = [NSString stringWithFormat:@"%@", parsedData[1]];
+            NSURLComponents *urlComp = [[NSURLComponents alloc] initWithString:userURL];
+            
+            if (urlComp.scheme == nil) {
+                
+                // By default we will add the http scheme.
+                userURL = [NSString stringWithFormat:@"http://%@", userURL];
+            }
+            
             // Set the various labels.
             [_fullNameLabel setTitle:[NSString stringWithFormat:@"%@", parsedData[0]] forState:UIControlStateNormal];
-            [_userWebsite setTitle:[NSString stringWithFormat:@"%@", parsedData[1]] forState:UIControlStateNormal];
+            [_userWebsite setTitle:userURL forState:UIControlStateNormal];
             _descriptionLabel.text = [NSString stringWithFormat:@"%@", parsedData[2]];
             [_followerCountLabel setTitle:[NSString stringWithFormat:@"%@", parsedData[3]] forState:UIControlStateNormal];
             [_followingCountLabel setTitle:[NSString stringWithFormat:@"%@", parsedData[4]] forState:UIControlStateNormal];

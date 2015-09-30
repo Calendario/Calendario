@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bDH-C0-VC9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B22c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bDH-C0-VC9">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -1882,6 +1882,9 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                                 <state key="normal" title="www.calendario.com">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="openUserWebsite:" destination="l7k-LR-Rfa" eventType="touchUpInside" id="PN8-Ot-MBf"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_dark_silver.png" translatesAutoresizingMaskIntoConstraints="NO" id="bce-ly-73P">
                                 <rect key="frame" x="-7" y="307" width="334" height="82"/>
@@ -3443,7 +3446,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
         <!--Webpage View-->
         <scene sceneID="cXO-7z-BeE">
             <objects>
-                <viewController id="ziF-rW-Bld" customClass="WebpageView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebsiteView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ziF-rW-Bld" customClass="WebpageView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NWC-dC-XX7"/>
                         <viewControllerLayoutGuide type="bottom" id="fl2-B4-7Cg"/>
@@ -3467,7 +3470,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbl-sy-1MN">
-                                <rect key="frame" x="266" y="29" width="42" height="35"/>
+                                <rect key="frame" x="266" y="29" width="34" height="35"/>
                                 <animations/>
                                 <state key="normal" image="ios7-refresh-empty.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -3527,7 +3530,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVI-hc-1YM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4000" y="-284"/>
+            <point key="canvasLocation" x="1862" y="2327"/>
         </scene>
         <!--Register Page-->
         <scene sceneID="uTd-ZQ-hlq">

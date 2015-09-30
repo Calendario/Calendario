@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EditProfile.h"
 
 @interface ProfilePage : UIViewController 
 
@@ -24,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *followingCountLabel;
 
 -(IBAction)editUserProfile:(id)sender;
+-(IBAction)openUserWebsite:(id)sender;
 
 @end
 
