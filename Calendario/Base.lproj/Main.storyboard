@@ -1513,10 +1513,10 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search Users, Hashtags" translatesAutoresizingMaskIntoConstraints="NO" id="iv4-3o-Ibu">
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search Users, Hashtags" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iv4-3o-Ibu">
                                 <rect key="frame" x="0.0" y="68" width="320" height="44"/>
                                 <animations/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
                                     <string>Title</string>
@@ -1551,7 +1551,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzA-J1-lN7">
                                                     <rect key="frame" x="77" y="8" width="235" height="34"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1562,10 +1562,16 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCk-wt-fyl">
                                                     <rect key="frame" x="77" y="37" width="235" height="34"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qqi-iM-Uoe">
+                                                    <rect key="frame" x="79" y="37" width="233" height="42"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                             <animations/>
                                         </tableViewCellContentView>
@@ -1573,6 +1579,7 @@ Children Privacy: Calendario does not knowingly collect or solicit any informati
                                         <connections>
                                             <outlet property="descLabel" destination="PCk-wt-fyl" id="non-Nu-pKu"/>
                                             <outlet property="picture" destination="fMI-v5-fES" id="ZnP-Oe-op1"/>
+                                            <outlet property="statusMessage" destination="Qqi-iM-Uoe" id="D4h-mh-azC"/>
                                             <outlet property="titleLabel" destination="nzA-J1-lN7" id="ZgH-Bk-Uz4"/>
                                         </connections>
                                     </tableViewCell>
