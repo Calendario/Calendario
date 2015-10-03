@@ -53,15 +53,38 @@
 
     
     
-
     };
     
-    [manager POST:@" http://calendario.co.uk/publish/" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    
+    NSString *link = @"http://calendario.co.uk/publish/";
+    
+    NSString *encodedlink = [link stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    
+    
+    
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    [manager POST:encodedlink parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON : %@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(error.localizedDescription);
+    }];
+    
+    
+    
+    /*[manager POST:encodedlink parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
+        manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"error: %@", error);
+        manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+
     }];
-}
+     */
+    
+   }
 
 
 
