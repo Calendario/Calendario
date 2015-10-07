@@ -9,12 +9,13 @@
 #import "AppDelegate.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "customTabBarViewController.h"
-
+#import <Parse/Parse.h>
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
+
     //reference the uitabBar
     UITabBar *tabBar = [UITabBar appearance];
     
@@ -27,6 +28,11 @@
     
     [FBLoginView class];
     return YES;
+    
+    //Parse connection
+    [Parse setApplicationId:@"p8YhMVSoCmZvl5tBbpvdk2CK3BYmqwC3p9VS4kPI"
+                  clientKey:@"fyHr9RFkqoeefvQxX92J1RBAKnm1s4aqDLRDhAgr"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

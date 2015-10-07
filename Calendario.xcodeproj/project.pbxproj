@@ -278,6 +278,18 @@
 		78AB4EEA19D441B6003D028C /* background3.png in Resources */ = {isa = PBXBuildFile; fileRef = 78AB4EE919D441B6003D028C /* background3.png */; };
 		78AB4EEC19D441C0003D028C /* wallpaper2.png in Resources */ = {isa = PBXBuildFile; fileRef = 78AB4EEB19D441C0003D028C /* wallpaper2.png */; };
 		78AB4EEE19D441C9003D028C /* fillbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 78AB4EED19D441C9003D028C /* fillbox.png */; };
+		78D5045A1BC53D1500A78EED /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D504591BC53D1500A78EED /* Accounts.framework */; };
+		78D5045C1BC53D2500A78EED /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D5045B1BC53D2500A78EED /* Social.framework */; };
+		78D5045E1BC53D3500A78EED /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D5045D1BC53D3500A78EED /* StoreKit.framework */; };
+		78D5046B1BC53DEE00A78EED /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D504641BC53DEE00A78EED /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
+		78D5046C1BC53DEF00A78EED /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D504651BC53DEE00A78EED /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
+		78D5046D1BC53DEF00A78EED /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D504661BC53DEE00A78EED /* ParseCrashReporting.framework */; settings = {ASSET_TAGS = (); }; };
+		78D5046E1BC53DEF00A78EED /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D504671BC53DEE00A78EED /* ParseFacebookUtils.framework */; settings = {ASSET_TAGS = (); }; };
+		78D5046F1BC53DEF00A78EED /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D504681BC53DEE00A78EED /* ParseFacebookUtilsV4.framework */; settings = {ASSET_TAGS = (); }; };
+		78D504701BC53DEF00A78EED /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D504691BC53DEE00A78EED /* ParseTwitterUtils.framework */; settings = {ASSET_TAGS = (); }; };
+		78D504711BC53DEF00A78EED /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D5046A1BC53DEE00A78EED /* ParseUI.framework */; settings = {ASSET_TAGS = (); }; };
+		78D504721BC542A900A78EED /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D504611BC53D4C00A78EED /* libsqlite3.tbd */; };
+		78D504741BC542B300A78EED /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D504731BC542B300A78EED /* libz.tbd */; };
 		78D680861A277C0900DBBEE4 /* RegisterPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D680851A277C0900DBBEE4 /* RegisterPage.m */; };
 		78D680891A2782EF00DBBEE4 /* LogOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D680881A2782EF00DBBEE4 /* LogOut.m */; };
 		78D970601AC2075C001B82EF /* calendar_logo-(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 78D9705F1AC2075C001B82EF /* calendar_logo-(1).png */; };
@@ -637,6 +649,19 @@
 		78AB4EE919D441B6003D028C /* background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background3.png; sourceTree = "<group>"; };
 		78AB4EEB19D441C0003D028C /* wallpaper2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wallpaper2.png; sourceTree = "<group>"; };
 		78AB4EED19D441C9003D028C /* fillbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fillbox.png; sourceTree = "<group>"; };
+		78D504591BC53D1500A78EED /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		78D5045B1BC53D2500A78EED /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		78D5045D1BC53D3500A78EED /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		78D5045F1BC53D4000A78EED /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
+		78D504611BC53D4C00A78EED /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		78D504641BC53DEE00A78EED /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library-1-4/Bolts.framework"; sourceTree = "<group>"; };
+		78D504651BC53DEE00A78EED /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1-4/Parse.framework"; sourceTree = "<group>"; };
+		78D504661BC53DEE00A78EED /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "parse-library-1-4/ParseCrashReporting.framework"; sourceTree = "<group>"; };
+		78D504671BC53DEE00A78EED /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "parse-library-1-4/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
+		78D504681BC53DEE00A78EED /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "parse-library-1-4/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
+		78D504691BC53DEE00A78EED /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = "parse-library-1-4/ParseTwitterUtils.framework"; sourceTree = "<group>"; };
+		78D5046A1BC53DEE00A78EED /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "parse-library-1-4/ParseUI.framework"; sourceTree = "<group>"; };
+		78D504731BC542B300A78EED /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		78D680841A277C0900DBBEE4 /* RegisterPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterPage.h; sourceTree = "<group>"; };
 		78D680851A277C0900DBBEE4 /* RegisterPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterPage.m; sourceTree = "<group>"; };
 		78D680871A2782EF00DBBEE4 /* LogOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogOut.h; sourceTree = "<group>"; };
@@ -694,18 +719,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D504741BC542B300A78EED /* libz.tbd in Frameworks */,
+				78D504721BC542A900A78EED /* libsqlite3.tbd in Frameworks */,
+				78D504711BC53DEF00A78EED /* ParseUI.framework in Frameworks */,
+				78D5046D1BC53DEF00A78EED /* ParseCrashReporting.framework in Frameworks */,
+				78D5045E1BC53D3500A78EED /* StoreKit.framework in Frameworks */,
+				78D5045C1BC53D2500A78EED /* Social.framework in Frameworks */,
+				78D5045A1BC53D1500A78EED /* Accounts.framework in Frameworks */,
 				7895003E1A6425EE00763491 /* QuartzCore.framework in Frameworks */,
 				B79481711A6459B30091332E /* FacebookSDK.framework in Frameworks */,
+				78D5046E1BC53DEF00A78EED /* ParseFacebookUtils.framework in Frameworks */,
 				7895003C1A6425A900763491 /* MobileCoreServices.framework in Frameworks */,
 				7895003A1A64259000763491 /* CFNetwork.framework in Frameworks */,
 				789500381A64256E00763491 /* AudioToolbox.framework in Frameworks */,
+				78D5046C1BC53DEF00A78EED /* Parse.framework in Frameworks */,
 				7841D2961949CA5200F8351C /* UIKit.framework in Frameworks */,
 				0439213F19B452E500716F6C /* SystemConfiguration.framework in Frameworks */,
 				0439213D19B452D500716F6C /* Security.framework in Frameworks */,
 				7824B77F1A23A77D0097F204 /* MediaPlayer.framework in Frameworks */,
+				78D5046F1BC53DEF00A78EED /* ParseFacebookUtilsV4.framework in Frameworks */,
 				7824B77D1A23A7760097F204 /* CoreText.framework in Frameworks */,
+				78D5046B1BC53DEE00A78EED /* Bolts.framework in Frameworks */,
 				B79481721A6459B30091332E /* GoogleOpenSource.framework in Frameworks */,
 				7841D2941949CA5200F8351C /* CoreGraphics.framework in Frameworks */,
+				78D504701BC53DEF00A78EED /* ParseTwitterUtils.framework in Frameworks */,
 				7824B77B1A23A7640097F204 /* CoreMotion.framework in Frameworks */,
 				7824B7791A23A75B0097F204 /* CoreLocation.framework in Frameworks */,
 				7841D2921949CA5200F8351C /* Foundation.framework in Frameworks */,
@@ -887,6 +924,20 @@
 		7841D2901949CA5200F8351C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				78D5046A1BC53DEE00A78EED /* ParseUI.framework */,
+				78D504681BC53DEE00A78EED /* ParseFacebookUtilsV4.framework */,
+				78D504691BC53DEE00A78EED /* ParseTwitterUtils.framework */,
+				78D504661BC53DEE00A78EED /* ParseCrashReporting.framework */,
+				78D504651BC53DEE00A78EED /* Parse.framework */,
+				78D504641BC53DEE00A78EED /* Bolts.framework */,
+				78D504671BC53DEE00A78EED /* ParseFacebookUtils.framework */,
+				78D504731BC542B300A78EED /* libz.tbd */,
+				78D504631BC53DEE00A78EED /* parse-library-1-4 */,
+				78D504611BC53D4C00A78EED /* libsqlite3.tbd */,
+				78D5045F1BC53D4000A78EED /* libz.1.1.3.tbd */,
+				78D5045D1BC53D3500A78EED /* StoreKit.framework */,
+				78D5045B1BC53D2500A78EED /* Social.framework */,
+				78D504591BC53D1500A78EED /* Accounts.framework */,
 				B794816C1A6459B30091332E /* Bolts.framework */,
 				B794816D1A6459B30091332E /* FacebookSDK.framework */,
 				B794816E1A6459B30091332E /* GoogleOpenSource.framework */,
@@ -1243,6 +1294,13 @@
 				789500341A64217500763491 /* WelcomeView.h */,
 			);
 			name = "Log In";
+			sourceTree = "<group>";
+		};
+		78D504631BC53DEE00A78EED /* parse-library-1-4 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "parse-library-1-4";
 			sourceTree = "<group>";
 		};
 		78D680831A276D6500DBBEE4 /* Register */ = {
@@ -1870,6 +1928,7 @@
 					"$(PROJECT_DIR)",
 					/Users/harith/Dropbox/calendario/Code/Xcode/Calendario/Calendario/Calendario,
 					/Users/harith/Documents/FacebookSDK,
+					"$(PROJECT_DIR)/parse-library-1-4",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Calendario/Calendario-Prefix.pch";
@@ -1894,6 +1953,7 @@
 					"$(PROJECT_DIR)",
 					/Users/harith/Dropbox/calendario/Code/Xcode/Calendario/Calendario/Calendario,
 					/Users/harith/Documents/FacebookSDK,
+					"$(PROJECT_DIR)/parse-library-1-4",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Calendario/Calendario-Prefix.pch";
